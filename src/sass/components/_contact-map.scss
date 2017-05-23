@@ -1,0 +1,77 @@
+.c-contact-map {
+	@extend %rel;
+	background-color: $c-white--darker;
+	height: 500px;
+	margin-bottom: 130px;
+	
+	&__company {
+		@extend %abs;
+		@extend %big-shadow;
+		left: calc((100% - 1180px) / 2); top: 55px;
+
+		.o-btn {
+			@extend %abs-x;
+			bottom: 60px;
+			padding: 0 70px;
+		}
+	}
+
+	&__map {
+		height: 500px;
+	}
+
+	&__pin {
+		position: absolute;
+		width: 200px;
+		height: 140px;
+		background: transparent; 
+		text-align: center;
+	}
+
+	> i {
+		@include icomoon;
+		width: 100px; height: 100px;
+		display: block;
+		background: red;
+	}
+
+	&__marker {
+		@extend %rel;
+		text-align: center;
+		height: 130px;
+		
+		> img {
+			display: block;
+			margin: 0 auto;
+			height: 100%;
+			width: auto;
+			max-width: none;
+		}
+		
+		&:after {
+			@extend %abs-after;
+			left: 50%; bottom: 40px; z-index: 1;
+			transform: translateX(-50%);
+			width: 20px; height: 20px;
+			background: black;
+			opacity: .9;
+			filter: blur(20px);
+		}
+		
+		img {
+			@extend %rel;
+			z-index: 5;
+		}
+	}
+	
+	.c-contact-map__title {
+		@extend %antialias;
+		margin-top: -10px;
+		font: {
+			family: $text;
+			size: 15px;
+			weight: $bold;
+		}
+		color: $c-gray;
+	}
+}

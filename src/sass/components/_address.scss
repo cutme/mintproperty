@@ -1,0 +1,41 @@
+.c-address {
+	@extend %rel;
+	padding-top: 65px;
+	text-align: center;
+	
+	address {
+		margin-bottom: 15px;
+		color: $c-gray;
+	}
+
+	h4, h5 {
+		font-size: em(30);
+	}	
+
+	h4 {
+		@extend %antialias;
+		margin-bottom: 15px;
+		font-weight: $bold;
+		color: white;
+	}
+	
+	h5 {
+		font-weight: $hairline;
+		color: $c-gray--brightest;
+	}
+	
+	h6 {
+		margin-bottom: 10px;
+		text-transform: uppercase;
+		font: {
+			size: em(11);
+			weight: $light;
+		}
+		color: $c-gray;
+	}
+	
+	.o-dot {
+		@extend %abs-x;
+		top: -17px;
+	}
+}

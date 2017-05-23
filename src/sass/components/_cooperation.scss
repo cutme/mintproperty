@@ -1,0 +1,10 @@
+.c-cooperation {
+	@extend %clear;
+	@extend %rel;
+	background-color: $c-white--darker;
+	padding: 100px 0;
+	
+	&__photo {
+		float: left;
+	}
+}

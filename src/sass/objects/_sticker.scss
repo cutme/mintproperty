@@ -1,0 +1,72 @@
+.o-sticker {
+	@extend %abs;
+	right: 10px; top: 0;
+	z-index: 100;
+	
+	&:after {
+    	@extend %abs-after;
+    	@extend %icomoon;
+    	left: 50%; top: 8px;
+    	transform: translateX(-50%);
+    	font-size: em(26);
+    	color: white;
+	}
+
+    .icon-sticker {
+	    font-size: em(48);
+    }
+    
+    &--exclusive {
+    	&:after {
+	    	content: "\e909";
+    	}
+
+	    .icon-sticker {
+	    	color: #820de5;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to bottom, #820de5 0%, #7111c2 100%);
+	    }
+    }
+    
+    &--rent-property {
+	    &:after {
+	    	top: 10px;
+	    	font-size: em(20);
+		    content: "\e912";
+	    }
+	    
+	    .icon-sticker {
+	    	color: #f62524;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to bottom, #ffa70f 0%, #f69035 100%);		    
+	    }
+    }
+    
+    &--sold {
+	    &:after {
+		    content: "\e918";
+	    }
+	    
+	    .icon-sticker {
+	    	color: #f62524;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to bottom, #f62524 0%, #df2626 100%);		    
+	    }
+    }
+    
+    &--without-commission {
+	    &:after {
+			content: "\e91a";
+	    }
+	    
+	    .icon-sticker {
+	    	color: #f62524;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to bottom, #f7d90c 0%, #eac51a 100%);		    
+	    }
+    }
+}

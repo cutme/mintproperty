@@ -1,0 +1,10 @@
+.c-disclaimer {
+	padding: 0 grid(170) 30px grid(170);
+	text-align: center;
+	line-height: 1.1;
+	font: {
+		size: em(10);
+		weight: $light;
+	}
+	color: $c-gray--darkest;
+}

@@ -1,0 +1,26 @@
+.c-search {
+	@extend %abs;
+	right: 20px;
+	bottom: 14px;
+	width: 280px;
+	
+	input {
+		padding-right: 50px;
+	}
+	
+	.icon-search {
+		@extend %abs;
+		right: 10px; top: 5px;
+		font-size: em(24);
+
+		&:before {
+			color: $c-green;
+		}
+		
+		&:hover {
+			&:before {
+				color: darken($c-green, 5%);
+			}
+		}
+	}
+}

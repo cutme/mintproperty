@@ -1,0 +1,27 @@
+.c-grid {
+
+	&:not(.c-grid--noflex) {
+		@extend %flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+    
+    &__item {
+    	float: left;
+	    width: grid(380);
+	    margin-right: grid(20);
+	    margin-bottom: 20px;
+	    
+	    &:nth-child(3n) {
+		    margin-right: 0;
+	    }
+    }
+    
+    &__sizer {
+	    width: grid(380);
+    }
+    
+    .gutter-sizer {
+	    width: grid(20);
+    }
+}

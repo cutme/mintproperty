@@ -1,0 +1,16 @@
+.c-clipboard {
+	strong {
+		color: $c-gray;
+	}
+	
+	.o-btn {
+		margin-left: 10px;
+		font-size: em(13);
+		color: $c-green--darker;
+	}
+	
+	i {
+		margin-right: 10px;
+		font-size: em(28);
+	}
+}

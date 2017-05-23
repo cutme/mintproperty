@@ -1,0 +1,25 @@
+.c-contact-form {
+	width: grid(580);
+	margin: 0 auto 40px auto;	
+	
+	input[type=text], input[type=email], input[type=tel], textarea {
+		margin-bottom: 10px;
+		color: $c-gray--brighter;
+	}
+	
+	input[type=text], input[type=email], input[type=tel] {
+		height: 45px;
+		padding: 0 40px;
+	}
+	
+	textarea {
+		height: 145px;
+		padding: 20px 40px;
+	}
+	
+	&__row {
+		@extend %rel;
+		margin-bottom: 10px;
+	}
+	
+}

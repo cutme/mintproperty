@@ -1,0 +1,23 @@
+.c-copyrights {
+	border-bottom: 1px solid rgba(white, .05);
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	text-align: right;
+	font-size: em(11);
+	color: $c-gray--darker;
+	
+	.design {
+		border-left: 1px solid $c-gray--darker;
+		padding-left: 18px;
+		margin: {
+			left: 18px;
+		}
+	}
+	
+	img {
+		display: inline-block;
+		margin-left: 8px;
+		vertical-align: middle;
+		width: 52px;
+	}
+}

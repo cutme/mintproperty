@@ -1,0 +1,23 @@
+.o-dot {
+	width: 34px; height: 34px;
+	background-color: $c-green;
+	border-radius: 50%;
+	
+	animation-name: pulse_animation;
+		animation-duration: 5000ms;
+		transform-origin:70% 70%;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	
+	&:before {
+		@extend %abs-after;
+		left: -50%; top: -50%;
+		width: 66px; height: 66px;
+		background-color: rgba($c-green, .2);
+		border-radius: 50%;
+		
+		
+		
+		
+	}
+}

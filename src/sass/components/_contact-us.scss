@@ -1,0 +1,11 @@
+.c-contact-us {
+	text-align: center;
+
+	.o-btn {
+		color: white;	
+
+		i {
+			@extend %arrow-down;
+		}
+	}
+}

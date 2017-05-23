@@ -1,0 +1,24 @@
+.c-recommendations {
+	@extend %clear;
+	@extend %rel;
+	background-color: $c-white--darker;
+	padding: 100px 0;
+	overflow: hidden;
+	
+	article {
+		h5 {
+			margin: 0;
+			text-transform: none;
+			color: $c-black;
+		}
+		
+		h6 {
+			color: $c-gray;
+		}
+	}
+	
+	
+	&__photo {
+		float: left;
+	}
+}

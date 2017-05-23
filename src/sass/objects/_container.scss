@@ -1,0 +1,9 @@
+.o-container {
+	@extend %clear;
+	overflow: hidden;
+	
+	&--negative-margin {
+		margin-top: -375px;
+		padding-top: 375px;
+	}
+}

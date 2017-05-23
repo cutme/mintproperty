@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+	@@include('./includes/top.html')
+	
+	
+	<div class="o-wrap">
+		<header class="o-header o-header--type-1 o-header--extramargin">
+			<h1 class="title">Blog</h1>			
+		</header>
+
+
+		<div class="c-boxes c-boxes--noborder">			
+			<ul class="c-grid c-grid--noflex" id="masonry">
+			
+				<li class="c-grid__sizer"></li>
+				<li class="gutter-sizer"></li>
+				
+				@@include('./includes/posts-1.html')
+				@@include('./includes/posts-2.html')
+				@@include('./includes/posts-3.html')
+
+				
+			</ul>
+		</div>
+
+	</div>
+	
+
+
+	@@include('./includes/shortcuts.html') 
+	@@include('./includes/footer.html')
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

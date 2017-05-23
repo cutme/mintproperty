@@ -1,0 +1,24 @@
+.c-fav {
+	@extend %abs;
+	right: 120px;
+	top: 10px;
+	
+	i {
+		margin-right: 10px;
+		font-size: em(28);
+		
+		&:before {
+			color: $c-green--darker;
+		}
+	}
+	
+	small {
+		margin-left: 5px;
+		font-size: em(10, 13);
+		color: $c-green;
+	}
+	
+	.o-btn {
+		padding: 0 20px;
+	}
+}

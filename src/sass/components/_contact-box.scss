@@ -1,0 +1,46 @@
+.c-contact-box {
+	h4 {
+		margin-bottom: .8em;
+		font: {
+			size: em(20);
+			weight: $bold;
+		}
+	}
+	
+	h5 {
+		margin-bottom: 1em;
+		color: $c-gray;
+	}
+	
+	p {
+		margin-bottom: 20px;
+	}
+	
+	&__phone {
+		i {
+			font-size: em(24);
+			color: $c-green--darker;
+			vertical-align: middle;
+		}
+		
+		span {
+			padding-left: 10px;
+			color: $c-gray;
+		}
+	}
+	
+	&__photo {
+		@extend %border-radius;
+		float: left;
+		width: 130px;
+	}
+	
+	&__text {
+		float: right;
+		width: 230px;
+		
+		.c-agents & {
+			padding-right: 30px;
+		}
+	}
+}

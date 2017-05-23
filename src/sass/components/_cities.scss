@@ -1,0 +1,36 @@
+.c-cities {
+	@extend %abs;
+	left: 180px; top: 25px;
+	line-height: 1;
+	
+	li {
+		display: inline-block;
+		border-right: 1px solid $c-gray--brightest;
+		padding: 0 5px;
+
+
+		&:first-child {
+			padding-left: 0;
+		}
+		
+		&:last-child {
+			border: none;
+		}
+		
+		&.is-active {
+			a {
+				font-weight: $bold;
+			}
+		}
+	}
+
+	a {
+		text-transform: uppercase;
+		font-size: em(11);
+		color: $c-gray--brighter;
+		
+		&:hover {
+			color: $c-green;
+		}
+	}	
+}

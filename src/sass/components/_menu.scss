@@ -1,0 +1,28 @@
+.c-menu {
+	@extend %abs;
+	left: 180px; bottom: 25px;
+	
+	li {
+		float: left;
+		padding: 0 25px;
+		
+		&:first-child {
+			padding-left: 0;
+		}
+		
+		a {
+			@extend %underline;
+			@extend %rel;
+			
+			font-weight: $bold;
+			
+
+			
+/*
+			&:hover {
+				color: $c-green;
+			}
+*/
+		}
+	}
+}

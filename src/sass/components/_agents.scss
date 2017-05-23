@@ -1,0 +1,24 @@
+.c-agents {
+	margin-bottom: 100px;
+
+	.o-header {
+		.title {
+			margin-bottom: 80px;
+		}
+	}
+	
+	.c-grid {
+		.c-grid__item {
+			margin-bottom: 40px;
+		}
+	}
+	
+	.c-contact-box {
+		.o-btn {
+			width: 100%;
+			padding: 0;
+			justify-content: center;
+			font-size: em(13);
+		}
+	}
+}

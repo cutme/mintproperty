@@ -1,0 +1,35 @@
+.c-shortcuts-btn {
+	
+	.o-btn {
+		background-color: white;
+		font-size: em(13);	
+
+		i {
+			@extend %anim;
+			@extend %arrow-down;
+			
+			&:before {
+				display: block;
+			}
+		}
+	}
+	
+	&--adv {
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	
+	&--trigger {
+		@extend %abs-x;
+		z-index: 25;
+		top: 10px;
+	}
+	
+	&.is-fixed {
+		.o-btn {
+			i {
+				transform: scaleY(-1);
+			}
+		}
+	}
+}

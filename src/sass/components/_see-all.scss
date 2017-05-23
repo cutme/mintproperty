@@ -1,0 +1,25 @@
+.c-see-all {
+	color: $c-gray;
+	
+	strong {
+		font-size: em(13);
+	}
+	
+	i {
+		display: inline-block;
+		margin-left: 5px;
+		font-size: em(8);
+		color: $c-green--darker;
+		
+		&:before {
+			@extend %rel;
+			display: block;
+			top: -1px;
+			transform: rotate(270deg);
+		}
+	}
+	
+	&:hover {
+		color: $c-green--darker;
+	}
+}
