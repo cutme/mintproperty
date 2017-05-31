@@ -17,6 +17,7 @@
 		
 		mint.Helper.exist('#homeSlider') && mint.Slider.init();
 		mint.Helper.exist('#offerCarousel') && mint.OfferCarousel.init();
+		//mint.Helper.exist('#offersOnMap') && mint.OffersOnMap.init();
 		mint.Helper.exist('#questionForm') && mint.QuestionForm.init();
 		mint.Helper.exist('#shortcuts') && mint.Shortcuts.init();
 		

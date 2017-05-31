@@ -41,12 +41,24 @@
 					<a href="#" class="o-btn o-btn--green-empty js-btn" data-type="map">Mapa ofert</a>
 				</div>
 			</header>
-			
-			<ul class="c-grid">
-				@@include('./includes/places-1.html')
-				@@include('./includes/places-2.html')
-				@@include('./includes/places-3.html')
-			</ul>
+
+			<div class="c-results" id="results">
+				<div class="c-results__view js-view is-active" id="grid">
+				
+					<ul class="c-grid">
+						@@include('./includes/places-1.html')
+						@@include('./includes/places-2.html')
+						@@include('./includes/places-3.html')
+					</ul>
+				
+				</div>
+				
+				<div class="c-results__view js-view" id="map">
+					<div class="c-map c-map--big">
+						<div id="offersOnMap" data-marker="img/icons/marker.svg"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 

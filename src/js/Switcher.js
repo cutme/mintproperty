@@ -56,17 +56,42 @@
 	Switcher.prototype.viewType = function() {
 
 		var el = document.getElementById('viewType'),
-			btn = $('.js-btn', el);
-		
-		// Set type of filter				
+			btn = $('.js-btn', el),
+			results = document.getElementById('results');
 		
 		btn.on('click', function(e) {
 			e.preventDefault();
 			
-			var $$ = $(this);
+			var $$ = $(this),
+				target = $$.data('type');
 			
 			btn.removeClass('is-active');
 			$$.addClass('is-active');
+			
+			$('.js-view', results).removeClass('is-active');
+			
+			$('#'+target).addClass('is-active');
+			
+			if (target === 'map') {
+				mint.OffersOnMap.init();
+			}
+			
+			/*
+var bLazy = new Blazy({
+				breakpoints: false,	
+				success: function(element){
+				    setTimeout(function(){					
+						var parent = element.parentNode.parentNode;
+						parent.className = parent.className.replace(/\bis-hidden\b/,'');
+						parent.parentNode.className = parent.parentNode.className.replace(/\bis-loading\b/,'');
+				    }, 200);
+		        }
+		   });
+			
+			$(el).on('afterChange', function(event, slick, direction) {
+				bLazy.revalidate();
+			});	
+*/
 		});
 	};
 		

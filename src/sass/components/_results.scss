@@ -1,0 +1,9 @@
+.c-results {
+	&__view {
+		display: none;
+		
+		&.is-active {
+			display: block;
+		}
+	}
+}

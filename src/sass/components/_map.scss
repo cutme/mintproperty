@@ -1,0 +1,15 @@
+.c-map {
+	@extend %border-radius;
+	@extend %rel;
+	height: 735px;
+	border: 1px solid $c-gray--brightest;
+	
+	> div {
+		@extend %abs;
+		width: 100%; height: 100%;
+	}
+	
+	&--big {
+		height: 960px;
+	}
+}
