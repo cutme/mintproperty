@@ -25,7 +25,6 @@
 			    setTimeout(function(){					
 					var parent = element.parentNode.parentNode;
 					parent.className = parent.className.replace(/\bis-hidden\b/,'');
-					console.log('f');
 					parent.parentNode.className = parent.parentNode.className.replace(/\bis-loading\b/,'');
 			    }, 200);
 	        }

@@ -8,6 +8,7 @@
     
     &__item {
     	float: left;
+    	@extend %rel;
 	    width: grid(380);
 	    margin-right: grid(20);
 	    margin-bottom: 20px;
