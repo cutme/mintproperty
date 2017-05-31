@@ -1,0 +1,13 @@
+.c-updated {
+	margin-bottom: 40px;
+	text-align: right;
+	font-size: em(11);
+	border-bottom: 1px solid $c-gray--brightest;
+	padding-bottom: 5px;
+	color: $c-gray--brighter;
+	
+	time {
+		display: inline;
+		font-size: 11px;
+	}
+}

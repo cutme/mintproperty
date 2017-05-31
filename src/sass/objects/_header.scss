@@ -4,6 +4,7 @@
 	&--type-1 {
 		@extend %rel;
 		margin-bottom: 30px;
+		overflow: hidden;
 
 		.title {
 			line-height: 1;
@@ -128,6 +129,30 @@
 		}
 	}
 	
+	&--type-7 {
+		margin-bottom: 35px;
+
+		.title {
+			line-height: 1;
+			text-align: center;
+			font: {
+				size: em(24);
+				weight: $bold;
+			}
+		}
+	}
+	
+	&--type-8 {
+		margin-bottom: 50px;
+
+		.title {
+			line-height: 1;
+			text-align: center;
+			font-weight: $bold;
+			color: $c-gray;
+		}
+	}
+	
 	&--bordered {
 		padding-bottom: 30px;
 		border-bottom: 1px solid $c-gray--brightest;
@@ -135,8 +160,14 @@
 	
 	&--extramargin {
 		padding: {
-			top: 30px;
+			top: 35px;
 			bottom: 10px;
+		}
+	}
+	
+	&--extramargin-2 {
+		margin: {
+			bottom: 30px;
 		}
 	}
 	

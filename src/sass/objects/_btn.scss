@@ -16,9 +16,31 @@
 		height: 50px;
 	}
 	
+	&--small {
+		height: 35px;
+		font-size: em(13);
+	}
+	
 	&--green-fill {
+		&:after {
+			background-image: linear-gradient(to right, $c-green 0%, $c-green--darker 100%);
+		}		
+	}
+	
+	&--green-fill-whitehover {
+		&:after {
+			background-color: white;
+		}
+		
+		&:hover {
+			color: $c-green--darker;
+		}
+	}
+
+	&--green-fill,
+	&--green-fill-whitehover {
 		background-image: linear-gradient(to right, $c-green--darker 0%, $c-green 100%);
-		color: white;
+		color: white;	
 		
 		&:after {
 			@extend %abs-after;
@@ -27,9 +49,8 @@
 			left: 0; top: 0;
 			width: 100%; height: 100%;
 			border-radius: 40px;
-			background-image: linear-gradient(to right, $c-green 0%, $c-green--darker 100%);
 			opacity: 0;
-		}
+		}	
 		
 		&:hover {
 			&:after {
@@ -37,6 +58,8 @@
 			}
 		}
 	}
+	
+	
 
 	&--green-empty {
 		border-color: $c-green;
@@ -52,7 +75,7 @@
 				}
 			}
 		}
-	}
+	}	
 	
 	&--gray-fill {
 		background-color: $c-gray--brightest;
@@ -84,6 +107,28 @@
 					color: white !important;
 				}
 			}
+		}
+	}
+	
+	&--white-empty {
+		border-color: white;
+		color: white;
+		
+		&:hover {
+			background-color: $c-green !important;
+			border-color: $c-green;
+			color: white;
+		}
+	}
+	
+	&--white-fill {
+		background-color: white;
+		color: $c-green--darker;
+
+		&:hover {
+			background-color: $c-green !important;
+			border-color: $c-green;
+			color: white;
 		}
 	}
 }

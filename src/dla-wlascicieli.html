@@ -3,6 +3,12 @@
 @@include('./includes/head.html')
 <body>
 
+	@@include('./includes/cookies.html')
+	
+	
+	<div class="c-container">
+
+
 	@@include('./includes/top.html')
 
 
@@ -33,13 +39,13 @@
 		<div class="o-wrap">
 
 			<div class="c-accordion" id="accordion">
-				<a href="#" class="c-accordion__nav js-accNav is-active" id="acc-01">
+				<a href="#" class="c-accordion__nav js-accNav" id="acc-01">
 					<i class="icon-rent-property"></i> 
-					<i class="icon-arrow-2"></i> 
+					<i class="icon-arrow-3"></i> 
 					<span>Wynajmij swoją nieruchomość</span>
 				</a>
 		
-				<div class="c-accordion__content o-article o-article--full is-active">
+				<div class="c-accordion__content o-article o-article--full">
 					
 					<h2>Oferujemy <strong>kompleksowe rozwiązania</strong></h2>
 	
@@ -75,7 +81,7 @@
 						</p>
 						
 						<p>
-							<a href="#" class="o-btn o-btn--green-fill">Wyślij wiadomość</a>
+							<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
 						</p>
 					</div>
 				</div>
@@ -84,7 +90,7 @@
 	
 				<a href="#" class="c-accordion__nav js-accNav" id="acc-02">
 					<i class="icon-sell"></i> 
-					<i class="icon-arrow-2"></i> 
+					<i class="icon-arrow-3"></i> 
 					<span>Sprzedaj swoją nieruchomość</span>
 				</a>
 				
@@ -124,7 +130,7 @@
 						</p>
 						
 						<p>
-							<a href="#" class="o-btn o-btn--green-fill">Wyślij wiadomość</a>
+							<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
 						</p>
 					</div>
 				</div>
@@ -138,7 +144,11 @@
 	@@include('./includes/recomenndations.html') 
 
 
-	@@include('./includes/shortcuts.html') 
+	@@include('./includes/shortcuts.html')
+	
+	</div>
+
+
 	@@include('./includes/footer.html')
 	@@include('./includes/scripts.html')
 

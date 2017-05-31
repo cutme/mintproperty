@@ -11,18 +11,13 @@
 		}
 		
 		a {
-			@extend %underline;
+			//@extend %underline;
 			@extend %rel;
-			
 			font-weight: $bold;
 			
-
-			
-/*
 			&:hover {
-				color: $c-green;
+				color: $c-green--darker;
 			}
-*/
 		}
 	}
 }

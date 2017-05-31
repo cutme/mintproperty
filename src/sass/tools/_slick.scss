@@ -1,0 +1,25 @@
+.slick-arrow {
+	position: absolute; z-index: 10;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slick-prev {
+	transform: translateY(-50%) scale(-1);
+}
+
+.icon-arrow-2 {
+	@extend %anim;
+	@extend %flex;
+	@extend %flex-xy;
+	width: 75px; height: 75px;
+	border-radius: 50%;
+	background-color: rgba(white, .3);
+	font-size: em(32);
+	color: white;
+	cursor: pointer;
+	
+	&:hover {
+		background-color: rgba(white, .6);
+	}
+}

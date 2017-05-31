@@ -3,6 +3,12 @@
 @@include('./includes/head.html')
 <body>
 
+	@@include('./includes/cookies.html')
+	
+	
+	<div class="c-container">
+
+
 	@@include('./includes/top.html')
 
 
@@ -84,11 +90,11 @@
 				<source 
 						media="(max-width: 768px)" 
 						srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-						data-srcset="img/about/laptop.jpg">
+						data-srcset="img/about/laptop@2x.png">
 				<img 
 					class="b-lazy" 
 					src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-					data-src="img/about/laptop@2x.jpg" alt="" width="820" height="640">
+					data-src="img/about/laptop@2x.png" alt="" width="820" height="640">
 			</picture>
 		</div>
 
@@ -107,6 +113,10 @@
 
 
 	@@include('./includes/shortcuts.html') 
+	
+	</div>
+
+
 	@@include('./includes/footer.html')
 	@@include('./includes/scripts.html')
 

@@ -1,0 +1,53 @@
+.c-cookies {
+	@extend %anim-slow;
+	@extend %rel;
+	height: 120px;
+	background-color: $c-green--darker;
+	margin-top: 0;
+
+	&.move-out {
+		margin-top: -120px;
+	}
+	
+	.o-wrap {
+		@extend %flex;
+		    align-items: center;
+		justify-content: space-between;
+		&:after {
+			display: none;
+		}
+	}
+	
+	&__title {
+		@extend %flex;
+		    align-items: center;
+		font: {
+			size: em(30);
+			weight: $light;
+		}
+		color: white;
+		
+		img {
+			margin-right: 20px;
+		}
+	}
+	
+	.icon-close {
+		@extend %abs;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 30px;
+		font-size: em(36);
+		color: white;
+		
+		&:hover {
+			color: $c-green;
+		}
+	}
+	
+	.o-btn {
+		margin-left: 20px;
+		padding: 0 25px;
+		font-size: em(13);
+	}
+}

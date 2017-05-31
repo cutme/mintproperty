@@ -1,0 +1,11 @@
+.c-offer-video {
+	margin-bottom: 40px;
+	
+	.c-video {
+		@extend %border-radius;
+		border: 1px solid $c-gray--brightest;
+	}
+}
+
+
+

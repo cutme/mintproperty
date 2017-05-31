@@ -1,0 +1,188 @@
+.c-filters {
+	@extend %clear;
+	@extend %rel;
+	@extend %anim;
+	z-index: 10;
+	margin-bottom: 50px;
+	opacity: 0;
+	
+	&--dropdown {
+		margin-bottom: 0;
+
+		.c-filters__more {
+			display: none;			
+		}
+	}
+	
+	&__more {
+		&.is-expanded {
+			display: block;
+			animation: fadeInFromNone .5s ease-out;
+		}
+	}
+	
+	
+	&.is-visible {
+		opacity: 1;
+	}
+	
+	&__checkbox {
+		float: left;
+		width: 100px;
+		margin-bottom: 20px;
+		
+		&.rent {
+			display: none;
+			
+			.type-rent & {
+				display: block;
+			}
+		}
+		
+		span {
+			width: 80px;
+			font-weight: $regular;
+			line-height: 1.2;
+			color: $c-gray;
+		}
+	}
+	
+	&__clear {
+		float: right;
+		margin-top: -20px;
+		
+		.c-filters--dropdown & {
+			margin-top: 0;
+		}
+
+		i {
+			@extend %close;
+			margin-right: 5px;
+		}
+		
+		span {
+			display: inline-block;
+			line-height: 35px;
+			font: {
+				size: em(13);
+				weight: $bold;
+			}
+			color: $c-gray--brighter;
+		}
+		
+		&:hover {
+			i {
+				background-color: $c-gray--brightest;
+				color: white;
+			}
+		}
+	}
+
+	&__item {
+		float: left;
+		width: 206px;
+		margin: 0 20px 20px 0;
+		
+		&.full {
+			width: 100%;
+			
+			.c-filters--dropdown & {
+				margin-bottom: 0;
+			}
+		}
+		
+		&.medium {
+			width: 276px;
+			margin-right: 0;
+		}
+
+		&.medium--rent {
+			.type-rent & {
+				width: 276px;
+				margin-right: 0;
+			}
+		}
+		
+		&.medium--sale {
+			.type-sale & {
+				width: 276px;
+				margin-right: 0;
+			}
+		}
+		
+		&.rent {
+			display: none;
+
+			.type-rent & {
+				display: block;
+				animation: fadeInFromNone .5s ease-out;
+			}
+		}
+		
+		&.sale {
+			display: none;
+
+			.type-sale & {
+				display: block;
+				animation: fadeInFromNone .5s ease-out;
+			}
+		}
+		
+		&.wide {
+			.type-rent & {
+				width: 884px;
+				margin-right: 0;
+			}
+			
+			.type-sale & {
+				float: right;
+				width: 728px;
+				margin-right: 0;
+			}
+		}
+		
+		&--small {
+			float: left;
+			width: 128px;
+			
+			&:last-of-type {
+				float: right;
+			}
+		}
+	}
+	
+	&__info {
+		@extend %abs-y;
+		right: 0;
+		font: {
+			size: em(11);
+			weight: $regular;
+		}
+		color: $c-gray--brighter;
+	}
+	
+	&__title {
+		@extend %clear;
+		@extend %rel;
+		margin-bottom: 10px;
+		font-weight: $bold;
+		color: $c-gray;
+	}
+	
+	&__row {
+		@extend %clear;
+		margin-bottom: 20px;
+	}
+	
+	input[type=checkbox] {		
+		& + label {
+			i {				
+				&:before {
+					color: $c-green;
+				}
+			}
+		}
+	}
+}
+
+

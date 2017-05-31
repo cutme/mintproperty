@@ -1,0 +1,44 @@
+.c-offer-cta {
+	margin-bottom: 30px;
+	text-align: center;
+	
+	&__item {
+		display: inline-block;
+		width: 75px;
+		//text-align: center;
+
+		i {
+			display: inline-block;
+			width: 55px;
+			height: 55px;
+			background-color: $c-white--darker;
+			border-radius: 50%;
+			margin-bottom: 10px;
+			line-height: 55px;
+			font-size: em(24);
+			color: $c-green--darker;
+		}
+		
+		span {
+			display: block;
+			font-size: em(11);
+			color: $c-gray--brighter;
+		}
+		
+		&:hover {
+			
+			i {
+				
+				background-color: $c-green--darker;
+				box-shadow: rgba(black, .2) 0 0 10px;
+				color: white;
+			}
+			
+			span {
+				color: $c-green--darker;;
+			}
+			
+		}
+		
+	}
+}

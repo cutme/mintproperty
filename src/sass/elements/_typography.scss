@@ -26,6 +26,10 @@ a {
     &:after, &:before {
 	    @extend %anim;
     }
+    
+    i {
+	    @extend %anim;
+    }
 }
 
 br {
@@ -36,6 +40,11 @@ br {
 
 strong {
 	font-weight: $bold;
+}
+
+sup {
+	font-size: em(10);
+	vertical-align: top;
 }
 
 ::selection {

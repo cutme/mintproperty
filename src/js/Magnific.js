@@ -28,6 +28,7 @@
 			},
 			
 			closeBtnInside: false,
+			closeOnBgClick: false,
 			closeMarkup: '<button title="%title%" type="button" class="mfp-close icon-close"></button>',
 			delegate: '',
 			type: 'image',
@@ -43,6 +44,30 @@
 			}
 		});
 	};
+	
+	Magnific.prototype.video = function() {
+
+		$('.mfp-video').magnificPopup({
+		
+			closeBtnInside: false,
+			closeMarkup: '<button title="%title%" type="button" class="mfp-close icon-close"></button>',
+			disableOn: 700,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			iframe: {
+				patterns: {
+					youtube_short: {
+						index: 'youtu.be/',
+						id: 'youtu.be/',
+						src: '//www.youtube.com/embed/%id%?autoplay=1'
+					}
+				}
+			}
+		});
+	}
 	
 	mint.Magnific = new Magnific();
 

@@ -1,0 +1,35 @@
+.c-pricebox {
+	@extend %rel;
+	@extend %border-radius;
+	@extend %flex;
+	@extend %flex-xy;
+	flex-wrap: wrap;
+	min-height: 120px;
+	border: 1px solid $c-gray--brightest;
+	margin-bottom: 30px;
+	padding: 0 20px 0 20px;
+	text-align: center;
+	
+	small {
+		display: block;
+		font: {
+			size: em(11, 30);
+			weight: $regular;
+		}
+		color: $c-gray--brighter;
+	}
+
+	&__lead {
+		@extend %abs;
+		left: 20px; top: 10px;
+		color: $c-gray;
+	}
+	
+	&__price {
+		white-space: nowrap;
+		font: {
+			size: em(30);
+			weight: $bold;
+		}
+	}
+}

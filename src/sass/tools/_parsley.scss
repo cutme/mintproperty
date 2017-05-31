@@ -1,10 +1,11 @@
 .parsley-errors-list {
 	&.filled {
+		padding: 2px 0 0 20px;
 		font: {
-			size: em(14);
+			size: em(12);
 			weight: $regular;
 		}
-		color: $c-red;
+		color: red;
 		
 		.o-form__row--field & {
 			padding: 10px 0 0 20px;

@@ -5,18 +5,24 @@
 
 	Slider.prototype.init = function() {
 
-		var owl = document.getElementById('homeSlider');
-
-		$(owl).owlCarousel({
+		var el = document.getElementById('homeSlider');
+		
+		$(el).slick({
 			autoplay: true,
-			autoplayTimeout: 8000,
-			items: 1,
-			lazyLoad: true,
-			loop: true,
-			nav: true,
-			navText: ['<i class="icon-arrow-2"></i>','<i class="icon-arrow-2"></i>'],
-			smartSpeed: 900
-		});		
+			autoplaySpeed: 8000,
+			dots: false,
+			speed: 600,
+			prevArrow: '<i class="icon-arrow-2 slick-prev"></i>',
+			nextArrow: '<i class="icon-arrow-2 slick-next"></i>'
+		});
+		
+		var bLazy = new Blazy({ 
+		    container: '#homeSlider' // Default is window
+		});
+		
+		$(el).on('afterChange', function(event, slick, direction){
+			bLazy.revalidate();
+		});			
 	};
 		
 	mint.Slider = new Slider();

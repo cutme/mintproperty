@@ -1,0 +1,21 @@
+.c-offer-contact {
+	float: right;
+	width: 430px;
+	
+	.c-contact-box {
+		@extend %clear;
+		width: 360px;
+		margin-bottom: 30px;
+		
+		.o-btn {
+			@extend %flex;
+			@extend %flex-x;
+			padding: 0;
+			font-size: em(13);
+		}
+		
+		.c-contact-box__text {
+			padding-left: 20px;
+		}
+	}
+}

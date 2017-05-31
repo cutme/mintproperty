@@ -1,0 +1,28 @@
+.c-offer-description {
+	font-size: em(14);
+	line-height: 1.6;
+
+	h2 {
+		margin-bottom: 1em;
+		font: {
+			size: em(20, 14);
+			weight: $bold;
+		}
+	}
+	
+	li, p {
+//		font-size: em(14)
+	}
+	
+	p {
+		margin-bottom: 1.5em;
+	}
+	
+	ul {
+		margin-bottom: 2em;
+		list-style: disc;
+		padding-left: 20px;
+	}
+}
+
+

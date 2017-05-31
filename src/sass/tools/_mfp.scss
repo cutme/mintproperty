@@ -9,6 +9,7 @@
 
 .mfp-arrow {
 	@extend %icomoon;
+	@extend %anim;
 	display: block;
 	width: 75px; 
 	height: 75px;
@@ -19,10 +20,9 @@
 	font-size: em(34);
 	text-align: center;
 	color: white;
+	cursor: pointer;
 	
-	&:active {
-		margin-top: -37px;
-	}
+	
 
 	&:after {
 		display: none;
@@ -45,13 +45,55 @@
 		left: 2%;
 		
 		&:before {
+			left: -2px;
 			transform: scaleX(-1);
 		}
 	}
 	
 	&.mfp-arrow-right {
 		right: 2%;
+		
+		&:before {
+			left: 2px;
+		}
 	}
 	
+	&:hover {
+		border: 1px solid rgba(white, .6);
+	}
+	
+	&:active {
+		margin-top: -37px;
+		
+		&:before {
+			color: $c-green--darker;
+		}
+	}
+}
 
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
 }

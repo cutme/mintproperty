@@ -4,8 +4,8 @@
 	@extend %rel;
 	display: block;
 	background-color: white;
-	box-shadow: 0 0 0 1px $c-gray--brightest;	
-	
+	box-shadow: 0 0 0 1px $c-gray--brightest;
+
 	h3 {
 		margin-bottom: 15px;
 		line-height: 1.2;
@@ -54,19 +54,25 @@
 				display: none;
 			}
 		}
-	}
-	
-	sup {
-		font-size: em(10);
-		vertical-align: top;
-	}
+	}	
 	
 	&__caption {
 		padding: 20px;
 	}
 	
 	&__photo {
+		@extend %rel;
 		max-height: 250px;
+		
+		.c-boxes-with-apla & {
+			&:after {
+				@extend %anim;
+				@extend %abs-after;
+				top: 0;
+				width: 100%; height: 100%;
+				background: rgba($c-black, .3);
+			}
+		}
 	}
 	
 	&.is-hidden {
@@ -75,6 +81,12 @@
 	
 	&:hover {
 		box-shadow: 0 0 0 2px $c-green--darker;
+		
+		.c-box__photo {
+			&:after {
+				opacity: 0;
+			}
+		}
 
 		li {
 			&:after {

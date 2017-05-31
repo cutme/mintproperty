@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./includes/head.html')
+<body>
+
+	@@include('./includes/cookies.html')
+	
+	
+	<div class="c-container">
+
+
+	@@include('./includes/top.html')
+		
+
+	<div class="o-wrap o-wrap--top-padding margin-100">	
+		<header class="o-header o-header--type-1 o-header--bordered">
+			<h1 class="title">Kraków i okolice, <strong>mieszkanie</strong> na <strong>wynajem</strong></h1>
+			
+			<div class="c-switcher c-switcher--right" id="rentSale">
+				<a href="#" class="o-btn o-btn--green-empty o-btn--small js-btn rent" data-type="rent">Wynajem</a>
+				<a href="#" class="o-btn o-btn--green-empty o-btn--small js-btn sale" data-type="sale">Sprzedaż</a>
+			</div>
+		</header>
+
+
+		<div id="filters" class="c-filters">
+
+			@@include('./includes/filters.html')
+
+		</div>
+
+
+		<div class="c-boxes">
+			<header class="o-header o-header--type-2 o-header--options o-header--extramargin-2">
+				<h2 class="title">Wyszukane oferty</h2>
+
+				<strong>Liczba ofert: <span class="results_num">123</span></strong>
+				
+				<div class="c-switcher c-switcher--center big" id="viewType">
+					<a href="#" class="o-btn o-btn--green-empty js-btn is-active" data-type="grid">Lista ofert</a>
+					<a href="#" class="o-btn o-btn--green-empty js-btn" data-type="map">Mapa ofert</a>
+				</div>
+			</header>
+			
+			<ul class="c-grid">
+				@@include('./includes/places-1.html')
+				@@include('./includes/places-2.html')
+				@@include('./includes/places-3.html')
+			</ul>
+		</div>
+	</div>
+
+
+	@@include('./includes/shortcuts.html')
+	
+	</div>
+
+                                                                                        
+ 	@@include('./includes/footer.html')
+	@@include('./includes/scripts.html')
+
+</body>
+</html>

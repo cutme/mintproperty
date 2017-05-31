@@ -1,0 +1,89 @@
+.c-offer-summary {
+	@extend %flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+	&__price {
+		float: left;
+		width: 280px;
+	}
+	
+	.c-pricebox {
+		margin: 0;
+	}
+	
+	&__amenities {
+		@extend %border-radius;
+		float: right;
+		width: 430px;
+		background-color: $c-white--darker;
+		padding: 20px;
+		
+		h5 {
+			margin-bottom: 10px;
+			font-weight: $bold;
+			color: $c-gray;
+		}
+		
+		ul {
+			@extend %clear;
+			@extend %rel;
+		}
+
+		li {
+			float: left;
+			margin-right: 20px;
+			
+			i {
+				@extend %anim;
+				@extend %rel;
+				
+				&:after {
+					display: none;
+					@extend %abs-after;
+					bottom: -10px;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 3px 6px 3px;
+					border-color: transparent transparent white transparent;
+				}
+			}
+			
+			span {
+				@extend %abs;
+				display: none;
+				left: 0; bottom: calc(-100% - 1px);
+				width: 100%;
+				background-color: white;
+				padding: 3px 10px;
+				border-radius: 10px;
+				font-size: em(11);
+				color: $c-green--darker;
+			}
+			
+			&:hover {
+				i {
+					cursor: pointer;
+					color: $c-green--darker;
+
+					&:after {
+						display: block;
+						animation: fadeInFromNone .3s ease-out;
+					}
+				}
+				
+				span {
+					display: block;
+					animation: fadeInFromNone .5s ease-out;
+				}
+			}
+		}
+		
+		i {
+			font-size: em(26);
+		}
+	}
+}

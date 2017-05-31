@@ -1,6 +1,20 @@
 .c-contact-form {
 	width: grid(580);
-	margin: 0 auto 40px auto;	
+	margin: 0 auto 40px auto;
+	
+	&[type=checkbox],
+	&[type=radio] {
+		& + label {
+			span {
+				//width: grid(460, 520);
+				color: $c-gray--brighter;
+				
+				@media screen and ( max-width: $smartphone_portrait + px ) {
+					//width: grid(400, 520);
+				}
+			}
+		}
+	}	
 	
 	input[type=text], input[type=email], input[type=tel], textarea {
 		margin-bottom: 10px;
@@ -20,6 +34,21 @@
 	&__row {
 		@extend %rel;
 		margin-bottom: 10px;
+	}
+	
+	.o-form__captcha {
+		width: 280px;
+		height: 60px;
+		border-radius: 30px;
+	}
+	
+	.o-form__code {
+		width: 280px;
+		height: 45px;
+	}
+	
+	@include input-placeholder {	
+		color: $c-gray--brighter;
 	}
 	
 }

@@ -1,0 +1,88 @@
+.c-question-form {
+	@extend %anim;
+	@extend %rel;
+	margin-bottom: 40px;
+
+	input,
+	textarea {
+		border-radius: 5px;
+	}
+	
+	input {
+		border-radius: 5px;
+	}
+	
+	textarea {
+		height: 160px;
+		padding: 10px 20px;
+	}
+	
+	input[type=checkbox] {
+		& + label {
+			span {
+				width: 360px;
+				font-size: em(11) !important;
+				color: $c-gray--brighter;
+			}
+		}
+	}
+	
+	.icon-close-2 {
+		@extend %close;
+		@extend %abs;
+		right: 0; top: -20px;
+		
+		&:hover {
+			background-color: $c-gray--brightest;
+			color: white;
+		}
+	}
+
+	.o-btn {
+		@extend %flex;
+		@extend %flex-x;
+	}	
+
+	.o-form {
+		@extend %rel;
+		display: none;
+	}
+	
+	.o-form__captcha {
+		width: 110px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	
+	.o-form__code {
+		width: 110px;
+	}
+	
+	.o-form__row--summary {
+		@extend %flex;
+	    justify-content: space-between;
+	    align-items: center;
+    
+		.o-btn {
+			font-size: em(15);
+		}
+	}
+	
+	&.is-active {
+	
+		@extend %border-radius;
+		padding: 40px 20px 20px 20px;
+		border: 1px solid $c-gray--brightest;
+		
+		> .o-btn {
+			position: absolute;
+			width: 100%;
+			transform: translateY(-100px);
+		}
+		
+		.o-form {
+			display: block;
+			animation: fadeInFromNone .5s ease-out;
+		}
+	}
+}

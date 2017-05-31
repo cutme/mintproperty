@@ -1,0 +1,100 @@
+.c-offer-carousel {
+	@extend %rel;
+	margin-bottom: 45px;
+	
+	.icon-sticker {
+	    font-size: em(104);
+    }
+	
+	.slider-for {
+		margin-bottom: 20px;
+		overflow: hidden;
+		height: 480px;
+		
+		.slick-slide {
+			@extend %border-radius;
+		}
+	}
+	
+	.slider-nav {
+		padding: 0 80px;
+	}
+	
+	.slick-prev {
+		left: 20px;
+	}
+	
+	.slick-next {
+		right: 20px;
+	}
+
+	.slider-nav {
+	
+		.slick-arrow {
+			background: $c-white--darker;
+			width: 40px; height: 40px;
+			
+			&:hover {
+				background: darken($c-white--darker, 5%);
+			}
+		}
+		
+		.icon-arrow-2 {
+			font-size: em(16);
+			color: $c-green--darker;
+		}
+		
+		.slick-track {
+		    display: flex;
+		    align-items: center;
+			
+		}
+
+		.slick-slide {
+			@extend %anim;
+			width: 130px;
+			margin: 0 2px;
+			text-align: center;
+			padding: 20px;
+			
+			img {
+				@extend %border-radius;
+			}
+			
+			&.slick-center {
+				@extend %border-radius;
+				box-shadow:  0 0 0 2px $c-green--darker;
+				border: 0;
+				padding: 0;
+			}
+		}
+		
+	}
+	
+	&__stickers {
+		@extend %abs;
+		top: 0; right: 0;
+		
+		.o-sticker {
+			@extend %rel;
+			float: left;
+			margin-right: 10px;
+			
+			span {
+				position: absolute;
+				top: 50px;
+				left: 0;
+				line-height: 1.1;
+				padding: 0 10px;
+				width: 100%;
+				text-align: center;
+				font-size: 11px;
+				color: white;
+			}
+			
+			&:after {
+				top: 18px;
+			}
+		}
+	}
+}

@@ -1,3 +1,4 @@
+/*
 (function(window, document, $, mint, undefined) {
 	'use strict';
 	
@@ -70,3 +71,4 @@
 }(window, document, jQuery, window.mint = window.mint || {}));
 
 
+*/

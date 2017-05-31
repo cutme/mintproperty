@@ -14,10 +14,34 @@
 		left: -50%; top: -50%;
 		width: 66px; height: 66px;
 		background-color: rgba($c-green, .2);
-		border-radius: 50%;
-		
-		
-		
-		
+		border-radius: 50%;	
+	}
+}
+
+.o-dot-2 {
+	@extend %anim-slow;
+	opacity: 0;
+	position: absolute;	
+	width: 110px; height: 110px;
+	border-radius: 50%;
+	border: 1px solid $c-green;
+	
+	&:before {
+		@extend %abs-after;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+		width: 55px; height: 55px;
+		background-color: rgba($c-green, .2);
+		border-radius: 50%;	
+	}
+	
+	&:after {
+		@extend %abs-after;
+		z-index: 10;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+		width: 17px; height: 17px;
+		background-color: $c-green;
+		border-radius: 50%;	
 	}
 }

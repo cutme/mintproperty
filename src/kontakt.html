@@ -3,6 +3,12 @@
 @@include('./includes/head.html')
 <body>
 
+	@@include('./includes/cookies.html')
+	
+	
+	<div class="c-container">
+
+
 	@@include('./includes/top.html')
 
 
@@ -95,7 +101,7 @@ pon - pt 9:30-17:30<br>
 	</div>
 
 
-	<div class="c-contact-map">
+	<div class="c-contact-map" id="contact-map">
 		<div id="pin" class="c-contact-map__pin">
 			<div class="c-contact-map__marker">
 				<img src="img/icons/pin.svg" alt="" width="71" height="98">
@@ -249,7 +255,11 @@ pon - pt 9:30-17:30<br>
 	</div>
 
 
-	@@include('./includes/shortcuts.html') 
+	@@include('./includes/shortcuts.html')
+	
+	</div>
+
+
 	@@include('./includes/footer.html')
 	@@include('./includes/scripts.html')
 

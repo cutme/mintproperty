@@ -1,0 +1,21 @@
+.c-bathrooms {
+	@extend %rel;
+	top: 4px;
+
+	a {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-color: $c-gray--brightest;
+		border-radius: 50%;
+		margin-right: 2px;
+		text-align: center;
+		line-height: 20px;
+		font-size: em(10);
+		color: white;
+		
+		&:hover {
+			background-color: $c-green--darker;
+		}
+	}
+}

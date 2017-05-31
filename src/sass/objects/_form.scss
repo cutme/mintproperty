@@ -23,6 +23,11 @@ input {
 		}
 	}
 	
+	&.small {
+		height: 35px;
+	}
+	/*
+
 	&[type=checkbox],
 	&[type=radio] {
 		display: none;
@@ -45,26 +50,20 @@ input {
 			
 			span {
 				float: left;
-				width: grid(460, 520);
-				padding-left: 6px;
-				font-size: em(11);
-				
-				@media screen and ( max-width: $smartphone_portrait + px ) {
-					width: grid(400, 520);
-				}
+				//padding-left: 6px;
+				font-size: em(11);				
 			}
 		}
 		
 		&:checked {
 			& + label {
 				i {
-					background-color: white;
-					
-					
+					background-color: white;					
 				}
 			}
 		}
 	}
+*/
 }
 
 textarea {
@@ -77,11 +76,13 @@ textarea {
 	}
 }
 
+input[type=radio],
 input[type=checkbox] {
 	display: none;
-	
+
 	& + label {
 		i {
+			float: left;
 			height: 20px;
 			width: 20px;
 			background-color: $c-white--darker;
@@ -89,7 +90,7 @@ input[type=checkbox] {
 			cursor: pointer;
 			vertical-align: middle;
 			font-size: em(12);
-			padding: 2px 0 0 2px;
+			padding: 4px 0 0 2px;
 			color: $c-gray--brighter;
 			
 			&:before {
@@ -98,10 +99,10 @@ input[type=checkbox] {
 		}
 
 		span {
+			float: left;
 			padding: 2px 0 0 10px;
 			vertical-align: middle;
 			font-size: em(13) !important;
-			color: $c-gray--brighter;
 		}
 	}
 	
@@ -142,9 +143,6 @@ input[type=checkbox] {
 	}
 	
 	&__captcha {
-		width: 280px;
-		height: 60px;
-		border-radius: 30px;
 		text-align: center;
 		border: 1px solid $c-gray--brightest;
 
@@ -152,18 +150,10 @@ input[type=checkbox] {
 			display: inline-block;
 		}
 	}
-	
-	&__code {
-		width: 280px;
-		height: 45px;
-	}
 }
 
 
 
 
 
-@include input-placeholder {
-	
-	color: $c-gray--brighter;
-}
+
