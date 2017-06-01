@@ -22,6 +22,15 @@
 	    width: grid(380);
     }
     
+    &--addresses {
+	    margin-bottom: 30px;
+    }
+    
+    &--follow {
+    	@extend %clear;
+	    margin-bottom: 40px;
+    }
+    
     .gutter-sizer {
 	    width: grid(20);
     }
