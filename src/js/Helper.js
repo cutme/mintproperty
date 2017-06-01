@@ -7,6 +7,7 @@
         	exist: exist,
         	blazy: blazy,
         	goToTarget: goToTarget,
+        	language: language,
         	mapstyle: mapstyle,
         	nSelect: nSelect
         };
@@ -67,6 +68,16 @@
 		}, {
 			easing: 'easeOutCubic',
 			duration: 500
+		});
+	}
+	
+	function language() {
+		var el = document.getElementById('language');
+		
+		$(document).on('change', el, function() {
+			var url = $('option:selected', el).val();
+			
+			if (url) window.location = url;
 		});
 	}
 

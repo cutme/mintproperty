@@ -1,4 +1,8 @@
 .c-top {
 	height: 120px;
 	border-bottom: 1px solid $c-gray--brightest;
+	
+	.o-wrap {
+		z-index: 20;
+	}
 }

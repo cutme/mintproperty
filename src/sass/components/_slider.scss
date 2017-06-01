@@ -55,7 +55,7 @@
 				color: $c-green--darker;
 			}
 		}
-	}
+	}	
 	
 	.slick-active {
 		article {
@@ -64,12 +64,27 @@
 		}
 	}
 	
+	.slick-arrow {
+		
+		@media screen and ( max-width: 1200px ) {
+			display: none;
+		}
+	}
+	
 	.slick-prev {
 		left: calc( (100% - 1180px) / 2 - 90px ); 
+		
+		@media screen and ( max-width: $base + 180px ) {
+			left: 20px;
+		}
 	}
 	
 	.slick-next {
 		right: calc( (100% - 1180px) / 2 - 90px ); 
+		
+		@media screen and ( max-width: $base + 180px ) {
+			right: 20px;
+		}
 	}
 }
 

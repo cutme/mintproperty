@@ -26,14 +26,14 @@
 		right: 10px; top: 0;
 		display: block;
 		font-family: 'icomoon';
-		content: "\e904";
+		content: "\e925";
 		width: 48px; height: 46px;
 		padding-left: 4px;
 		text-align: center;
-		font-size: em(16);
-		transform-origin: 50% 50%;
+		font-size: em(10);
+		//transform-origin: 50% 50%;
 		transition: all 0.15s ease-in-out;
-		transform: rotate(90deg);
+		//transform: rotate(90deg);
 	}
 	
 	.list {
@@ -61,6 +61,43 @@
 		}
 	}
 	
+	&.mini {
+		background-color: white;
+		height: 20px;
+		line-height: 20px;
+		padding-left: 15px;
+		font: {
+			size: em(14);
+			weight: $regular;
+		}
+		color: $c-gray--brighter;
+
+		&:after {
+			width: 20px;
+			height: 20px;
+			font-size: em(7);
+			color: $c-gray--brighter;
+		}
+		
+		.current {
+			text-transform: uppercase;
+		}
+		
+		.list {
+			background-color: white;
+			border: 1px solid $c-white--darker;
+			padding: 5px 15px;
+			border-radius: 15px;
+			color: $c-gray--brighter;
+		}
+		
+		.option {
+			text-transform: uppercase;
+			line-height: 1.5;
+			font-size: em(14);
+		}
+	}
+	
 	&.small {
 		height: 35px;
 		line-height: 35px;
@@ -71,7 +108,7 @@
 		&:after {
 			right: 0;
 			height: 35px;
-			font-size: em(14);
+			font-size: em(8);
 			color: $c-gray--brighter;
 		}
 		
@@ -92,7 +129,7 @@
 	}
 
 	&.open:after {
-		transform: rotate(270deg);
+		transform: scaleY(-1); //rotate(180deg);
 		//transform: rotate(-180deg);
 	}
 	

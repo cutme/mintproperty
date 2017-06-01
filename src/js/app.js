@@ -6,7 +6,9 @@
 	$(document).ready(function() {
 		
 		mint.Helper.cookies();
+		mint.Helper.language();
 		mint.Helper.exist('.b-lazy') && mint.Helper.blazy();
+
 		
 		mint.Helper.exist('#contact-map') && mint.ContactMap.init();
 		mint.Helper.exist('#filters') && mint.Filters.init();
