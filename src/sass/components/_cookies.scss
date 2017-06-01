@@ -49,5 +49,20 @@
 		margin-left: 20px;
 		padding: 0 25px;
 		font-size: em(13);
+		
+		&--white-fill {
+			&:hover {
+				background-color: transparent !important;
+				border-color: white;
+				color: white;
+			}
+		}
+		
+		&--white-empty {
+			&:hover {
+				background-color: white !important;
+				color: $c-green--darker;
+			}
+		}
 	}
 }
