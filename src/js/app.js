@@ -1,3 +1,8 @@
+window.paceOptions = {
+  elements: {
+    selectors: ['img']
+  }
+};
 
 (function(window, document, $, mint, undefined) {
 	'use strict';
