@@ -25,7 +25,8 @@
     "js-cookie": "^2.1.4",
     "nouislider": "noUiSlider#^10.0.0",
     "wnumb": "^1.1.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "PACE": "pace#^1.0.2"
   },
   "overrides": {
     "outlayer": {
