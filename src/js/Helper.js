@@ -72,10 +72,8 @@
 	}
 	
 	function language() {
-		var el = document.getElementById('language');
-		
-		$(document).on('change', el, function() {
-			var url = $('option:selected', el).val();
+		$(document).on('change', '#language', function() {
+			var url = $('option:selected', '#language').val();
 			
 			if (url) window.location = url;
 		});
