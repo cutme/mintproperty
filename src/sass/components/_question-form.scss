@@ -40,18 +40,18 @@
 
 	.o-btn {
 		@extend %flex;
-		@extend %flex-x;
-		
+		@extend %flex-x;		
+	}	
+	
+	> .o-btn {
 		&:hover {
-			background: white;
-			border-color: $c-green--darker;
-			color: $c-green--darker;
+			box-shadow: rgba(black, .2) 0 0 13px;
 
 			&:after {
 				display: none;
-			}
-		}
-	}	
+			}			
+		}	
+	}
 
 	.o-form {
 		@extend %rel;
@@ -66,6 +66,20 @@
 	
 	.o-form__code {
 		width: 110px;
+	}
+	
+	.o-form__submit {
+		.o-btn {
+			&:hover {
+				background: white;
+				border-color: $c-green--darker;
+				color: $c-green--darker;
+	
+				&:after {
+					display: none;
+				}
+			}
+		}
 	}
 	
 	.o-form__row--summary {
