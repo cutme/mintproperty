@@ -60,7 +60,8 @@
 	.slick-active {
 		article {
 			display: block;
-			animation: fadeInFromBlur 2s ease-out;
+			animation: slide-in-bottom 2s ease-out;
+			//animation: fadeInFromBlur 2s ease-out;
 		}
 	}
 	

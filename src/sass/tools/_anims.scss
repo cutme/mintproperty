@@ -28,23 +28,5 @@
     }
 }
 
-@keyframes fadeInFromBlur {
-    0% {
-        display: none;
-        opacity: 0;
-        filter: blur(50px);
-		transform: translateY(20px);
-    }
 
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-        filter: blur(0);
-		transform: translateY(0);
-    }
-}
+@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
