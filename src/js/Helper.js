@@ -60,8 +60,9 @@
 	
 	function goToTarget(target, offset) {
 		var $viewport = $('body, html'), 
-			o = $(target).offset().top,
-			offset = offset || 0;		
+			o = $(target).offset().top;
+			
+		//offset = offset || 0;		
 
 		$viewport.animate({
 			scrollTop: o + offset

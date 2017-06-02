@@ -212,11 +212,11 @@
 			});
 		}
 		
-		mint.Helper.exist('#bathrooms') && bathrooms();
-		mint.Helper.exist('#slider-floor') && floor();
-		mint.Helper.exist('#slider-area') && area();
-		mint.Helper.exist('#slider-price') && price();	
-		mint.Helper.exist('#slider-rooms') && rooms();	
+		if (mint.Helper.exist('#bathrooms')) bathrooms();
+		if (mint.Helper.exist('#slider-floor')) floor();
+		if (mint.Helper.exist('#slider-area')) area();
+		if (mint.Helper.exist('#slider-price')) price();	
+		if (mint.Helper.exist('#slider-rooms')) rooms();	
 		
 	};
 	

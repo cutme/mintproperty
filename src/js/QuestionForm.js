@@ -19,7 +19,7 @@
 		show.on('click', function(e) {
 			e.preventDefault();
 			$(form).addClass('is-active');
-			mint.Helper.goToTarget('#questionForm', -20)
+			mint.Helper.goToTarget('#questionForm', -20);
 		});
 		
 		close.on('click', function(e) {

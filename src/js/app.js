@@ -7,30 +7,29 @@
 		
 		mint.Helper.cookies();
 		mint.Helper.language();
-		mint.Helper.exist('.b-lazy') && mint.Helper.blazy();
+		if (mint.Helper.exist('.b-lazy')) mint.Helper.blazy();
 
 		
-		mint.Helper.exist('#contact-map') && mint.ContactMap.init();
-		mint.Helper.exist('#filters') && mint.Filters.init();
-		mint.Helper.exist('#locationMap') && mint.LocationMap.init();
-		mint.Helper.exist('#masonry') && masonryInit();
-		mint.Helper.exist('#accordion') && mint.Accordion.init();
+		if (mint.Helper.exist('#contact-map')) mint.ContactMap.init();
+		if (mint.Helper.exist('#filters')) mint.Filters.init();
+		if (mint.Helper.exist('#locationMap')) mint.LocationMap.init();
+		if (mint.Helper.exist('#masonry')) masonryInit();
+		if (mint.Helper.exist('#accordion')) mint.Accordion.init();
 		
 		
-		mint.Helper.exist('#homeSlider') && mint.Slider.init();
-		mint.Helper.exist('#offerCarousel') && mint.OfferCarousel.init();
-		//mint.Helper.exist('#offersOnMap') && mint.OffersOnMap.init();
-		mint.Helper.exist('#questionForm') && mint.QuestionForm.init();
-		mint.Helper.exist('#shortcuts') && mint.Shortcuts.init();
+		if (mint.Helper.exist('#homeSlider')) mint.Slider.init();
+		if (mint.Helper.exist('#offerCarousel')) mint.OfferCarousel.init();
+		if (mint.Helper.exist('#questionForm')) mint.QuestionForm.init();
+		if (mint.Helper.exist('#shortcuts')) mint.Shortcuts.init();
 		
 		
 		
-		mint.Helper.exist('.mfp-image') && mint.Magnific.images();
-		mint.Helper.exist('.mfp-video') && mint.Magnific.video();
+		if (mint.Helper.exist('.mfp-image')) mint.Magnific.images();
+		if (mint.Helper.exist('.mfp-video')) mint.Magnific.video();
 		
-		mint.Helper.exist('.nice-select') && mint.Helper.nSelect();
-		mint.Helper.exist('#rentSale') && mint.Switcher.rentSale();
-		mint.Helper.exist('#viewType') && mint.Switcher.viewType();
+		if (mint.Helper.exist('.nice-select')) mint.Helper.nSelect();
+		if (mint.Helper.exist('#rentSale')) mint.Switcher.rentSale();
+		if (mint.Helper.exist('#viewType')) mint.Switcher.viewType();
 	});
 
 

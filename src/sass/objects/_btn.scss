@@ -16,7 +16,14 @@
 		height: 50px;
 	}
 	
+	&--block {
+		display: flex;
+		padding: 0;
+		justify-content: center;
+	}
+	
 	&--small {
+		padding: 0 24px;
 		height: 35px;
 		font-size: em(13);
 	}
@@ -111,6 +118,10 @@
 		}
 	}
 	
+	&--long {
+		padding: 0 60px !important;
+	}
+		
 	&--white-empty {
 		border-color: white;
 		color: white;

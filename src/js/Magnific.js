@@ -67,7 +67,7 @@
 				}
 			}
 		});
-	}
+	};
 	
 	mint.Magnific = new Magnific();
 

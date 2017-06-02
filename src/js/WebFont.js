@@ -3,7 +3,7 @@
 			families: ['Lato:100,300,700:latin-ext']
 		},
 		active: function() { 
-			mint.Helper.exist('#masonry') && triggerMasonry();
+			if (mint.Helper.exist('#masonry')) triggerMasonry();
 		}
 	};
 

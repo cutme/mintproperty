@@ -43,7 +43,8 @@
 			            google.maps.event.removeListener(z);
 			            smoothZoom(map, max, cnt + 1);
 			        });
-			        setTimeout(function(){map.setZoom(cnt)}, 80); // 80ms is what I found to work well on my system -- it might not work well on all systems
+			        setTimeout(function(){map.setZoom(cnt);}, 80); 
+			        // 80ms is what I found to work well on my system -- it might not work well on all systems
 			    }
 			}  
 
@@ -86,48 +87,11 @@
 				map.fitBounds(bounds);
 				markers.push(marker);
 				
-				
 				// link to marker
 				google.maps.event.addListener(marker, 'click', function() {
 					window.location.href = marker.url;
 				});
-
-
-				// auto center map on marker click
-				/*
-				google.maps.event.addListener(marker, 'click', function() {
-					latPos = String( this.getPosition().lat() ).split('.').join('');
-					
-					// Przesun
-					map.panTo(this.getPosition());
-					
-					// Przybliz
-					smoothZoom(map, 14, map.getZoom());
-
-					// Pobierz pozycje
-					targetPosition = this.posY;
-
-					// usun wszystkie aktywne miejsca
-					$('.addresses .row').removeClass('is-active');
-
-					// szukaj adresu (wiersza) z zadanym ID
-					rowId = $('#marker-'+latPos);
-					
-					console.log('#marker-'+latPos);
-					
-					// przesun liste pod wskazany adres
-					$('.column.content').animate({
-						scrollTop: targetPosition - 135
-					}, {
-						duration: 1500
-					});
-					
-					// dodaj aktywna klase
-					rowId.addClass('is-active');
-				});
-				*/
-
-			}
+			}			
 		}
 
 
@@ -158,28 +122,30 @@
 	
 			deleteMarkers();
 			addMarkers(locations);
-	}
+	};
 	
 	
 	OffersOnMap.prototype.googleMap = function() {
 	
 	
-	}
+	};
 
 
 	OffersOnMap.prototype.init = function() {
+	
+		function initialize() {
+		
+	        map = new google.maps.Map(container, mapOptions);
+
+			var myLatlng = new google.maps.LatLng(lat, lng);
+			
+			OffersOnMap.prototype.getLocations(map);
+			
+			initialized= true;
+	    }
 
 		if (initialized === false) {
-			function initialize() {
-		
-		        map = new google.maps.Map(container, mapOptions);
-	
-				var myLatlng = new google.maps.LatLng(lat, lng);
-				
-				OffersOnMap.prototype.getLocations(map);
-				
-				initialized= true;
-		    }
+			
 		    
 			$.getScript('https://www.google.com/jsapi', function()
 			{
