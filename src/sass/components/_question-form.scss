@@ -41,6 +41,16 @@
 	.o-btn {
 		@extend %flex;
 		@extend %flex-x;
+		
+		&:hover {
+			background: white;
+			border-color: $c-green--darker;
+			color: $c-green--darker;
+
+			&:after {
+				display: none;
+			}
+		}
 	}	
 
 	.o-form {

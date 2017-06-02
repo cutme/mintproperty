@@ -2,9 +2,13 @@
 	width: grid(580);
 	margin: 0 auto 40px auto;
 	
-	&[type=checkbox],
-	&[type=radio] {
+	input[type=checkbox] {
 		& + label {
+			i {
+				@extend %rel;
+				top: 2px;
+			}
+
 			span {
 				//width: grid(460, 520);
 				color: $c-gray--brighter;

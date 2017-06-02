@@ -1,21 +1,24 @@
 .c-switcher {
 	//@extend %anim-slow;
 	@extend %abs;
-	@extend %animfix;
+	//@extend %animfix;
 	top: 50%;
-	transition-delay: 2s;
+	//transform: none;
+	//transition-delay: 2s;
 	
 	&--center {
-		left: 50%;
-		transform: translate(-50%, calc(-50% - 10px));
+		left: calc(50% - 120px);
+		top: calc(50% - 30px);
+//		transform: translate(-50%, calc(-50% - 10px));
 	}
 	
 	&--right {
-		transform: translateY(100%);
+		//transform: translateY(100%);
+		top: calc(50% - 30px);
 		right: 0;
 		
 		&.is-visible {
-			transform: translateY(calc(-50% - 10px));
+			//transform: translateY(calc(-50% - 10px));
 		}
 	}
 	
@@ -27,7 +30,6 @@
 
 	.o-btn {
 		float: left;
-		border-color: $c-green--darker;
 		font-size: em(13);
 		
 		&:first-of-type {

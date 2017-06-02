@@ -117,8 +117,8 @@ gulp.task('fileinclude', function() {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(w3cjs())
-        .pipe(w3cjs.reporter())
+        //.pipe(w3cjs())
+        //.pipe(w3cjs.reporter())
         .pipe(gulp.dest('web/'))
         .pipe(browserSync.stream());        
 });

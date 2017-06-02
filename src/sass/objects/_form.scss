@@ -26,44 +26,6 @@ input {
 	&.small {
 		height: 35px;
 	}
-	/*
-
-	&[type=checkbox],
-	&[type=radio] {
-		display: none;
-		
-		& + label {
-			i {
-				@extend %anim;
-				float: left;
-				height: 24px;
-				width: 24px;
-				border: 2px solid white;
-				margin-right: 10px;
-				vertical-align: middle;
-				cursor: pointer;
-				
-				.has-error & {
-					border-color: $c-red;
-				}
-			}
-			
-			span {
-				float: left;
-				//padding-left: 6px;
-				font-size: em(11);				
-			}
-		}
-		
-		&:checked {
-			& + label {
-				i {
-					background-color: white;					
-				}
-			}
-		}
-	}
-*/
 }
 
 textarea {
