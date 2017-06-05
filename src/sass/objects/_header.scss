@@ -5,6 +5,10 @@
 		@extend %rel;
 		margin-bottom: 30px;
 		overflow: hidden;
+		
+		@media screen and ( min-width: $tablet_portrait + px ) {
+			padding-right: 240px;
+		}
 
 		.title {
 			line-height: 1;
@@ -17,13 +21,13 @@
 	
 	&--type-2 {
 		@extend %rel;
-		padding-bottom: 20px;
+		padding-bottom: 20px;		
 
 		.title {
 			font: {
 				size: em(20);
 				weight: $bold;
-			}
+			}			
 		}
 	}
 	

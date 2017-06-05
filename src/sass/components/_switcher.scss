@@ -1,25 +1,25 @@
 .c-switcher {
-	//@extend %anim-slow;
 	@extend %abs;
-	//@extend %animfix;
 	top: 50%;
-	//transform: none;
-	//transition-delay: 2s;
-	
+
 	&--center {
 		left: calc(50% - 120px);
 		top: calc(50% - 30px);
-//		transform: translate(-50%, calc(-50% - 10px));
 	}
 	
 	&--right {
-		//transform: translateY(100%);
-		top: calc(50% - 30px);
-		right: 0;
-		
-		&.is-visible {
-			//transform: translateY(calc(-50% - 10px));
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			top: calc(50% - 30px);
+			right: 0;
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			@extend %clear;
+			position: relative;
+			top: auto;
+			margin-bottom: 20px;
+		}
+		
 	}
 	
 	&.big {
@@ -30,16 +30,24 @@
 
 	.o-btn {
 		float: left;
+		
 		font-size: em(13);
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: 50%;
+			justify-content: center;
+		}
 		
 		&:first-of-type {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
+			border-color: $c-green--darker;
 		}
 		
 		&:last-of-type {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
+			border-left: 0;
 		}
 		
 		&.rent {

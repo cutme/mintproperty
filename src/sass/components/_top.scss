@@ -1,8 +1,18 @@
 .c-top {
+	@extend %rel;
+	@extend %anim-slow;
 	height: 120px;
 	border-bottom: 1px solid $c-gray--brightest;
 	
+	.mobile-menu & {
+		position: static;
+	}
+	
 	.o-wrap {
-		z-index: 20;
+		z-index: 30;
+	}
+	
+	.mobile-menu & {
+		height: 100vh;
 	}
 }

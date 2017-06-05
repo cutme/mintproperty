@@ -20,6 +20,10 @@
 			size: em(18);
 			weight: $bold;
 		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(14);
+		}
 	}
 	
 	img {
@@ -35,6 +39,11 @@
 		margin-bottom: 20px;
 		padding-bottom: 20px;
 		border-bottom: 1px solid $c-gray--brightest;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+		}
 		
 		&:after {
 			@extend %abs-after;
@@ -58,6 +67,10 @@
 	
 	&__caption {
 		padding: 20px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 12px;
+		}
 	}
 	
 	&__photo {
@@ -76,7 +89,7 @@
 	}
 	
 	&.is-hidden {
-		transform: translateY(40px);
+		//transform: translateY(40px);
 	}
 	
 	&:hover {
@@ -106,9 +119,23 @@
 	.num {
 		font-size: em(11);
 		color: $c-gray--brighter;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(10);
+		}
+	}
+	
+	.price {
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(14);
+		}
 	}
 	
 	.size {
 		color: $c-gray;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			font-size: em(12);
+		}
 	}
 }

@@ -7,5 +7,10 @@
 		i {
 			@extend %arrow-down;
 		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			display: flex;
+		    justify-content: center;
+	    }
 	}
 }

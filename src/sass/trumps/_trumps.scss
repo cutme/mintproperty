@@ -7,11 +7,14 @@
 }
 
 .is-hidden {
-	opacity: 0;
+	//opacity: 0;
 }
 
 .margin-100 {
-	margin-bottom: 100px;
+	
+	@media screen and ( min-width: $smartphone + 1px ) {
+		margin-bottom: 100px;
+	}
 }
 
 .no-scroll {

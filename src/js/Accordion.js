@@ -3,36 +3,28 @@
 	
 	var Accordion = mint.Accordion = function () { };
 	
-	Accordion.prototype.init = function() {
+	Accordion.prototype.init = function(el) {
 		var trigger = document.querySelector('.js-accNav');
 		
 
-		$(document).on('click', '.js-accNav', function(e) {
+		$(el).on('click', '.js-accNav', function(e) {
 			e.preventDefault();	
 			
-			var $$ = $(this);
+			var $$ = $(this),
+				nav = $('.js-accNav', el),
+				content = $('.js-accContent', el);			
 			
 			if ($$.hasClass('is-active')) {
-				$('.js-accNav').removeClass('is-active');
-				$('.c-accordion__content').slideUp();
+				nav.removeClass('is-active');
+				content.slideUp();
 			} else {
-				$('.js-accNav').removeClass('is-active');
-				$('.c-accordion__content').slideUp();
-					$$.addClass('is-active');
-					$$.next('.c-accordion__content').slideDown();
-					
-					//var target = '#'+$$.attr('id');
-					//mint.Helper.goToTarget(target);
+				nav.removeClass('is-active');
+				content.slideUp();
 
+				$$.addClass('is-active');
+				$$.next(content).slideDown();					
 			}
-			
-					
-			
-			
-
-		});
-		
-		
+		});		
 	};
 	
 	mint.Accordion = new Accordion();

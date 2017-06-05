@@ -5,6 +5,11 @@
 		.c-grid {
 			padding-bottom: 20px;
 			border-bottom: 1px solid $c-gray--brightest;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				border: none;
+			}
+			
 		}
 	}
 	

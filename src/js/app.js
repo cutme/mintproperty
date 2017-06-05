@@ -7,6 +7,7 @@
 		
 		mint.Helper.cookies();
 		mint.Helper.language();
+		mint.Menu.init();
 		if (mint.Helper.exist('.b-lazy')) mint.Helper.blazy();
 
 		
@@ -14,7 +15,8 @@
 		if (mint.Helper.exist('#filters')) mint.Filters.init();
 		if (mint.Helper.exist('#locationMap')) mint.LocationMap.init();
 		if (mint.Helper.exist('#masonry')) masonryInit();
-		if (mint.Helper.exist('#accordion')) mint.Accordion.init();
+		if (mint.Helper.exist('#accordion')) mint.Accordion.init('#accordion');
+		if (mint.Helper.exist('#shortcuts')) mint.Accordion.init('#shortcuts');
 		
 		
 		if (mint.Helper.exist('#homeSlider')) mint.Slider.init();

@@ -18,7 +18,8 @@
 
 <body>
 
-		<div class="c-cookies move-out" id="cookies">
+	
+	<div class="c-cookies move-out" id="cookies">
 		<div class="o-wrap">
 			<div class="c-cookies__title">
 				<img src="img/other/cookies.png" alt="cookies" width="76" height="70" />
@@ -34,6 +35,7 @@
 		<a href="#" class="icon-close js-close"></a>
 	</div>
 
+
 	
 	
 	<div class="c-container">
@@ -45,22 +47,6 @@
 			<a href="index.html" class="c-logo">
 				<img src="img/logos/mint-property.svg" alt="Mint Property" width="106" height="62">
 			</a>
-			
-			<nav class="c-cities">
-				<ul>
-					<li class="is-active">
-						<a href="#">kraków</a>
-					</li>
-					
-					<li>
-						<a href="#">rzeszów</a>
-					</li>
-					
-					<li>
-						<a href="#">dębica</a>
-					</li>				                
-				</ul>
-			</nav>
 			
 			<nav class="c-menu">
 				<ul>
@@ -92,10 +78,30 @@
 						<a href="kontakt.html">Kontakt</a>
 					</li>
 				</ul>
+				
+				<div class="c-cities">
+					<ul>
+						<li class="is-active">
+							<a href="#">kraków</a>
+						</li>
+						
+						<li>
+							<a href="#">rzeszów</a>
+						</li>
+						
+						<li>
+							<a href="#">dębica</a>
+						</li>				                
+					</ul>
+				</div>
 			</nav>
+
 			
+
 			<div class="c-fav">
-				<a href="schowek.html" class="o-btn o-btn--gray-empty"><i class="icon-your-property"></i> Twoje nieruchomości <small id="fav-all">(14)</small></a>
+				<a href="schowek.html" class="o-btn o-btn--gray-empty">
+					<i class="icon-your-property"></i> <span>Twoje nieruchomości</span> <small id="fav-all">(14)</small>
+				</a>
 			</div>
 			
 			<div class="c-metaselects">
@@ -121,7 +127,7 @@
 				<button type="submit" class="icon-search"></button>
 			</form>
 			
-			<i class="icon-hamburger c-mobile-nav-btn" id="mobileMenu"></i>
+			<i class="icon-hamburger c-mobile-nav-btn is-active" id="mobileMenu"></i>
 		</div>
 	</div>
 
@@ -151,7 +157,7 @@
 				</select>
 			</div>
 			
-			<div class="c-filters__item">
+			<div class="c-filters__item slider">
 				<p class="c-filters__title">Cena
 					<span class="c-filters__info">
 						<span class="min">Min</span>-<span class="max">Max</span>
@@ -161,7 +167,7 @@
 				<div id="slider-price"></div>
 			</div>
 			
-			<div class="c-filters__item">
+			<div class="c-filters__item slider">
 				<p class="c-filters__title">Powierzchnia
 					<span class="c-filters__info">
 						<span class="min">Min</span>-<span class="max">Max</span>
@@ -171,7 +177,7 @@
 				<div id="slider-area"></div>
 			</div>
 			
-			<div class="c-filters__item">
+			<div class="c-filters__item slider">
 				<p class="c-filters__title">Liczba pokoi
 					<span class="c-filters__info">
 						<span class="min">1</span>-<span class="max">Max</span>
@@ -181,7 +187,7 @@
 				<div id="slider-rooms"></div>
 			</div>
 
-			<div class="c-filters__item medium">
+			<div class="c-filters__item longinmobile c-filters__item--numoffers medium">
 			
 				<div class="c-filters__item--small medium" id="bathrooms">
 					<p class="c-filters__title">Liczba łazienek</p>
@@ -198,82 +204,83 @@
 					</div>
 				</div>	
 				
-				<div class="c-filters__item--small">
-					<p class="c-filters__title">Liczba ofert: <span class="results_num">123</span></p>
+				<div class="c-filters__item--small js-start">
+					<p class="c-filters__title c-filters__offersNum js-offersNum">Liczba ofert: <span class="results_num">123</span></p>
 					
-					<a href="#" class="o-btn o-btn--small o-btn--green-empty o-btn--block">Pokaż</a>
+					<div class="c-filters__submit js-submit">
+						<a href="#" class="o-btn o-btn--small o-btn--green-empty o-btn--block">Pokaż</a>
+					</div>
 				</div>	
 			
 			</div>
 
 
 
-			<div class="c-filters__more js-allFilters">
-				<div class="c-filters__item sale">
-					<p class="c-filters__title">Rynek</p>
-	
-					<select class="nice-select small">
-						<option>Dowolny</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item">
-					<p class="c-filters__title">Typ budynku</p>
-	
-					<select class="nice-select small">
-						<option>Dowolny</option>
-						<option>Apartamentowiec</option>
-						<option>Kamienica</option>
-						<option>Blok</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item">
-					<p class="c-filters__title">Piętro
-						<span class="c-filters__info">
-							<span class="min">Min</span>-<span class="max">Max</span>
-						</span>
-					</p>
-	
-					<div id="slider-floor"></div>
-				</div>
-				
-				<div class="c-filters__item sale">
-					<p class="c-filters__title">Stan wykończenia</p>
-	
-					<select class="nice-select small">
-						<option>Dowolny</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item medium--sale">
-					<p class="c-filters__title">Inwestycja</p>
-	
-					<select class="nice-select small">
-						<option>Dowolna</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item">
-					<p class="c-filters__title">Dzielnica</p>
-	
-					<select class="nice-select small">
-						<option>Wszystkie</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item rent medium--rent">
-					<p class="c-filters__title">Umeblowanie</p>
-	
-					<select class="nice-select small">
-						<option>Dowolne</option>
-					</select>
-				</div>
-				
-				<div class="c-filters__item wide">
-					<p class="c-filters__title">&nbsp;</p>
-					
-					<div class="c-filters__checkbox">
+
+			<div class="c-filters__item moreOption sale">
+				<p class="c-filters__title">Rynek</p>
+
+				<select class="nice-select small">
+					<option>Dowolny</option>
+				</select>
+			</div>
+			
+			<div class="c-filters__item moreOption rent sale">
+				<p class="c-filters__title">Typ budynku</p>
+
+				<select class="nice-select small">
+					<option>Dowolny</option>
+					<option>Apartamentowiec</option>
+					<option>Kamienica</option>
+					<option>Blok</option>
+				</select>
+			</div>
+			
+			<div class="c-filters__item slider moreOption rent sale">
+				<p class="c-filters__title">Piętro
+					<span class="c-filters__info">
+						<span class="min">Min</span>-<span class="max">Max</span>
+					</span>
+				</p>
+
+				<div id="slider-floor"></div>
+			</div>
+			
+			<div class="c-filters__item moreOption sale">
+				<p class="c-filters__title">Stan wykończenia</p>
+
+				<select class="nice-select small">
+					<option>Dowolny</option>
+				</select>
+			</div>
+			
+			<div class="c-filters__item moreOption rent sale medium--sale">
+				<p class="c-filters__title">Inwestycja</p>
+
+				<select class="nice-select small">
+					<option>Dowolna</option>
+				</select>
+			</div>
+			
+			<div class="c-filters__item moreOption rent sale">
+				<p class="c-filters__title">Dzielnica</p>
+
+				<select class="nice-select small">
+					<option>Wszystkie</option>
+				</select>
+			</div>
+			
+			<div class="c-filters__item longinmobile moreOption rent medium medium--rent">
+				<p class="c-filters__title">Umeblowanie</p>
+
+				<select class="nice-select small">
+					<option>Dowolne</option>
+				</select>
+			</div>				
+			
+			<div class="c-filters__item moreOption rent sale wide">
+				<div class="c-checkboxes">					
+					<div class="c-checkboxes__item">
 						<input type="checkbox" checked id="option-1">
 						<label for="option-1">
 							<i class="icon-checkmark"></i>
@@ -281,7 +288,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-2">
 						<label for="option-2">
 							<i class="icon-checkmark"></i>
@@ -289,7 +296,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-3">
 						<label for="option-3">
 							<i class="icon-checkmark"></i>
@@ -297,7 +304,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-4">
 						<label for="option-4">
 							<i class="icon-checkmark"></i>
@@ -305,7 +312,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-5">
 						<label for="option-5">
 							<i class="icon-checkmark"></i>
@@ -313,7 +320,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-6">
 						<label for="option-6">
 							<i class="icon-checkmark"></i>
@@ -321,7 +328,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox">
+					<div class="c-checkboxes__item">
 						<input type="checkbox" id="option-7">
 						<label for="option-7">
 							<i class="icon-checkmark"></i>
@@ -329,7 +336,7 @@
 						</label>
 					</div>
 					
-					<div class="c-filters__checkbox rent">
+					<div class="c-checkboxes__item rent">
 						<input type="checkbox" id="option-8">
 						<label for="option-8">
 							<i class="icon-checkmark"></i>
@@ -338,18 +345,22 @@
 					</div>
 				</div>
 				
-				<div class="c-filters__item medium--rent pull-right">
+				<div class="c-filters__item keywords">
 					<p class="c-filters__title">Słowo kluczowe</p>
 	
 					<input type="text" class="small" placeholder="Zacznij wpisywać">
 				</div>
-			</div><!-- /more -->
+			</div>
+				
+				
+
+
 			
-			<div class="c-filters__item full">
+			<div class="c-filters__item full js-end">
 				<a href="#" class="c-filters__clear">
 					<i class="icon-close-2"></i>
 					<span>Wyczyść</span>
-				</a>
+				</a>				
 			</div>
 
 
@@ -374,13 +385,15 @@
 					<ul class="c-grid">
 						
 				<li class="c-grid__item js-location is-loading" data-lat="50.0623232" data-lng="19.9260243">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--exclusive">
 							<i class="icon-sticker"></i>
 						</div>
 						
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -402,9 +415,11 @@
 				</li>
 				
 				<li class="c-grid__item js-location is-loading" data-lat="50.0755806" data-lng="19.9220141">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -426,13 +441,15 @@
 				</li>
 				
 				<li class="c-grid__item js-location is-loading" data-lat="50.0492984" data-lng="19.9598932">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--sold">
 							<i class="icon-sticker"></i>
 						</div>
 						
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -455,13 +472,15 @@
 
 						
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--without-commission">
 							<i class="icon-sticker"></i>
 						</div>
 						
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -483,13 +502,15 @@
 				</li>
 				
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--rent-property">
 							<i class="icon-sticker"></i>
 						</div>
 
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -511,9 +532,12 @@
 				</li>
 				
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
+
 					<a href="oferta-detal.html" class="c-box is-hidden">
+					
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -536,9 +560,10 @@
 
 						
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -560,9 +585,10 @@
 				</li>
 				
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -584,9 +610,10 @@
 				</li>
 				
 				<li class="c-grid__item is-loading">
-					<div class="pl-wave"><div class="loader"><span></span></div></div>
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="c-box__photo">
+							<div class="pl-wave"><div class="loader"><span></span></div></div>
+							
 							<img 
 								class="b-lazy" 
 								src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
@@ -633,14 +660,14 @@
 			<header class="o-header o-header--type-1">
 				<h3 class="title">Wynajem</h3>
 			</header>
-			
-			<div class="c-shortcuts__cols c-shortcuts__cols--border">
-				<aside>
-					<header class="o-header o-header--type-2">
+
+			<ul class="c-shortcuts__cols c-shortcuts__cols--border">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">Polecane oferty</h4>
 					</header>
 					
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Bieńczyce</a>
 						</li>
@@ -721,14 +748,14 @@
 							<a href="#">Zwierzyniec</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">Popularne inwestycje</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -777,14 +804,14 @@
 							<a href="#">Parkowe Wzgórze (5)</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">W pobliżu uczelni</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -833,14 +860,14 @@
 							<a href="#">Parkowe Wzgórze (5)</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">W pobliżu biurowców</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -889,21 +916,21 @@
 							<a href="#">Parkowe Wzgórze (5)</a>
 						</li>
 					</ul>
-				</aside>
-			</div>
+				</li>
+			</ul>
 			
 			
 			<header class="o-header o-header--type-1">
 				<h3 class="title">Sprzedaż</h3>
 			</header>
 			
-			<div class="c-shortcuts__cols">
-				<aside>
-					<header class="o-header o-header--type-2">
+			<ul class="c-shortcuts__cols">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">Dzielnice</h4>
 					</header>
 					
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Bieńczyce</a>
 						</li>
@@ -984,14 +1011,14 @@
 							<a href="#">Zwierzyniec</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">Inwestycje - rynek pierwotny</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -1040,14 +1067,14 @@
 							<a href="#">Parkowe Wzgórze (5)</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">Inwestycje - rynek wtórny</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -1096,14 +1123,14 @@
 							<a href="#">Parkowe Wzgórze (5)</a>
 						</li>
 					</ul>
-				</aside>
+				</li>
 				
-				<aside>
-					<header class="o-header o-header--type-2">
+				<li>
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">W pobliżu uczelni</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">AGH</a>
 						</li>
@@ -1140,13 +1167,13 @@
 							<a href="#">UR</a>
 						</li>
 					</ul>
-					
-					
-					<header class="o-header o-header--type-2">
+
+
+					<header class="o-header o-header--type-2 js-accNav">
 						<h4 class="title">W pobliżu biurowców</h4>
 					</header>
 
-					<ul class="c-shortcuts__items">
+					<ul class="c-shortcuts__items js-accContent">
 						<li>
 							<a href="#">Angel City (3)</a>
 						</li>
@@ -1167,8 +1194,8 @@
 							<a href="#">Browar Lubicz (1)</a>
 						</li>
 					</ul>
-				</aside>
-			</div>
+				</li>
+			</ul>
 			
 			
 			<div class="c-shortcuts-btn c-shortcuts-btn--adv">

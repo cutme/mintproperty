@@ -6,6 +6,17 @@
 	top: 20px;
 	width: 120px;
 	
+	@media screen and ( max-width: $tablet + px ) {
+		display: none;
+		left: 10px;
+		right: auto;
+		
+		.mobile-menu & {
+			display: block;
+		}
+	}
+	
+	
 	&__item {
 		@extend %rel;
 		float: left;

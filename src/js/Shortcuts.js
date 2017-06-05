@@ -5,7 +5,8 @@
 
 	Shortcuts.prototype.init = function() {
 
-		var btn_top = $('.c-shortcuts-btn--trigger'),
+		var body = document.getElementsByTagName('body'),
+			btn_top = $('.c-shortcuts-btn--trigger'),
 			shortcuts = document.getElementById('shortcuts'),
 			trigger = $('.js-shortcuts-trigger');
 
@@ -13,7 +14,8 @@
 			e.preventDefault();
 			btn_top.toggleClass('is-fixed');
 			
-			$(shortcuts).toggleClass('is-visible');
+			$(shortcuts).toggleClass('is-visible');			
+			$(body).toggleClass('no-scroll');
 		});
 	};
 		

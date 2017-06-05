@@ -9,27 +9,71 @@
 	};
 	
 	Filters.prototype.moreOptions = function() {
-		var btn = $('.js-moreOptions'),
-			all = $('.js-allFilters');
+		var el = document.getElementById('filters'),
+			btn = $('.js-moreOptions'),
+			offersNum = $('.js-offersNum'),
+			start = $('.js-start'),
+			submit = $('.js-submit'),
+			end = $('.js-end');
 		
 		btn.on('click', function(e) {
 			e.preventDefault();
 			
-			var $$ = $(this);
-
-			var more = $$.data('more'),
+			var $$ = $(this),
+				more = $$.data('more'),
 				less = $$.data('less');
 
-			all.toggleClass('is-expanded');
-
 			$$.toggleClass('is-opened');
+			
+			$(el).toggleClass('is-expanded');
 
 			if ($$.hasClass('is-opened')) {
 				$('span', $$).text(less);
+				
+				// Move Submit and summary to the end of form
+				
+				if (mint.Helper.isWindowSmallerThan(640)) {
+					offersNum.detach();
+					submit.detach();
+					
+					end.prepend(offersNum);
+					end.append(submit);
+				}
+				
+				
 			} else {
 				$('span', $$).text(more);
+				
+				offersNum.detach();
+				submit.detach();
+				
+				start.prepend(offersNum);
+				start.append(submit);
 			}
 		});
+		
+		// Back Submit and summary to their place
+		
+		$(window).on('resize', function() {
+			if ( $(el).hasClass('is-expanded') ) {
+				if (mint.Helper.isWindowSmallerThan(640) === false) {
+					offersNum.detach();
+					submit.detach();
+					
+					start.prepend(offersNum);
+					start.append(submit);
+				} else {
+					
+					offersNum.detach();
+					submit.detach();
+					
+					end.prepend(offersNum);
+					end.append(submit);
+					
+				}
+			}
+		});
+		
 	};
 
 	Filters.prototype.ajax = function() {

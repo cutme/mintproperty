@@ -1,6 +1,21 @@
 .c-see-all {
 	color: $c-gray;
 	
+	&--bottom {
+		display: block;
+		text-align: center;
+	
+		@media screen and ( min-width: $smartphone + 1px ) {
+			display: none;
+		}
+	}
+	
+	&--top {
+		@media screen and ( max-width: $smartphone + px ) {
+			display: none;
+		}
+	}
+	
 	strong {
 		font-size: em(13);
 	}

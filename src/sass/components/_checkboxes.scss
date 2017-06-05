@@ -1,0 +1,59 @@
+.c-checkboxes {
+			
+	@media screen and ( min-width: $smartphone + 1px ) {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    padding-top: 36px;
+	    
+	    .type-rent & {
+			float: left;
+			width: grid(884);
+		}
+	}
+	
+	@media screen and ( min-width: $tablet + 1px ) {
+		.type-sale & {
+			float: right;
+			width: grid(728, 954);
+		}
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		.type-rent & {
+			width: 100%;
+		}
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+	    display: flex;
+	    flex-direction: column;
+	}
+	
+	&__item {
+		margin-bottom: 10px;
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: 100px;
+		}		
+		
+		&.rent {
+			display: none;
+			
+			.type-rent & {
+				display: block;
+			}
+		}
+		
+		span {
+			width: 80px;
+			font-weight: $regular;
+			line-height: 1.2;
+			color: $c-gray;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: calc(100% - 20px);
+			}
+		}
+	}	   
+}

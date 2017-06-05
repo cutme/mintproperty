@@ -1,20 +1,47 @@
 .c-search {
 	@extend %abs;
-	right: 20px;
-	bottom: 14px;
-	width: 280px;
+	@media screen and ( max-width: $base + px ) {
+		width: grid(280);
+	}
+	
+	@media screen and ( min-width: $tablet + 1px ) {
+		right: 20px;
+		bottom: 14px;
+		width: 280px;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		top: 50%;
+		right: 0;
+		transform: translateY(calc(-50% + 27px));
+		width: auto;
+		height: 40px;
+	}
 	
 	input {
 		padding-right: 50px;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			display: none;
+		}
 	}
 	
 	.icon-search {
 		@extend %abs;
-		right: 10px; top: 5px;
-		font-size: em(24);
+
+		@media screen and ( min-width: $tablet + 1px ) {
+			right: 10px; top: 5px;
+			font-size: em(24);
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			right: 85px;
+			width: 36px; height: 30px;
+			font-size: em(26);
+		}
 
 		&:before {
-			color: $c-green;
+			color: $c-green--darker;
 		}
 		
 		&:hover {

@@ -1,6 +1,10 @@
 .c-bathrooms {
 	@extend %rel;
 	top: 4px;
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		height: 50px;
+	}	
 
 	a {
 		display: inline-block;

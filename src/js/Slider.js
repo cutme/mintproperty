@@ -10,7 +10,7 @@
 		$(el).slick({
 			autoplay: true,
 			autoplaySpeed: 8000,
-			dots: false,
+			dots: true,
 			speed: 600,
 			prevArrow: '<i class="icon-arrow-2 slick-prev"></i>',
 			nextArrow: '<i class="icon-arrow-2 slick-next"></i>'

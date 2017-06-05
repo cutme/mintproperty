@@ -1,7 +1,12 @@
 .c-address {
 	@extend %rel;
+	margin-bottom: 30px;
 	padding-top: 65px;
 	text-align: center;
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		margin-bottom: 60px;
+	}
 	
 	address {
 		margin-bottom: 15px;
@@ -36,6 +41,6 @@
 	
 	.o-dot {
 		@extend %abs-x;
-		top: -17px;
+		top: -33px;
 	}
 }

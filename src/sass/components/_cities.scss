@@ -1,13 +1,50 @@
-.c-cities {
-	@extend %abs;
-	left: 180px; top: 25px;
+.c-cities {	
+	@extend %rel;
+	z-index: 30;
 	line-height: 1;
+	
+	@media screen and ( min-width: $tablet + 1px ) and ( max-width: $base + px ) {
+		left: grid(180);
+	}
+	
+	@media screen and ( min-width: $tablet + 1px ) {
+		position: absolute;
+		z-index: 30;
+		left: 180px; top: 25px;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+		display: none;
+	}
+	
+	.mobile-menu & {
+		display: block;
+		width: 100%;
+		text-align: center;
+
+		a {
+			font-size: em(14);
+			color: $c-green--darkest;
+		}
+		
+		li {
+			&.is-active {
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+	
 	
 	li {
 		display: inline-block;
 		border-right: 1px solid $c-gray--brightest;
-		padding: 0 5px;
-
+		padding: 0 6px 0 4px;
+		
+		.mobile-menu & {
+			padding: 0 16px 0 14px;
+		}
 
 		&:first-child {
 			padding-left: 0;
@@ -30,7 +67,9 @@
 		color: $c-gray--brighter;
 		
 		&:hover {
-			color: $c-green;
+			@media screen and ( min-width: $tablet + 1px ) {
+				color: $c-green;
+			}
 		}
 	}	
 }

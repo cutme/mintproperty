@@ -3,6 +3,11 @@
 	right: 140px;
 	top: 10px;
 	
+	@media screen and ( max-width: $tablet + px ) {
+		top: 50%;
+		transform: translateY(calc(-50% + 20px));
+	}
+	
 	i {
 		margin-right: 10px;
 		font-size: em(28);
@@ -20,5 +25,30 @@
 	
 	.o-btn {
 		padding: 0 20px;
+
+		@media screen and ( max-width: $tablet + px ) {
+			border: none;
+			border-radius: 0;
+			padding: 0;
+
+			small, span {
+				display: none;
+			}
+			
+			i {
+				margin: 0;
+				font-size: em(26);
+			}
+			
+			&:hover {
+				background-color: transparent;
+				
+				i {
+					&:before {
+						color: $c-green--darker !important;
+					}
+				}
+			}
+		}
 	}
 }

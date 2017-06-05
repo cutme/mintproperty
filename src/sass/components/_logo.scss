@@ -2,6 +2,14 @@
 	@extend %abs-y;
 	left: 20px;
 	
+	@media screen and ( max-width: $tablet + px ) {
+		display: block;
+		top: auto;
+		bottom: 15px;
+		transform: translateY(0);
+		width: 85px;
+	}
+	
 	img {
 		@extend %img;
 	}

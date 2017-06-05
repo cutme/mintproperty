@@ -1,13 +1,6 @@
 .o-wrap {
 	@extend %clear;
-	@extend %wrap;
-	
-	@media screen and ( max-width: $smartphone + px ) {
-		padding: {
-			left: 10px;
-			right: 10px;
-		}
-	}
+	@extend %wrap;	
 	
 	&--top-padding {
 		padding-top: 35px;

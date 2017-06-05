@@ -1,6 +1,9 @@
 .c-follow {
-	padding-left: 85px;
 	color: white;
+	
+	@media screen and ( min-width: $smartphone + 1px ) {
+		padding-left: grid(85, $grid_item);
+	}
 
 	.icon-fb {
 		@extend %anim;
@@ -19,4 +22,7 @@
 			border-color: $c-gray--brighter;
 		}
 	}
+	
+	
+	
 }

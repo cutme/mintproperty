@@ -1,5 +1,5 @@
 .c-disclaimer {
-	padding: 0 grid(170) 30px grid(170);
+	padding-bottom: 30px;
 	text-align: center;
 	line-height: 1.1;
 	font: {
@@ -7,4 +7,11 @@
 		weight: $light;
 	}
 	color: $c-gray--darkest;
+	
+	@media screen and ( min-width: $smartphone + 1px ) {
+		padding: {
+			left: grid(170);
+			right: grid(170);
+		}
+	}
 }

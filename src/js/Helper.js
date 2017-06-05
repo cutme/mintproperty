@@ -7,6 +7,7 @@
         	exist: exist,
         	blazy: blazy,
         	goToTarget: goToTarget,
+        	isWindowSmallerThan: isWindowSmallerThan,
         	language: language,
         	mapstyle: mapstyle,
         	nSelect: nSelect
@@ -37,9 +38,11 @@
 		var el = document.getElementById('cookies'),
 			accept = $('.js-accept', el),
 			close = $('.js-close', el);
-	    
+
 	    if (Cookies.get('mintproperty-cookies') != 1) {
-	       $(el).removeClass('move-out');
+	    	setTimeout(function() {
+				$(el).removeClass('move-out');
+	    	}, 2000);
 	    }
 	    
 	    accept.on('click', function(e){
@@ -72,6 +75,10 @@
 		});
 	}
 	
+	function isWindowSmallerThan(resBorder) {
+        return window.innerWidth < parseInt(resBorder, 10);
+    }
+
 	function language() {
 		$(document).on('change', '#language', function() {
 			var url = $('option:selected', '#language').val();

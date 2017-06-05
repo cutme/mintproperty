@@ -2,9 +2,11 @@
 	opacity: 0;
 	//filter: grayscale(1);
 	transition: all 500ms ease-in-out 100ms;
+	
+	&.b-loaded {
+		opacity: 1;
+		//filter: grayscale(0);
+	}
 }
 
-.b-loaded {
-	opacity: 1;
-	//filter: grayscale(0);
-}
+

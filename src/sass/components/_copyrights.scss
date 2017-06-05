@@ -4,13 +4,26 @@
 	padding-bottom: 20px;
 	text-align: right;
 	font-size: em(11);
-	color: $c-gray--darker;
+	color: $c-gray--darker;	
+	
+	.o-wrap {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+		    display: flex;
+		    justify-content: space-between;
+		    padding: 0;
+		    
+		    &:after {
+			    display: none;
+		    }
+		}
+	}
 	
 	.design {
-		border-left: 1px solid $c-gray--darker;
-		padding-left: 18px;
-		margin: {
-			left: 18px;
+
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			border-left: 1px solid $c-gray--darker;
+			padding-left: 18px;
+			margin-left: 18px;
 		}
 	}
 	

@@ -1,5 +1,23 @@
 .c-mobile-nav-btn {
 	@extend %abs;
-	right: 10px; top: 10px;
-	display: none;
+	@extend %anim;
+	z-index: 15;
+	right: 20px;
+	top: 50%;
+	transform: translateY(calc(-50% + 20px));
+	font-size: em(23);
+	cursor: pointer;
+	
+	@media screen and ( min-width: $tablet + 1px ) {
+		display: none;
+	}
+	
+	.mobile-menu & {
+		top: 20px;
+		color: white;
+		
+		&:before {
+			content: "\e917";
+		}
+	}
 }

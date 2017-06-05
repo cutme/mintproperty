@@ -1,37 +1,105 @@
 .c-grid {
 
-	&:not(.c-grid--noflex) {
-		@extend %flex;
+	&:not(.c-grid--noflex) {	
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			justify-content: center;
+		}		
+	}
+	
+	&--noflex {
+		.c-grid__item {
+			float: left;
+			margin-right: grid(20);	
+			
+			&:nth-child(3n) {
+		    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		    	   margin-right: 0;
+		    	}		 
+		    }	    
+		}
 	}
     
     &__item {
-    	float: left;
     	@extend %rel;
-	    width: grid(380);
-	    margin-right: grid(20);
 	    margin-bottom: 20px;
+
+	    @media screen and ( min-width: $tablet_portrait + 1px ) {
+	    	width: grid($grid_item);
+	    }
+
+	    @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+	  	    	
+	    	width: grid(354, $tablet_portrait - 40);
+	    	
+	    	&:nth-child(odd) {
+				margin-right: grid(20, $tablet_portrait - 40);
+		    }
+		    
+		    &:last-child {
+			    margin-right: 0;
+		    }
+	    }
 	    
-	    &:nth-child(3n) {
-		    margin-right: 0;
-	    }	    
+		@media screen and ( max-width: $smartphone + px ) {
+	    	max-width: $grid_item + px;
+	    }
     }
     
     &__sizer {
-	    width: grid(380);
+    	max-width: $grid_item + px;
+    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		    width: grid($grid_item);
+	    }
+	    
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			width: grid($grid_item - 10, $tablet_portrait);
+    	}
     }
-    
-    &--addresses {
-	    margin-bottom: 30px;
-    }
-    
+
+	&--addresses {
+		 @media screen and ( max-width: $smartphone + px ) {			
+			.c-grid__item {
+			
+				@media screen and ( max-width: $smartphone + px ) {
+					width: 100%;
+				}
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
     &--follow {
     	@extend %clear;
 	    margin-bottom: 40px;
+	    
+	    @media screen and ( max-width: $smartphone + px ) {
+			display: flex;
+			flex-direction: column-reverse;
+			margin-bottom: 10px;
+			
+			.c-grid__item {
+				width: 100%;
+				max-width: none;
+				text-align: center;				
+			}
+		}
     }
-    
+
     .gutter-sizer {
-	    width: grid(20);
+    
+    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		    width: grid(20);
+		}
+	    
+	    @media screen and ( max-width: $tablet_portrait + px ) {
+			width: grid(20, $tablet_portrait);
+    	}
     }
 }

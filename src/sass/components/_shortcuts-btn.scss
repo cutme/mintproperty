@@ -2,7 +2,7 @@
 	
 	.o-btn {
 		background-color: white;
-		font-size: em(13);	
+		font-size: em(13);			
 
 		i {
 			@extend %anim;
@@ -14,15 +14,39 @@
 		}
 	}
 	
+	&--trigger {
+		.o-btn {
+			@media screen and ( max-width: $tablet + px ) {
+				display: flex;
+				justify-content: center;
+				background-color: $c-green--darker;			
+				border: none;
+				border-radius: 0;
+				text-align: center;
+				color: white;
+			}
+		}
+	}
+	
 	&--adv {
 		margin-bottom: 40px;
 		text-align: center;
 	}
 	
 	&--trigger {
-		@extend %abs-x;
+		@extend %abs;
 		z-index: 25;
-		top: 10px;
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			left: 50%;
+			top: 10px;
+			transform: translateX(-50%);
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			left: 0; top: 0;
+			width: 100%;
+		}
 	}
 	
 	&.is-fixed {
