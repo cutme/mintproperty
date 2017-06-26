@@ -7,18 +7,11 @@
 	}
 	
 	&:not(.o-article--full) {
-	
-		@media screen and ( max-width: 1400px ) {
-			
-		}
-	
+
 		@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1400px ) {
 			float: left;
 			width: grid(580, 1400);
-			background: red;
 		}
-		
-		
 	}
 	
 	&:not(.o-article--nofluid) {
@@ -38,7 +31,7 @@
 		}
 		
 		@media screen and ( max-width: $smartphone + px ) {
-			font-size: em(24);
+			font-size: em(30);
 		}
 	}	
 
@@ -104,7 +97,7 @@
 		padding-left: 75px;
 		
 		@media screen and ( max-width: $smartphone + px ) {
-			padding-left: 30px;
+			padding-left: 0;
 		}
 		
 		> h2 {

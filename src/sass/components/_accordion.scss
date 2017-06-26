@@ -12,6 +12,7 @@
 	&__nav {
 		@extend %flex;
 		@extend %rel;
+		width: 100%;
 		align-items: center;
 		height: 80px;
 		border: 1px solid $c-green--darker;

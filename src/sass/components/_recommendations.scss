@@ -24,34 +24,37 @@
 		h6 {
 			color: $c-gray;
 		}
-		
-		h2 {
-			@media screen and ( max-width: $tablet_portrait + px ) {
-				font-size: em(30);
-			}
-		}
 	}
 	
 	
 	.o-article {
+		float: left;
+		width: 580px;
 		
 		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
 			float: left;
-			width: grid(580, 1400); background: red;
+			width: grid(580, 1400);
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: 100%;
 			padding: 0 20px;
 		}
 	}
 	
 	&__photo {
+		float: left;
+		width: 820px;
+
 		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
 			float: left;
 			width: grid(820, 1400);
 		}
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: auto;
 			position: relative;
 			left: get-vw-tablet(-120);
 		    margin-bottom: 40px;
