@@ -83,14 +83,17 @@
 	}
 	
 	.o-header--type-2 {
+	
+		&:after {
+			@extend %abs-after;
+			@extend %anim;
+			@extend %icomoon;
+		}
 		
 		@media screen and ( max-width: $tablet + px ) {
 			cursor: pointer;
 
 			&:after {
-				@extend %anim;
-				@extend %abs-after;
-				@extend %icomoon;
 				right: 10px; top: 10px;
 				width: 10px; height: 10px;
 				display: block;

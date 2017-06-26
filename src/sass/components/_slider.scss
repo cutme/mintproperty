@@ -27,7 +27,7 @@
 	
 	article {
 		@extend %abs;
-		@extend %anitalias;
+		@extend %antialias;
 		left: calc( (100% - 1180px) / 2 + 100px);
 		bottom: 50px;
 		width: calc( 100% - 20px);

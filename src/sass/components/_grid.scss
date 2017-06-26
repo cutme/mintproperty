@@ -37,7 +37,13 @@
 	    	
 	    	&:nth-child(odd) {
 				margin-right: grid(20, $tablet_portrait - 40);
-		    }
+		    }	    	
+
+		    .c-grid--noflex & {
+		    	&:nth-child(odd) {
+					margin-right: 0;
+			    }
+	    	}
 		    
 		    &:last-child {
 			    margin-right: 0;
@@ -46,19 +52,33 @@
 	    
 		@media screen and ( max-width: $smartphone + px ) {
 	    	max-width: $grid_item + px;
+	    	
+			.c-grid--noflex & {
+				float: none;
+	    	    margin: 0 auto 20px auto;
+	    	}
 	    }
     }
     
     &__sizer {
     	max-width: $grid_item + px;
+   
     	@media screen and ( min-width: $tablet_portrait + 1px ) {
 		    width: grid($grid_item);
 	    }
 	    
 		@media screen and ( max-width: $tablet_portrait + px ) {
-			width: grid($grid_item - 10, $tablet_portrait);
+		
+			.c-grid--noflex & {
+				//width: grid(374, $tablet_portrait);
+				width: grid(354, $tablet_portrait - 40);
+			}
+		
+//			width: grid($grid_item - 10, $tablet_portrait);
     	}
+    	
     }
+
 
 	&--addresses {
 		 @media screen and ( max-width: $smartphone + px ) {			
@@ -100,6 +120,7 @@
 	    
 	    @media screen and ( max-width: $tablet_portrait + px ) {
 			width: grid(20, $tablet_portrait);
+			//width: 1px;
     	}
     }
 }

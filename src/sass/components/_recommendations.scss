@@ -5,20 +5,57 @@
 	padding: 100px 0 150px 0;
 	overflow: hidden;
 	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		padding-bottom: 50px;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		padding-top: 0;
+	}
+	
 	article {
 		h5 {
 			margin: 0;
 			text-transform: none;
 			color: $c-black;
+			
 		}
 		
 		h6 {
 			color: $c-gray;
 		}
+		
+		h2 {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				font-size: em(30);
+			}
+		}
 	}
 	
 	
+	.o-article {
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
+			float: left;
+			width: grid(580, 1400); background: red;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			padding: 0 20px;
+		}
+	}
+	
 	&__photo {
-		float: left;
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
+			float: left;
+			width: grid(820, 1400);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			position: relative;
+			left: get-vw-tablet(-120);
+		    margin-bottom: 40px;
+		}
+
 	}
 }

@@ -40,6 +40,12 @@
 		height: 500px;
 		margin-bottom: 50px;
 		
+		@media screen and ( max-width: $smartphone + px ) {
+			height: 446px;
+			margin-bottom: 25px;
+		}
+		
+		
 		&:after {
 			background-color: rgba($c-black, .6);
 		}

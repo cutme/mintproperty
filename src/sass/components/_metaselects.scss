@@ -1,7 +1,7 @@
 .c-metaselects {
 	@extend %abs;
 	@extend %clear;
-	z-index: 10;
+	z-index: 15;
 	right: 20px;
 	top: 20px;
 	width: 120px;
@@ -9,6 +9,7 @@
 	@media screen and ( max-width: $tablet + px ) {
 		display: none;
 		left: 10px;
+		top: 30px;
 		right: auto;
 		
 		.mobile-menu & {

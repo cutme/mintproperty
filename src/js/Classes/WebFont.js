@@ -1,6 +1,6 @@
 	WebFontConfig = {
 		google: {
-			families: ['Lato:100,300,700:latin-ext']
+			families: ['Lato:100,300,400,700:latin-ext']
 		},
 		active: function() { 
 			if (mint.Helper.exist('#masonry')) triggerMasonry();

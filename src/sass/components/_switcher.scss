@@ -8,13 +8,14 @@
 	}
 	
 	&--right {
+		@extend %clear;
+
 		@media screen and ( min-width: $tablet_portrait + 1px ) {
 			top: calc(50% - 30px);
 			right: 0;
 		}
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
-			@extend %clear;
+		@media screen and ( max-width: $tablet_portrait + px ) {			
 			position: relative;
 			top: auto;
 			margin-bottom: 20px;

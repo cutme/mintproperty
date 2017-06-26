@@ -2,9 +2,13 @@
 	@include icomoon;
 }
 
+
+
 .is-fixed {
 	position: fixed;
 }
+
+
 
 .is-hidden {
 	//opacity: 0;
@@ -19,7 +23,9 @@
 
 .no-scroll {
 	overflow: hidden;
+	position: fixed;
 }
+
 
 .pull-right {
 	float: right !important;;

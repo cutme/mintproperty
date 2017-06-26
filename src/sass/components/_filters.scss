@@ -260,8 +260,9 @@
 	
 	&__submit {
 		.full & {
+			@extend %clear;
+
 			@media screen and ( max-width: $smartphone + px ) {
-				@extend %clear;
 				padding: 30px 0 25px 0;
 		
 				.o-btn {

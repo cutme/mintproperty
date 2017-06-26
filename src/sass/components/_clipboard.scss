@@ -1,16 +1,47 @@
 .c-clipboard {
+	
+
+	@media screen and ( min-width: $smartphone + 1px ) {
+		display: flex;
+		align-items: center;
+		transform: translateY(5px);
+	}
+
 	strong {
 		color: $c-gray;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			display: block;
+			margin-bottom: 15px;
+		}
 	}
 	
 	.o-btn {
-		margin-left: 10px;
 		font-size: em(13);
 		color: $c-green--darker;
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			margin-left: 10px;
+		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 0;
+			flex-grow: 1;
+
+			&:first-of-type {
+				margin-right: 10px;
+			}
+		}
 	}
 	
 	i {
 		margin-right: 10px;
 		font-size: em(28);
+	}
+	
+	&__buttons {
+		@media screen and ( max-width: $smartphone + px ) {
+			display: flex;
+		}
 	}
 }

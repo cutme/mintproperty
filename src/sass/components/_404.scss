@@ -10,6 +10,8 @@
 		size: cover;
 		position: center;
 	}
+	padding: 0 20px;
+	text-align: center;
 	color: white;
 
 	@media screen and ( min-width: $tablet + 1 + px ) {
@@ -28,6 +30,10 @@
 			size: em(180);
 			weight: $bold;
 		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font-size: em(100);
+		}
 	}
 	
 	p {
@@ -36,11 +42,20 @@
 			size: em(20);
 			weight: $light;
 		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			font: {
+				size: em(18);
+				weight: $regular;
+			}
+		}
 	}
 	
 	.o-btn {
-		height: 50px;
+		height: 50px;	
 		
-		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+			width: 100%;
+		}	
 	}
 }

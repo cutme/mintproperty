@@ -5,3 +5,13 @@
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
 }
+
+@function get-vw-1400($target) {
+	$vw-context: (1400 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet($target) {
+	$vw-context: ($tablet * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}

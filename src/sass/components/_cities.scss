@@ -42,6 +42,11 @@
 		border-right: 1px solid $c-gray--brightest;
 		padding: 0 6px 0 4px;
 		
+		@media screen and ( max-width: $tablet + px ) {
+			border-right-color: #95be31;
+		}
+		
+		
 		.mobile-menu & {
 			padding: 0 16px 0 14px;
 		}

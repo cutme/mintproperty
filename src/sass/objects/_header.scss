@@ -7,7 +7,7 @@
 		overflow: hidden;
 		
 		@media screen and ( min-width: $tablet_portrait + px ) {
-			padding-right: 240px;
+			//padding-right: 240px;
 		}
 
 		.title {
@@ -62,15 +62,23 @@
 		top: 155px;
 		z-index: 15;
 		width: 100%;
+		padding: 0 20px;
 		text-align: center;
 		color: white;
 
 		.text {
-			width: 670px;
 			margin: 0 auto 25px auto;
 			font: {
 				size: em(20);
 				weight: $light;
+			}
+			
+			@media screen and ( min-width: $tablet_portrait + px ) {
+				width: 670px;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(18);
 			}
 		}
 
@@ -80,6 +88,10 @@
 			font: {
 				size: em(65);
 				weight: $hairline;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(40);
 			}
 		}
 		
@@ -117,6 +129,14 @@
 			line-height: 1;
 			font-size: em(200);
 			font-weight: $bold;
+			
+			@media screen and ( max-width: 1400px ) {
+				font-size: get-vw-1400(200);
+			}
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			left: 20px;
 		}
 	}
 	
@@ -167,6 +187,10 @@
 			top: 35px;
 			bottom: 10px;
 		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding: 20px 0 0 0;
+		}
 	}
 	
 	&--extramargin-2 {
@@ -175,8 +199,24 @@
 		}
 	}
 	
-	&--options {
-		@extend %flex;
-		justify-content: space-between;
+	
+	
+	&--options {		
+		
+		@media screen and ( min-width: $tablet + 1px ) {
+			display: flex;
+		    flex-wrap: wrap;
+		    align-items: center;
+			justify-content: space-between;
+			
+			
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			.title {
+				margin-bottom: 15px;
+			}
+		}
+		
 	}
 }
