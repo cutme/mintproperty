@@ -1,23 +1,63 @@
 .c-contact-map {
 	@extend %rel;
-	background-color: $c-white--darker;
+	//background-color: $c-white--darker;
 	height: 500px;
 	margin-bottom: 130px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		height: 782px;
+		margin-bottom: 70px;
+		padding-top: 215px;
+	}
 	
 	&__company {
 		@extend %abs;
 		@extend %big-shadow;
-		left: calc((100% - 1180px) / 2); top: 55px;
-
+		top: 55px;
+		
+		@media screen and ( min-width: $base + px ) {
+			left: calc((100% - 1180px) / 2);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			top: 0;
+		}
+		
 		.o-btn {
 			@extend %abs-x;
 			bottom: 60px;
 			padding: 0 70px;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				padding: 0;
+				display: flex;
+				width: calc(100% - 40px);
+				left: 20px;
+				transform: none;
+				bottom: 25px;				
+			}
+		}
+
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: 325px;
+			
+			left: 50%;
+			transform: translateX(-50%);
+			
+			img {
+				height: 100%;
+				width: auto;
+				max-width: none;
+			}
 		}
 	}
 
 	&__map {
 		height: 500px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: 567px;
+		}
 	}
 
 	&__pin {
@@ -27,6 +67,8 @@
 		background: transparent; 
 		text-align: center;
 		opacity: 0;
+		
+		
 	}
 
 	> i {

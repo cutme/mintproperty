@@ -1,25 +1,40 @@
 .o-article {
 	@extend %margin-60;
+	float: left;
+	width: 580px;
+	//width: grid(580); 
 	padding-top: 40px;
+	//padding-left: 75px;
+	padding-left: grid(75);
+	
+	@media screen and ( max-width: $tablet + px ) {
+		padding: {
+			left: 0;
+			right: 0;
+			top: get-vw-tablet(40);
+		}
+	}
 	
 	@media screen and ( min-width: $tablet + 1px ) {
 		padding-top: 80px;
 	}
 	
 	&:not(.o-article--full) {
-
 		@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1400px ) {
-			float: left;
-			width: grid(580, 1400);
+			//width: grid(580, 1400);
 		}
 	}
 	
 	&:not(.o-article--nofluid) {
 		
-		@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1400px ) {
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
 			width: grid(580); 
-			padding-left: 75px;
+			
 		}
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: 100%;
 	}
 	
 	h2 {

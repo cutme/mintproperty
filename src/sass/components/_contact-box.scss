@@ -1,6 +1,15 @@
 .c-contact-box {
+
+	@media screen and ( max-width: $smartphone + px ) {
+		float: left;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+
 	h4 {
 		margin-bottom: .8em;
+		line-height: 1.2;
 		font: {
 			size: em(20);
 			weight: $bold;
@@ -33,11 +42,22 @@
 		@extend %border-radius;
 		float: left;
 		width: 130px;
+		
+		
+		.c-grid & {
+			width: grid(130, 380);
+		}
 	}
+	
+	
 	
 	&__text {
 		float: right;
 		width: 230px;
+		
+		.c-grid & {
+			width: grid(230, 380);
+		}
 		
 		.c-agents & {
 			padding-right: 30px;

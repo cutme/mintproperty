@@ -19,7 +19,20 @@
 		    	@media screen and ( min-width: $tablet_portrait + 1px ) {
 		    	   margin-right: 0;
 		    	}		 
-		    }	    
+		    }
+		    
+		    @media screen and ( min-width: $tablet_portrait + 1px ) {
+		    	&:nth-child(3n+1) {
+		    		clear: left;
+		    	}
+		    }
+		    
+		    @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+		    	&:nth-child(2n+1) {
+		    		clear: left;
+		    	}
+		    }
+		    	    
 		}
 	}
     

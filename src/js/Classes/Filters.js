@@ -54,7 +54,7 @@
 		
 		// Back Submit and summary to their place
 		
-		$(window).on('resize', function() {
+		function checkAndPlace() {
 			if ( $(el).hasClass('is-expanded') ) {
 				if (mint.Helper.isWindowSmallerThan(640) === false) {
 					offersNum.detach();
@@ -72,8 +72,13 @@
 					
 				}
 			}
+		}
+		
+		$(window).on('resize', function() {
+			checkAndPlace();
 		});
 		
+		checkAndPlace();
 	};
 
 	Filters.prototype.ajax = function() {

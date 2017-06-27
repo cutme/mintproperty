@@ -1,10 +1,19 @@
 .c-video {
 	@extend %clear;
 	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		text-align: center;
+		
+		.o-header {
+			text-align: left;
+		}
+	}
+	
+	
 	&__item {
 		@extend %rel;
 		@extend %border-radius;
-		display: block;
+		display: inline-block;
 		
 		.icon-play {
 			@extend %abs-xy;

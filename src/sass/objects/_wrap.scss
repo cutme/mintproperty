@@ -3,6 +3,8 @@
 	@extend %wrap;	
 	
 	&--top-padding {
-		padding-top: 35px;
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			padding-top: 35px;
+		}
 	}
 }

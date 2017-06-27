@@ -13,13 +13,17 @@
 	}
 	
 	.o-article {
+		width: 100%;
 		padding: {
 			left: 75px;
 			right: 145px;
 		}
 		
-		@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1400px ) {
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
 			width: 100%;
+		}
+		
+		@media screen and ( min-width: $tablet+ 1px ) and ( max-width: 1400px ) {
 			padding: {
 				left: grid(75, 590);
 				right: grid(145, 590);
@@ -27,6 +31,7 @@
 		}
 		
 		@media screen and ( max-width: $tablet + px ) {
+			width: 100%;
 			padding: {
 				left: 0;
 				right: 0;

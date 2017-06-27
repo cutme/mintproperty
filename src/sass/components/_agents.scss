@@ -1,10 +1,17 @@
 .c-agents {
 	margin-bottom: 160px;
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		margin-bottom: 80px;
+	}
 
 	.o-header {
-		.title {
-			margin-bottom: 80px;
+		margin-bottom: 80px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 40px;
 		}
+
 	}
 	
 	.c-grid {

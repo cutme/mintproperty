@@ -135,13 +135,31 @@
 	
 		function initialize() {
 		
+			var center,
+				myLatlng = new google.maps.LatLng(lat, lng);
+		
 	        map = new google.maps.Map(container, mapOptions);
-
-			var myLatlng = new google.maps.LatLng(lat, lng);
+			
 			
 			OffersOnMap.prototype.getLocations(map);
 			
-			initialized= true;
+			initialized = true;
+			
+
+
+			function calculateCenter() {
+				center = map.getCenter();
+			}
+	
+			google.maps.event.addDomListener(map, 'idle', function() {
+				calculateCenter();
+			});
+		
+			google.maps.event.addDomListener(window, 'resize', function() {
+				setTimeout(function() {
+					map.setCenter(center);
+				}, 1);
+			});
 	    }
 
 		if (initialized === false) {

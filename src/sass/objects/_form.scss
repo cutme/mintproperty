@@ -87,10 +87,12 @@ input[type=checkbox] {
 		margin-bottom: 10px;
 		
 		&--captcha {
-			@extend %flex;
-			width: 100%;
-			justify-content: space-between;
-			align-items: center;
+			@media screen and ( min-width: $smartphone + 1px ) {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				align-items: center;
+			}
 		}
 		
 		&--submit {
@@ -107,6 +109,8 @@ input[type=checkbox] {
 	&__captcha {
 		text-align: center;
 		border: 1px solid $c-gray--brightest;
+		
+		
 
 		img {
 			display: inline-block;

@@ -1,6 +1,11 @@
 .c-contact-form {
-	width: grid(580);
+	width: 580px;
 	margin: 0 auto 40px auto;
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		width: 100%;
+	}
+	
 	
 	input[type=checkbox] {
 		& + label {
@@ -41,14 +46,44 @@
 	}
 	
 	.o-form__captcha {
-		width: 280px;
 		height: 60px;
-		border-radius: 30px;
+		border-radius: 30px;		
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 10px;
+		}
+	}
+	
+	.o-form__captcha,
+	.o-form__code {
+		@media screen and ( min-width: $smartphone + 1px ) {
+			width: 280px;
+		}
 	}
 	
 	.o-form__code {
-		width: 280px;
-		height: 45px;
+		height: 45px;		
+	}
+	
+	.o-form__row--submit {
+		.o-btn {
+			
+			@media screen and ( max-width: $smartphone + px ) {
+			
+				//display: flex;
+				display: block;
+				width: 100%;
+				padding: 0;
+				align-items: center;
+			
+				span {
+					display: flex;
+					width: 100%;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
 	}
 	
 	@include input-placeholder {	

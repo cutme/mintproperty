@@ -1,0 +1,12 @@
+.c-contact {
+	.o-header {
+		span {
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				display: block;
+			}
+			
+			
+		}
+	}
+}

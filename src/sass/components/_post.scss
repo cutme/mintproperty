@@ -1,0 +1,11 @@
+.c-post {
+	.o-article {
+		@media screen and ( max-width: $smartphone + px ) {
+			margin-bottom: 0;
+		}
+		
+	}
+	@media screen and ( max-width: $smartphone + px ) {
+		margin-bottom: 100px;
+	}
+}

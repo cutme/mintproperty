@@ -13,8 +13,12 @@
 	@extend %rel;
 	@extend %anim;
 	z-index: 10;
-	margin-bottom: 50px;
+	
 	opacity: 0;
+	
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		margin-bottom: 50px;
+	}
 	
 	@media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
 		display: flex;
@@ -110,6 +114,15 @@
 		&.full {
 			width: 100%;
 			margin-right: 0;
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: baseline;
+				justify-content: space-between;
+			}
+			
 			
 			.c-filters--dropdown & {
 				margin-bottom: 0;
@@ -263,6 +276,7 @@
 			@extend %clear;
 
 			@media screen and ( max-width: $smartphone + px ) {
+				width: 100%;
 				padding: 30px 0 25px 0;
 		
 				.o-btn {
