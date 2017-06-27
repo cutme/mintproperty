@@ -3,7 +3,9 @@
 	top: 50%;
 
 	&--center {
-		left: calc(50% - 120px);
+		//left: calc(50% - 120px);
+		left: 50%;
+		transform: translateX(-50%);
 		top: calc(50% - 30px);
 	}
 	
@@ -43,6 +45,8 @@
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			border-color: $c-green--darker;
+			
+			
 		}
 		
 		&:last-of-type {
@@ -68,6 +72,10 @@
 		&.is-active {
 			background-color: $c-green--darker;
 			color: white;
-		}				
+		}	
+		
+		&:hover {
+			border-color: $c-green;
+		}			
 	}
 }
