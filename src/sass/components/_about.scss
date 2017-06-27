@@ -1,0 +1,120 @@
+.c-about {
+	@extend %rel;
+	@extend %clear;
+	
+	@media screen and ( min-width: $smartphone + 1px ) {
+		margin-bottom: 100px;
+	}
+	
+	@media screen and ( max-width: $smartphone + px ) {
+		display: flex;
+		flex-wrap: wrap;
+	    flex-direction: column-reverse;
+	}
+	
+	.o-article {
+		padding: {
+			left: 75px;
+			right: 145px;
+		}
+		
+		@media screen and ( min-width: $tablet + 1px ) and ( max-width: 1400px ) {
+			width: 100%;
+			padding: {
+				left: grid(75, 590);
+				right: grid(145, 590);
+			}
+		}
+		
+		@media screen and ( max-width: $tablet + px ) {
+			padding: {
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+	
+	.o-photo {
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			position: absolute;
+		}
+	}
+	
+	&__col {
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			float: left;
+		}
+		
+		@media screen and ( min-width: 1220px ) {
+			width: 590px;
+		}
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+			width: grid(590);
+		}
+
+
+		&--team {
+			.o-article {
+				@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+					padding-left: grid(75);
+				}
+			}
+
+			.o-photo {
+				float: left;
+				
+				@media screen and ( min-width: $tablet_portrait + 1px ) {
+					left: 0;
+				}
+				
+				@media screen and ( min-width: 1221px ) {
+					top: -300px;
+				}
+				
+				@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+					width: grid(580);
+					top: get-vw-1220(-300);
+				}
+				
+				@media screen and ( max-width: $tablet_portrait + px ) {
+					margin-left: -7%;
+				}
+			}
+		}
+
+		&--vision {
+			@extend %rel;
+			
+			@media screen and ( min-width: 1221px ) {
+				padding-top: 300px;
+			}
+			
+			@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+				padding-top: get-vw-1220(300);
+			}
+
+			.o-photo {
+			
+				@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+					width: get-vw-1220(900);
+				
+				}
+			
+				@media screen and ( min-width: 1221px ) {
+					left: 460px; bottom: 0;
+				}
+				
+				@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+					left: get-vw-1220(560); bottom: 0;
+				}
+
+				img {
+					@media screen and ( min-width: 1221px ) {
+						max-width: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -11,7 +11,17 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function get-vw-1220($target) {
+	$vw-context: (1220 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 @function get-vw-tablet($target) {
 	$vw-context: ($tablet * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-tablet-portrait($target) {
+	$vw-context: ($tablet_portrait * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }

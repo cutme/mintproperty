@@ -2,9 +2,47 @@
 	@extend %clear;
 	@extend %rel;
 	background-color: $c-white--darker;
+	
 	padding: 100px 0 150px 0;
+	
+	@media screen and ( max-width: 1220px ) {
+		padding: get-vw-1220(100) 0 get-vw-1220(150) 0;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+
 	
 	&__photo {
 		float: left;
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
+			width: grid(820, 1400);
+		}
+	}
+	
+	.o-article {
+		padding: 0 20px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1400px ) {
+			float: left;
+			width: grid(580, 1400);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+	}
+	
+	.o-header {
+		@media screen and ( max-width: $tablet_portrait + px ) {
+		    top: auto;
+		    bottom: get-vw-tablet-portrait(620);
+		}
 	}
 }

@@ -30,6 +30,10 @@
 			weight: $hairline;
 		}
 		
+		@media screen and ( min-width: $tablet_portrait + 1px ) and ( max-width: 1220px ) {
+			font-size: get-vw-1220(50);
+		}
+		
 		@media screen and ( max-width: $smartphone + px ) {
 			font-size: em(30);
 		}
@@ -122,12 +126,4 @@
 			}
 		}
 	}
-	
-	&--narrow {
-		article {
-			padding-right: 145px;
-		}
-	}
 }
-
-

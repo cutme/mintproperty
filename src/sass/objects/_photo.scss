@@ -28,12 +28,18 @@
 		&:after {
 			background-color: rgba(black, .35);
 		}	
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			height: 446px;
+		}
 	}
 	
 	&--type-2 {
-		margin-bottom: 80px;
-		margin-top: -375px;
+		//margin-bottom: 80px;
+		//margin-top: -375px;
 		@extend %big-shadow;
+		
+		
 	}
 	
 	&--type-3 {

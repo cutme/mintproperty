@@ -66,6 +66,10 @@
 
 %big-shadow {
 	box-shadow: rgba(black, .1) 0 0 60px 30px;
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		box-shadow: rgba(black, .1) 0 0 30px 15px;
+	}
 }
 
 %border-radius {
