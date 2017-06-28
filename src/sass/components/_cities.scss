@@ -23,6 +23,20 @@
 		margin-bottom: 40px;
 		text-align: center;
 		
+		.desktop & {
+			position: absolute;
+			left: 50%; bottom: 0;
+			transform: translateX(-50%);
+		}
+		
+		.mobile & {
+			@media screen and (orientation: portrait) {
+				position: absolute;
+				left: 50%; bottom: 0;
+				transform: translateX(-50%);
+			}
+		}
+		
 		@media screen and (orientation: landscape) {
 			margin-bottom: 100px;
 		}

@@ -12,7 +12,13 @@
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 
-		
+		display: flex;
+		width: 100%;
+		align-content: center;
+		align-items: center;
+	    justify-content: space-between;
+		flex-wrap: wrap;
+	    flex-direction: row;
 
 	   // padding-bottom: 30px;
 		padding-top: 40px;
@@ -24,14 +30,10 @@
 	}
 	
 	
-	@media screen and ( max-width: $tablet + px ) and (orientation: portrait) {
-		display: flex;
-		width: 100%;
-		align-content: center;
-		align-items: center;
-	    justify-content: space-between;
-		flex-wrap: wrap;
-	    flex-direction: row;
+	@media screen and ( max-width: $tablet + px ) and (orientation: landscape) {
+		.mobile & {
+			display: block;
+		}
 	}
 	
 	@media screen and (orientation: landscape) {
