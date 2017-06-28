@@ -1,0 +1,60 @@
+.c-branch {
+	@extend %flex;
+	@extend %flex-xy;
+	flex-direction: column;
+	background: {
+		repeat: no-repeat;
+		size: cover;
+		position: center;
+	}
+	//padding: 90px 20px;
+	text-align: center;
+	color: $c-black;
+	
+	.set-min-height & {
+		min-height: 100vh;
+	}
+	
+	@media screen and ( min-width: $tablet + 1px ) and ( max-width: $project + px ) {
+		//padding: get-vw-1920(90) 20px;
+	}
+	
+	@media screen and ( max-width: $tablet + px ) {
+	//	padding: 20px;
+	}
+	
+	@media screen and (orientation: landscape) {
+		padding: 20px;
+	}
+
+	@media screen and ( min-width: $smartphone_portrait + 1px ) {
+		background-image: url(../img/bg/map@2x.jpg);
+	}
+	
+	@media screen and ( max-width: $smartphone_portrait + px ) {
+		background-image: url(../img/bg/map.jpg);
+	}
+	
+	&__select {
+		width: 280px;
+		margin-bottom: 60px;
+		
+		@media screen and ( max-width: $tablet + px ) {
+			margin-bottom: get-vw-tablet(60);
+		}	
+	}
+	
+	&__map {
+		@extend %anim;
+		width: 900px;
+		
+		@media screen and ( min-width: $tablet + 1px ) and ( max-width: $project + px ) {
+			width: get-vw-1920(900);
+		}
+	
+		@media screen and ( max-width: $tablet + px ) {
+			max-width: 600px;
+			width: auto;
+		}
+	}
+}

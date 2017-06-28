@@ -8,6 +8,7 @@
         	blazy: blazy,
         	fixTop: fixTop,
         	goToTarget: goToTarget,
+        	iosFix: iosFix,
         	isMobile: isMobile,
         	isWindowSmallerThan: isWindowSmallerThan,
         	language: language,
@@ -93,6 +94,44 @@
 			easing: 'easeOutCubic',
 			duration: 500
 		});
+	}
+	
+	function iosFix() {
+
+		var documentHeight = document.body.scrollHeight,
+			windowHeight = window.innerHeight,
+			container  = $('.ios-height');	
+	
+		function documentHigherThanWindow() {
+			documentHeight = document.body.scrollHeight;
+			windowHeight = window.innerHeight;
+	
+			return documentHeight <= windowHeight;
+		}
+		
+		function setFullHeight() {
+			container.height(windowHeight);
+		}
+
+		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {		
+
+			
+			if (documentHigherThanWindow()) setFullHeight();
+			
+			window.addEventListener("orientationchange", function() {
+				
+				//document.documentElement.innerHTML = document.documentElement.innerHTML;
+				container.attr('style', '');
+
+					if (documentHigherThanWindow()) setFullHeight();
+
+			
+			}, false);
+
+		} else {
+			$('html').addClass('set-min-height');
+		}
+
 	}
 	
 	function isMobile() {

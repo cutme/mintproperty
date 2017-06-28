@@ -6,7 +6,6 @@
 	$(document).ready(function() {
 		
 		mint.Helper.cookies();
-		mint.Helper.fixTop();
 		mint.Helper.isMobile();
 		mint.Helper.language();
 		mint.Menu.init();
@@ -30,9 +29,17 @@
 		if (mint.Helper.exist('.b-lazy')) mint.Helper.blazy();
 		if (mint.Helper.exist('.mfp-image')) mint.Magnific.images();
 		if (mint.Helper.exist('.mfp-video')) mint.Magnific.video();
-		if (mint.Helper.exist('.nice-select')) mint.Helper.nSelect();		
+		if (mint.Helper.exist('.nice-select')) mint.Helper.nSelect();
+		if (mint.Helper.exist('.c-top')) mint.Helper.fixTop();
+		
+		
+		
 	});
-
+	
+	
+	$(window).on('load', function() {
+		mint.Helper.iosFix();
+	});
 
 		
 }(window, document, jQuery, window.mint = window.mint || {}));

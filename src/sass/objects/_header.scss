@@ -35,7 +35,6 @@
 		@extend %rel;
 		@extend %clear;
 		//margin-bottom: 50px;
-		
 		.photo {			
 			border-radius: 4px;
 			overflow: hidden;
@@ -226,6 +225,31 @@
 			font-weight: $bold;
 			color: $c-gray;
 		}
+	}
+	
+	&--type-9 {
+		margin-bottom: 20px;
+
+		.title {
+			line-height: 1.2;
+			font: {
+				size: em(50);
+				weight: $hairline;
+			}
+			
+			@media screen and ( max-width: $smartphone + px ) {
+				font-size: em(30);
+			}
+		}
+		
+		strong {
+			text-transform: uppercase;
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: block;
+			}
+		}
+
 	}
 	
 	&--bordered {
