@@ -38,6 +38,11 @@
 			float: left;
 			margin-right: grid(20, 430);
 			
+			@media screen and ( max-width: $tablet + px ) {
+				//margin-right: 8px;
+			}
+			
+			
 			i {
 				@extend %anim;
 				@extend %rel;
@@ -67,7 +72,7 @@
 				font-size: em(11);
 				color: $c-green--darker;
 			}
-			
+
 			&:hover {
 				i {
 					cursor: pointer;
@@ -88,6 +93,10 @@
 		
 		i {
 			font-size: em(26);
+			
+			@media screen and ( max-width: $tablet + px ) {
+				font-size: get-vw-tablet(26);
+			}
 		}
 	}
 }
