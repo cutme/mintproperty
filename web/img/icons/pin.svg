@@ -1,1 +1,24 @@
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 102 128"><style>.st0,.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_)}.st1{fill:#fff}</style><image width="102" height="128" xlink:href="957F6AAD20A026B2.png" transform="translate(.003)" overflow="visible" opacity=".25"/><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="52.003" y1="110" x2="52.003" y2="12"><stop offset="0" stop-color="#9dd614"/><stop offset="1" stop-color="#a9eb0a"/></linearGradient><path class="st0" d="M52 12c19.6 0 35.5 14.3 35.5 35.7C87.5 68.6 69.6 77.6 60 91c-7.8 10.9-8 19-8 19s-.1-8.1-8-19c-9.8-13.4-27.5-21.7-27.5-43.3C16.5 26.3 32.4 12 52 12z"/><path class="st1" d="M52 25.8c12 0 21.8 9.8 21.8 21.9 0 12.1-9.7 21.9-21.8 21.9-12 0-21.8-9.8-21.8-21.9 0-12.1 9.8-21.9 21.8-21.9z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 102 128" style="enable-background:new 0 0 102 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<g>
+	
+		<image style="overflow:visible;opacity:0.25;" width="102" height="128" xlink:href="957F6AAD20A026B2.png"  transform="matrix(1 0 0 1 2.669271e-03 0)">
+	</image>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="52.0027" y1="110" x2="52.0027" y2="12">
+			<stop  offset="0" style="stop-color:#9DD614"/>
+			<stop  offset="1" style="stop-color:#A9EB0A"/>
+		</linearGradient>
+		<path class="st0" d="M52,12c19.6,0,35.5,14.3,35.5,35.7C87.5,68.6,69.6,77.6,60,91c-7.8,10.9-8,19-8,19s-0.1-8.1-8-19
+			c-9.8-13.4-27.5-21.7-27.5-43.3C16.5,26.3,32.4,12,52,12z"/>
+	</g>
+</g>
+<path class="st1" d="M52,25.8c12,0,21.8,9.8,21.8,21.9c0,12.1-9.7,21.9-21.8,21.9c-12,0-21.8-9.8-21.8-21.9
+	C30.2,35.6,40,25.8,52,25.8z"/>
+</svg>
