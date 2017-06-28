@@ -2,6 +2,16 @@
 	text-align: center;
 	
 	.o-btn {
-		padding: 0 140px;
+		@media screen and ( min-width: $smartphone + 1px ) {
+			padding: 0 140px;
+		}
+		
+		
+		
+		@media screen and ( max-width: $smartphone_portrait + px ) {
+				display: flex;
+				width: 100%;
+		}
+		
 	}
 }
