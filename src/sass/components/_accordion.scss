@@ -49,8 +49,9 @@
 		}
 		
 		.icon-arrow-3 {
-			@extend %abs-y;
-			right: 50px;
+			@extend %abs;
+			top: 0;
+			right: 50px; height: 100%;
 			border-radius: 0;
 			font-size: em(18);
 
@@ -61,8 +62,13 @@
 		
 			&:before {
 				width: 100%;
+				line-height: 80px;
 				transform: rotate(90deg) translateY(-50%);
 				color: $c-green--darker;
+				
+				@media screen and ( max-width: $smartphone + px ) {
+					line-height: 60px;
+				}
 			}
 		}
 		
