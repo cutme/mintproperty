@@ -1,7 +1,12 @@
 .c-question-form {
 	@extend %anim;
+	@extend %clear;
 	@extend %rel;
 	margin-bottom: 40px;
+
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		width: 100%;		
+	}
 
 	input,
 	textarea {
@@ -20,9 +25,12 @@
 	input[type=checkbox] {
 		& + label {
 			span {
-				width: 360px;
+				//width: grid(360);
+				//background: red;
 				font-size: em(11) !important;
 				color: $c-gray--brighter;
+				
+				
 			}
 		}
 	}
@@ -30,17 +38,21 @@
 	.icon-close-2 {
 		@extend %close;
 		@extend %abs;
-		right: 0; top: -20px;
+		right: 0; top: 20px;
 		
 		&:hover {
 			background-color: $c-gray--brightest;
 			color: white;
 		}
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			top: 10px;
+		}
 	}
 
 	.o-btn {
 		@extend %flex;
-		@extend %flex-x;		
+		@extend %flex-x;	
 	}	
 	
 	> .o-btn {
@@ -62,14 +74,42 @@
 		width: 110px;
 		border-radius: 5px;
 		overflow: hidden;
+		
+		@media screen and ( max-width: $base + px ) {
+			flex-grow: 1;
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			height: 40px;
+			
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
 	}
 	
 	.o-form__code {
 		width: 110px;
+		
+		@media screen and ( max-width: $base + px ) {
+			margin-left: 20px;
+			flex-grow: 1;
+		}
+		
+		
 	}
 	
 	.o-form__submit {
+
+		@media screen and ( max-width: $base + px ) {
+			display: flex;
+		    justify-content: center;
+		    padding-top: 5px;
+		}
+		
 		.o-btn {
+		
 			&:hover {
 				background: white;
 				border-color: $c-green--darker;
@@ -90,12 +130,13 @@
 		.o-btn {
 			font-size: em(15);
 		}
+
 	}
 	
 	&.is-active {
 	
 		@extend %border-radius;
-		padding: 40px 20px 20px 20px;
+		padding: 0 20px 20px 20px;
 		border: 1px solid $c-gray--brightest;
 		
 		> .o-btn {

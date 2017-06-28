@@ -19,6 +19,7 @@
 		if (mint.Helper.exist('#locationMap')) mint.LocationMap.init();
 		if (mint.Helper.exist('#masonry')) masonryInit();
 		if (mint.Helper.exist('#offerCarousel')) mint.OfferCarousel.init();
+		if (mint.Helper.exist('#offerContact')) mint.OfferContact.init();
 		if (mint.Helper.exist('#questionForm')) mint.QuestionForm.init();
 		if (mint.Helper.exist('#rentSale')) mint.Switcher.rentSale();
 		if (mint.Helper.exist('#shortcuts')) mint.Accordion.init('#shortcuts');		

@@ -1,11 +1,40 @@
 .c-offer-contact {
-	float: right;
-	width: 430px;
+
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		float: right;
+		width: grid(430);
+	}
+
 	
 	.c-contact-box {
 		@extend %clear;
-		width: 360px;
 		margin-bottom: 30px;
+		
+		@media screen and ( min-width: $tablet_portrait + 1px ) {
+			width: grid(360, 430);
+		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: flex;
+			//width: grid(360, $tablet_portrait);
+		}
+		
+		&__photo {
+			width: grid(130, 360);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: auto;
+			}
+		}
+		
+		&__text {
+			width: grid(230, 360);
+			
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				width: auto;
+				padding-left: 0;
+			}
+		}
 		
 		.o-btn {
 			@extend %flex;

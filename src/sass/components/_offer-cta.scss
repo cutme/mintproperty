@@ -2,10 +2,14 @@
 	margin-bottom: 30px;
 	text-align: center;
 	
+	@media screen and ( max-width: $smartphone + px ) {
+	    display: flex;
+	}
+	
+	
 	&__item {
 		display: inline-block;
 		width: 75px;
-		//text-align: center;
 
 		i {
 			display: inline-block;

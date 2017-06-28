@@ -1,12 +1,19 @@
 .c-offer-details {
-	float: left;
-	width: 730px;
+	
+	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		float: left;
+		width: grid(730);
+	}
 	
 	&__numbers {
 		@extend %flex;
 		width: 100%;
 		justify-content: space-between;
 		margin-bottom: 35px;
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: none;
+		}
 
 		li {
 			width: 100%;

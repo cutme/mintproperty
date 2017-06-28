@@ -8,7 +8,7 @@
 	LocationMap.prototype.init = function() {
 	
 		function initialize() {
-			var map, overlay, 
+			var map, overlay, center,
 				container = document.getElementById('locationMap'),
 				lat =  $(container).data('lat'),
 				lng =  $(container).data('lng'),
@@ -24,6 +24,9 @@
 					styles: mapStyle
 				};
 	
+			function calculateCenter() {
+				center = map.getCenter();
+			}
 			
 			function CustomMarker(latlng, map, args) {
 				this.latlng = latlng;	
@@ -87,6 +90,17 @@
 					marker_id: '123'
 				}
 			);
+			
+			
+			google.maps.event.addDomListener(map, 'idle', function() {
+				calculateCenter();
+			});
+		
+			google.maps.event.addDomListener(window, 'resize', function() {
+				setTimeout(function() {
+					map.setCenter(center);
+				}, 1);
+			});
 	    }
 	    
 		$.getScript('https://www.google.com/jsapi', function()

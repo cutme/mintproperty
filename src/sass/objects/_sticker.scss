@@ -3,6 +3,13 @@
 	right: 10px; top: 0;
 	z-index: 100;
 	
+	span {
+		@media screen and ( max-width: $smartphone + px ) {
+			display: none;
+		}
+		
+	}
+	
 	&:after {
     	@extend %abs-after;
     	@extend %icomoon;
@@ -10,10 +17,18 @@
     	transform: translateX(-50%);
     	font-size: em(26);
     	color: white;
+    	
+    	@media screen and ( max-width: $smartphone + px ) {
+    		top: 8px !important;
+    	}
 	}
 
     .icon-sticker {
 	    font-size: em(48);
+	    
+	    @media screen and ( max-width: $smartphone + px ) {
+	    	font-size: em(46);
+	    }
     }
     
     &--exclusive {

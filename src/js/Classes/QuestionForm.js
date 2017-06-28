@@ -5,6 +5,9 @@
 	
 	QuestionForm.prototype.init = function() {
 		this.enable();
+		this.rwud();
+		
+		
 	};
 
 	QuestionForm.prototype.ajax = function() {
@@ -26,9 +29,38 @@
 			e.preventDefault();
 			$(form).removeClass('is-active');
 			$('form', form).parsley().reset();
-		});
-		
+		});		
 	};
+	
+	
+	QuestionForm.prototype.rwud = function() {
+	
+		
+	
+		var el = document.getElementById('questionForm'),
+			form = $('form', el),
+			obj,
+			submit = $('.o-form__submit'),
+			summary = $('.o-form__row--summary'),
+			w = $(window);
+
+		function checkAndMove() {
+			if (mint.Helper.isWindowSmallerThan(1180)) {
+				obj = submit.detach();
+				form.append(obj);
+			} else {
+				obj = submit.detach();
+				summary.append(obj);
+			}
+		}
+
+		checkAndMove();
+		
+		$(w).on('resize', function() {
+			checkAndMove();
+		});
+	};
+
 	
 	mint.QuestionForm = new QuestionForm();
 	

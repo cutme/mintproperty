@@ -195,16 +195,30 @@
 
 		.title {
 			line-height: 1;
-			text-align: center;
 			font: {
 				size: em(24);
 				weight: $bold;
 			}
 		}
+		
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			display: flex;
+		    flex-direction: column-reverse;
+		    margin-bottom: 15px;
+		}
 	}
 	
 	&--type-8 {
-		margin-bottom: 50px;
+		@extend %flex;
+		@extend %flex-xy;
+		align-items: center;
+		justify-content: center;
+		height: 100px;
+		
+		@media screen and ( max-width: $smartphone + px ) {
+			padding-top: 20px;
+		}
+		
 
 		.title {
 			line-height: 1;

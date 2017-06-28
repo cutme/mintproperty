@@ -2,22 +2,43 @@
 	@extend %rel;
 	margin-bottom: 45px;
 	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		margin-bottom: 10px;
+	}
+	
+	@media screen and ( max-width: $tablet_portrait + px ) {
+		//margin-bottom: 0;
+	}
+	
 	.icon-sticker {
 	    font-size: em(104);
     }
 	
 	.slider-for {
 		margin-bottom: 20px;
-		overflow: hidden;
-		height: 480px;
+		
+		@media screen and ( min-width: $smartphone + 1px ) {
+			overflow: hidden;
+		}
+		@media screen and ( max-width: $tablet_portrait + px ) {
+			margin-bottom: 10px;
+		}
 		
 		.slick-slide {
 			@extend %border-radius;
 		}
+		
+		.slick-arrow {
+			@media screen and ( max-width: $tablet_portrait + px ) {
+				display: none !important;
+			}	
+		}
 	}
 	
 	.slider-nav {
-		padding: 0 80px;
+		@media screen and ( min-width: $smartphone + 1px ) {
+			padding: 0 80px;
+		}
 	}
 	
 	.slick-prev {
@@ -28,11 +49,11 @@
 		right: 20px;
 	}
 
-	.slider-nav {
+	.slider-nav {		
 	
 		.slick-arrow {
 			background: $c-white--darker;
-			width: 40px; height: 40px;
+			width: 40px; height: 40px;		
 			
 			&:hover {
 				background: darken($c-white--darker, 5%);
@@ -45,7 +66,7 @@
 		}
 		
 		.slick-track {
-		    display: flex;
+			display: flex;
 		    align-items: center;
 			
 		}
@@ -57,15 +78,24 @@
 			text-align: center;
 			padding: 20px;
 			
+			@media screen and ( max-width: $smartphone + px ) {
+				width: 68px;
+				margin: 0 5px;
+				padding: 0;
+			}
+			
 			img {
 				@extend %border-radius;
 			}
 			
 			&.slick-center {
 				@extend %border-radius;
-				box-shadow:  0 0 0 2px $c-green--darker;
 				border: 0;
 				padding: 0;
+				
+				@media screen and ( min-width: $smartphone + 1px ) {
+					box-shadow:  0 0 0 2px $c-green--darker;
+				}
 			}
 		}
 		

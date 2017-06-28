@@ -25,7 +25,17 @@
 			centerPadding: 0,
 			variableWidth: true,
 			prevArrow: '<i class="icon-arrow-2 slick-prev"></i>',
-			nextArrow: '<i class="icon-arrow-2 slick-next"></i>'
+			nextArrow: '<i class="icon-arrow-2 slick-next"></i>',
+			responsive: [
+		    {
+		      breakpoint: 569,
+		      settings: {
+		      	arrows: false,
+		      	slidesToShow: 4,
+			  	swipeToSlide: true
+		      }
+		    }
+		  ]
 		});
 
 		
