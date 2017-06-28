@@ -115,7 +115,7 @@
 			width: 100%;
 			margin-right: 0;
 			
-			@media screen and ( max-width: $smartphone + px ) {
+			@media screen and ( max-width: $tablet_portrait + px ) {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -264,7 +264,7 @@
 	
 	&__offersNum {
 		.full & {
-			@media screen and ( max-width: $smartphone + px ) {
+			@media screen and ( max-width: $tablet_portrait + px ) {
 				float: left;
 				padding-top: 8px;
 			}
@@ -275,14 +275,26 @@
 		.full & {
 			@extend %clear;
 
-			@media screen and ( max-width: $smartphone + px ) {
+			@media screen and ( max-width: $tablet_portrait + px ) {
 				width: 100%;
-				padding: 30px 0 25px 0;
+				padding: 20px 0;
 		
 				.o-btn {
 					height: 40px;
 				}
-			}			
+			}
+			
+			@media screen and ( min-width: $smartphone + px )  and ( max-width: $tablet_portrait + px ) {
+				text-align: center;
+			}
+			
+			
+			.o-btn {
+				@media screen and ( min-width: $smartphone + px )  and ( max-width: $tablet_portrait + px ) {
+					display: inline-flex;
+					padding: 0 70px;
+				}
+			}
 		}
 	}
 	

@@ -56,7 +56,7 @@
 		
 		function checkAndPlace() {
 			if ( $(el).hasClass('is-expanded') ) {
-				if (mint.Helper.isWindowSmallerThan(640) === false) {
+				if (mint.Helper.isWindowSmallerThan(769) === false) {
 					offersNum.detach();
 					submit.detach();
 					

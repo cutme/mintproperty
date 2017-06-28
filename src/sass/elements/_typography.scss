@@ -33,7 +33,7 @@ a {
 }
 
 br {
-	@media screen and ( max-width: $tablet_portrait + px ) {
+	@media screen and ( max-width: $smartphone + px ) {
 		display: none;
 	}
 }

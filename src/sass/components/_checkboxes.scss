@@ -3,7 +3,7 @@
 	@media screen and ( min-width: $smartphone + 1px ) {
 	    display: flex;
 	    flex-wrap: wrap;
-	    justify-content: space-between;
+	    justify-content: flex-start;
 	    padding-top: 36px;
 	    
 	    .type-rent & {
@@ -32,9 +32,10 @@
 	
 	&__item {
 		margin-bottom: 10px;
+		padding-right: 10px;
 		
 		@media screen and ( min-width: $smartphone + 1px ) {
-			width: 100px;
+			//width: 100px;
 		}		
 		
 		&.rent {
@@ -46,7 +47,7 @@
 		}
 		
 		span {
-			width: 80px;
+			//width: 80px;
 			font-weight: $regular;
 			line-height: 1.2;
 			color: $c-gray;
