@@ -20,7 +20,12 @@
 	.mobile-menu & {
 		display: block;
 		width: 100%;
+		margin-bottom: 40px;
 		text-align: center;
+		
+		@media screen and (orientation: landscape) {
+			margin-bottom: 100px;
+		}
 
 		a {
 			font-size: em(14);

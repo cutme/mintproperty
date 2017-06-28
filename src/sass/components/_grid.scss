@@ -44,7 +44,7 @@
 	    	width: grid($grid_item);
 	    }
 
-	    @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+	    @media screen and ( min-width: $smartphone + px ) and ( max-width: $tablet_portrait + px ) {
 	  	    	
 	    	width: grid(354, $tablet_portrait - 40);
 	    	

@@ -25,7 +25,7 @@
 				
 				isActive = false;
 
-			} else if ((ww > 640) && (isActive === false)) {
+			} else if ((ww > 567) && (isActive === false)) {
 				
 				msnry = new Masonry( container, masonryOptions );
 				

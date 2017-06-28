@@ -19,7 +19,7 @@
 		height: 500px;
 		background-color: $c-black;
 		
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media screen and ( max-width: $tablet_portrait + px ) and (orientation: portrait) {
 			height: calc(100vh - 120px);
 			//height: 450px;
 		}

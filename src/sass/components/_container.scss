@@ -1,6 +1,6 @@
 .c-container {
 	@extend %rel;
-	
+	z-index: 10;	
 	
 	&.padding-top {
 //		padding-top: 120px;
