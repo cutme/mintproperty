@@ -4,264 +4,259 @@
 <body>
 
 	@@include('./includes/cookies.html')
-	
+	@@include('./includes/top.html')
+
 	
 	<div class="c-container">
 
-
-	@@include('./includes/top.html')
-
-
-	<div class="c-contact">
-		<div class="o-photo o-photo--type-3">
-			<header class="o-header o-header--type-4">
-				<h1 class="title"><strong>MINT <span>PROPERTY</span></strong> <span>Kraków</span></h1>
-				
-				<div class="text text-center">
-					<span>ul. Grzegórzecka 67h/174 parter,</span> 
-					<span>31-559 Kraków</span><br>
-					<span>pon - pt 9:30-17:30</span><br>
-					<div class="contact">
-						<span>784 688 225</span>
-						<span>biuro@mintproperty.pl</span>
-					</div>
-				</div>
-				
-				<p>
-					<a href="#" class="o-btn o-btn--green-fill-whitehover o-btn--big">Wyślij wiadomość</a>
-				</p>
-			</header>
-			
-			<picture>
-				<source 
-						media="(max-width: 320px)" 
-						srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-						data-srcset="img/top/contact.jpg">
-				<img 
-					class="b-lazy" 
-					src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
-					data-src="img/top/contact@2x.jpg" alt="About" width="1920" height="500">
-			</picture>
-		</div>	
-	
-	
-		<div class="o-wrap">
-			<form action="#" class="c-contact-form" data-parsley-validate>
-				<header class="o-header o-header--type-6">
-					<h3 class="title">Skontaktuj się z nami</h3>
-				</header>
-	
-				<input type="text" placeholder="Imię i nazwisko" required>
-				
-				<input type="email" placeholder="Adres e-mail" required data-parsley-type="email">
-				
-				<input type="tel" placeholder="Telefon" required data-parsley-type="number">
-	
-				<div class="o-form__row">
-					<select class="nice-select">
-						<option>Czym jesteś zainteresowany</option>
-						<option>Mieszkanie</option>
-						<option>Dom</option>
-						<option>Powierzchnia komercyjna</option>
-						<option>Usługi</option>
-						<option>Jestem właścicielem</option>
-					</select>
-				</div>
-	
-				<textarea placeholder="Uwagi"></textarea>
-				
-				<div class="o-form__row o-form__row--captcha">
-					<div class="o-form__captcha">
-						<img src="img/other/captcha.png" alt="captcha" width="130" height="55">
+		<div class="c-contact">
+			<div class="o-photo o-photo--type-3">
+				<header class="o-header o-header--type-4">
+					<h1 class="title"><strong>MINT <span>PROPERTY</span></strong> <span>Kraków</span></h1>
+					
+					<div class="text text-center">
+						<span>ul. Grzegórzecka 67h/174 parter,</span> 
+						<span>31-559 Kraków</span><br>
+						<span>pon - pt 9:30-17:30</span><br>
+						<div class="contact">
+							<span>784 688 225</span>
+							<span>biuro@mintproperty.pl</span>
+						</div>
 					</div>
 					
-					<div class="o-form__code">
-						<input type="text" placeholder="Kod obrazkowy">
-					</div>
-				</div>
-				
-				<div class="o-form__row clear">
-					<input type="checkbox" id="agree-1">
-					<label for="agree-1">
-						<i class="icon-checkmark"></i>
-						<span>Wyrażam zgodę na przetwarzanie danych osobowych.</span>
-					</label>
-				</div>
-				
-				<div class="o-form__row clear">
-					<input type="checkbox" checked id="agree-2">
-					<label for="agree-1">
-						<i class="icon-checkmark"></i>
-						<span>Wyrażam zgodę na przetwarzanie danych osobowych.</span>
-					</label>
-				</div>
-				
-				<div class="o-form__row o-form__row--submit">
-					<button type="submit" class="o-btn o-btn--big o-btn--green-empty"><span>Wyślij</span></button>
-				</div>
-			</form>
-		</div>
-	
-	
-		<div class="c-contact-map" id="contact-map">
-			<div id="pin" class="c-contact-map__pin">
-				<div class="c-contact-map__marker">
-					<img src="img/icons/pin.svg" alt="" width="71" height="98">
-				</div>
-				<p class="c-contact-map__title">ul. Grzegórzecka 67h/174</p>
-			</div>
-			
-			<div class="c-contact-map__company">
-				<a href="#" class="o-btn o-btn--big o-btn--green-fill-whitehover">Pokaż trasę dojazdu</a>
-				<img src="img/contact/company.jpg" alt="" width="430" height="500">
-			</div>
-			
-			<div class="c-contact-map__map" id="map-canvas"></div>
-		</div>
-	
-	
-		<div class="c-agents">
-			<div class="o-wrap">
-				<header class="o-header o-header--type-6">
-					<h3 class="title">Nasi agenci</h3>
+					<p>
+						<a href="#" class="o-btn o-btn--green-fill-whitehover o-btn--big">Wyślij wiadomość</a>
+					</p>
 				</header>
 				
-				<ul class="c-grid c-grid--noflex">
-					<li class="c-grid__item">
-						<div class="c-contact-box">
-							<div class="c-contact-box__photo">
-								<img class="b-lazy" 
-									src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-									data-src="img/contact/karol-kaminski.jpg" alt="karol kaminski" width="130" height="170">
-							</div>
-							
-							<div class="c-contact-box__text">
-								<h4>Karol Kamiński</h4>
-				
-								<p>
-									<a href="tel:784688225" class="c-contact-box__phone">
-										<i class="icon-call"></i>
-										<span>784 688 225</span>
-									</a>
-								</p>
-								
-								<p>
-									<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
-								</p>
-							</div>
-						</div>
-					</li>
-					
-					<li class="c-grid__item">
-						<div class="c-contact-box">
-							<div class="c-contact-box__photo">
-								<img class="b-lazy" 
-									src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-									data-src="img/contact/alicja-nowak.jpg" alt="alicja nowak" width="130" height="170">
-							</div>
-							
-							<div class="c-contact-box__text">
-								<h4>Alicja Nowak</h4>
-				
-								<p>
-									<a href="tel:784688225" class="c-contact-box__phone">
-										<i class="icon-call"></i>
-										<span>784 688 225</span>
-									</a>
-								</p>
-								
-								<p>
-									<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
-								</p>
-							</div>
-						</div>
-					</li>
-					
-					<li class="c-grid__item">
-						<div class="c-contact-box">
-							<div class="c-contact-box__photo">
-								<img class="b-lazy" 
-									src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-									data-src="img/contact/kamila-mak.jpg" alt="kamila mak" width="130" height="170">
-							</div>
-							
-							<div class="c-contact-box__text">
-								<h4>Kamila Mak</h4>
-				
-								<p>
-									<a href="tel:784688225" class="c-contact-box__phone">
-										<i class="icon-call"></i>
-										<span>784 688 225</span>
-									</a>
-								</p>
-								
-								<p>
-									<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
-								</p>
-							</div>
-						</div>
-					</li>
-					
-					<li class="c-grid__item">
-						<div class="c-contact-box">
-							<div class="c-contact-box__photo">
-								<img class="b-lazy" 
-									src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-									data-src="img/contact/karol-kaminski.jpg" alt="karol kaminski" width="130" height="170">
-							</div>
-							
-							<div class="c-contact-box__text">
-								<h4>Karol Kamiński</h4>
-				
-								<p>
-									<a href="tel:784688225" class="c-contact-box__phone">
-										<i class="icon-call"></i>
-										<span>784 688 225</span>
-									</a>
-								</p>
-								
-								<p>
-									<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
-								</p>
-							</div>
-						</div>
-					</li>
-					
-					<li class="c-grid__item">
-						<div class="c-contact-box">
-							<div class="c-contact-box__photo">
-								<img class="b-lazy" 
-									src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-									data-src="img/contact/alicja-nowak.jpg" alt="alicja nowak" width="130" height="170">
-							</div>
-							
-							<div class="c-contact-box__text">
-								<h4>Alicja Nowak</h4>
-				
-								<p>
-									<a href="tel:784688225" class="c-contact-box__phone">
-										<i class="icon-call"></i>
-										<span>784 688 225</span>
-									</a>
-								</p>
-								
-								<p>
-									<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
+				<picture>
+					<source 
+							media="(max-width: 320px)" 
+							srcset="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+							data-srcset="img/top/contact.jpg">
+					<img 
+						class="b-lazy" 
+						src="data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+						data-src="img/top/contact@2x.jpg" alt="About" width="1920" height="500">
+				</picture>
+			</div>	
 		
+		
+			<div class="o-wrap">
+				<form action="#" class="c-contact-form" data-parsley-validate>
+					<header class="o-header o-header--type-6">
+						<h3 class="title">Skontaktuj się z nami</h3>
+					</header>
+		
+					<input type="text" placeholder="Imię i nazwisko" required>
+					
+					<input type="email" placeholder="Adres e-mail" required data-parsley-type="email">
+					
+					<input type="tel" placeholder="Telefon" required data-parsley-type="number">
+		
+					<div class="o-form__row">
+						<select class="nice-select">
+							<option>Czym jesteś zainteresowany</option>
+							<option>Mieszkanie</option>
+							<option>Dom</option>
+							<option>Powierzchnia komercyjna</option>
+							<option>Usługi</option>
+							<option>Jestem właścicielem</option>
+						</select>
+					</div>
+		
+					<textarea placeholder="Uwagi"></textarea>
+					
+					<div class="o-form__row o-form__row--captcha">
+						<div class="o-form__captcha">
+							<img src="img/other/captcha.png" alt="captcha" width="130" height="55">
+						</div>
+						
+						<div class="o-form__code">
+							<input type="text" placeholder="Kod obrazkowy">
+						</div>
+					</div>
+					
+					<div class="o-form__row clear">
+						<input type="checkbox" id="agree-1">
+						<label for="agree-1">
+							<i class="icon-checkmark"></i>
+							<span>Wyrażam zgodę na przetwarzanie danych osobowych.</span>
+						</label>
+					</div>
+					
+					<div class="o-form__row clear">
+						<input type="checkbox" checked id="agree-2">
+						<label for="agree-1">
+							<i class="icon-checkmark"></i>
+							<span>Wyrażam zgodę na przetwarzanie danych osobowych.</span>
+						</label>
+					</div>
+					
+					<div class="o-form__row o-form__row--submit">
+						<button type="submit" class="o-btn o-btn--big o-btn--green-empty"><span>Wyślij</span></button>
+					</div>
+				</form>
+			</div>
+		
+		
+			<div class="c-contact-map" id="contact-map">
+				<div id="pin" class="c-contact-map__pin">
+					<div class="c-contact-map__marker">
+						<img src="img/icons/pin.svg" alt="" width="71" height="98">
+					</div>
+					<p class="c-contact-map__title">ul. Grzegórzecka 67h/174</p>
+				</div>
+				
+				<div class="c-contact-map__company">
+					<a href="#" class="o-btn o-btn--big o-btn--green-fill-whitehover">Pokaż trasę dojazdu</a>
+					<img src="img/contact/company.jpg" alt="" width="430" height="500">
+				</div>
+				
+				<div class="c-contact-map__map" id="map-canvas"></div>
+			</div>
+		
+		
+			<div class="c-agents">
+				<div class="o-wrap">
+					<header class="o-header o-header--type-6">
+						<h3 class="title">Nasi agenci</h3>
+					</header>
+					
+					<ul class="c-grid c-grid--noflex">
+						<li class="c-grid__item">
+							<div class="c-contact-box">
+								<div class="c-contact-box__photo">
+									<img class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+										data-src="img/contact/karol-kaminski.jpg" alt="karol kaminski" width="130" height="170">
+								</div>
+								
+								<div class="c-contact-box__text">
+									<h4>Karol Kamiński</h4>
+					
+									<p>
+										<a href="tel:784688225" class="c-contact-box__phone">
+											<i class="icon-call"></i>
+											<span>784 688 225</span>
+										</a>
+									</p>
+									
+									<p>
+										<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
+									</p>
+								</div>
+							</div>
+						</li>
+						
+						<li class="c-grid__item">
+							<div class="c-contact-box">
+								<div class="c-contact-box__photo">
+									<img class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+										data-src="img/contact/alicja-nowak.jpg" alt="alicja nowak" width="130" height="170">
+								</div>
+								
+								<div class="c-contact-box__text">
+									<h4>Alicja Nowak</h4>
+					
+									<p>
+										<a href="tel:784688225" class="c-contact-box__phone">
+											<i class="icon-call"></i>
+											<span>784 688 225</span>
+										</a>
+									</p>
+									
+									<p>
+										<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
+									</p>
+								</div>
+							</div>
+						</li>
+						
+						<li class="c-grid__item">
+							<div class="c-contact-box">
+								<div class="c-contact-box__photo">
+									<img class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+										data-src="img/contact/kamila-mak.jpg" alt="kamila mak" width="130" height="170">
+								</div>
+								
+								<div class="c-contact-box__text">
+									<h4>Kamila Mak</h4>
+					
+									<p>
+										<a href="tel:784688225" class="c-contact-box__phone">
+											<i class="icon-call"></i>
+											<span>784 688 225</span>
+										</a>
+									</p>
+									
+									<p>
+										<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
+									</p>
+								</div>
+							</div>
+						</li>
+						
+						<li class="c-grid__item">
+							<div class="c-contact-box">
+								<div class="c-contact-box__photo">
+									<img class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+										data-src="img/contact/karol-kaminski.jpg" alt="karol kaminski" width="130" height="170">
+								</div>
+								
+								<div class="c-contact-box__text">
+									<h4>Karol Kamiński</h4>
+					
+									<p>
+										<a href="tel:784688225" class="c-contact-box__phone">
+											<i class="icon-call"></i>
+											<span>784 688 225</span>
+										</a>
+									</p>
+									
+									<p>
+										<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
+									</p>
+								</div>
+							</div>
+						</li>
+						
+						<li class="c-grid__item">
+							<div class="c-contact-box">
+								<div class="c-contact-box__photo">
+									<img class="b-lazy" 
+										src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+										data-src="img/contact/alicja-nowak.jpg" alt="alicja nowak" width="130" height="170">
+								</div>
+								
+								<div class="c-contact-box__text">
+									<h4>Alicja Nowak</h4>
+					
+									<p>
+										<a href="tel:784688225" class="c-contact-box__phone">
+											<i class="icon-call"></i>
+											<span>784 688 225</span>
+										</a>
+									</p>
+									
+									<p>
+										<a href="#" class="o-btn o-btn--green-empty">Wyślij wiadomość</a>
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+			
+				</div>
 			</div>
 		</div>
 	</div>
+
 
 	@@include('./includes/shortcuts.html')
-	
-	</div>
-
-
 	@@include('./includes/footer.html')
 	@@include('./includes/scripts.html')
 
