@@ -11,7 +11,8 @@
 		mint.Menu.init();
 		
 
-		if (mint.Helper.exist('#accordion')) mint.Accordion.init('#accordion');
+		if (mint.Helper.exist('#accordion')) mint.Accordion.init('#accordion');		
+		
 		if (mint.Helper.exist('#contact-map')) mint.ContactMap.init();
 		if (mint.Helper.exist('#filters')) mint.Filters.init();
 		if (mint.Helper.exist('#homeSlider')) mint.Slider.init();

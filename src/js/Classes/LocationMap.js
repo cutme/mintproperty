@@ -3,8 +3,6 @@
 	
 	var LocationMap = mint.LocationMap = function () { };
 	
-	
-
 	LocationMap.prototype.init = function() {
 	
 		function initialize() {

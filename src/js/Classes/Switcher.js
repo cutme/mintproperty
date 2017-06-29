@@ -58,24 +58,24 @@
 		var el = document.getElementById('viewType'),
 			btn = $('.js-btn', el),
 			results = document.getElementById('results');
-		
+
 		btn.on('click', function(e) {
 			e.preventDefault();
-			
+
 			var $$ = $(this),
 				target = $$.data('type');
-			
+
 			btn.removeClass('is-active');
 			$$.addClass('is-active');
-			
+
 			$('.js-view', results).removeClass('is-active');
-			
+
 			$('#'+target).addClass('is-active');
-			
-			if (target === 'map') {
-				mint.OffersOnMap.init();
+
+			if (target === 'mapHolder') {
+				mint.MapMarkers.init();
 			}
-			
+
 			/*
 var bLazy = new Blazy({
 				breakpoints: false,	
@@ -92,6 +92,7 @@ var bLazy = new Blazy({
 				bLazy.revalidate();
 			});	
 */
+
 		});
 	};
 		

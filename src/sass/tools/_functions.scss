@@ -30,3 +30,8 @@
 	$vw-context: ($tablet_portrait * 0.01);
 	@return ($target / $vw-context) * 1vw;
 }
+
+@function get-vw-640($target) {
+	$vw-context: (600 * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
