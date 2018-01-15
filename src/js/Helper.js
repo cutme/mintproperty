@@ -24,7 +24,7 @@
 
 	function blazy() {
 
-		var bLazy = new Blazy({
+		bLazy = new Blazy({
 			breakpoints: false,	
 			success: function(element){
 			    setTimeout(function(){					
@@ -34,8 +34,38 @@
 			    }, 200);
 	        }
 	   });
+
+
+       // Print offer
+       
+       var printPage = function() {
+           $('.b-lazy').each(function() {
+                var target = $(this).data('src');
+                $(this).attr('src', target).addClass('b-loaded');
+            });
+            
+            setTimeout(function() {
+                window.print();
+            }, 1000);
+       }
+       
+       document.addEventListener('click', function(e) {
+       
+           if ((e.target.parentNode.id === 'print') || (e.target.id === 'print')) { 
+           
+               if ( $('#locationMap').length > 0 ) {
+                   if ( $('body').hasClass('map-loaded') ) {
+                        printPage();
+                   }
+               } else {
+                    printPage();
+               }
+
+                e.returnValue = false;
+            }
+       }, false);
 	}
-	
+
 	function cookies() {
 
 		var el = document.getElementById('cookies'),

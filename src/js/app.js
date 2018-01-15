@@ -1,3 +1,4 @@
+var bLazy;
 
 (function(window, document, $, mint, undefined) {
 	'use strict';

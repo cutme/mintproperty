@@ -1,5 +1,9 @@
 .c-offer-plan {
 	margin-bottom: 40px;
+	
+	@media print {
+    	 page-break-before: always; 
+	}
 
 	i {
 		@extend %abs;
@@ -12,6 +16,10 @@
 		line-height: 55px;
 		color: $c-green--darker;
 		font-size: em(24);
+		
+		@media print {
+		    display: none;
+		}
 	}
 	
 	&__image {

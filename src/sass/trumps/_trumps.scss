@@ -19,11 +19,23 @@
 	@media screen and ( min-width: $smartphone + 1px ) {
 		margin-bottom: 100px;
 	}
+	
+	// Related offers
+	
+	&.c-boxes {
+        @media print {
+            display: none;
+        }
+	}
 }
 
 .no-scroll {
 	overflow: hidden;
 	position: fixed;
+}
+
+.no-visibility {
+    visibility: hidden;
 }
 
 

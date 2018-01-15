@@ -21,6 +21,10 @@
 			line-height: 55px;
 			font-size: em(24);
 			color: $c-green--darker;
+			
+			&.icon-checkmark {
+    			font-size: em(18);
+			}
 		}
 		
 		span {
@@ -29,20 +33,32 @@
 			color: $c-gray--brighter;
 		}
 		
-		&:hover {
-			
-			i {
-				
-				background-color: $c-green--darker;
-				box-shadow: rgba(black, .2) 0 0 10px;
-				color: white;
-			}
-			
-			span {
-				color: $c-green--darker;;
-			}
-			
-		}
 		
+		@at-root {
+            a#{&} {
+
+            	&:hover {
+        			
+        			i {
+        				
+        				background-color: $c-green--darker;
+        				box-shadow: rgba(black, .2) 0 0 10px;
+        				color: white;
+        			}
+        			
+        			span {
+        				color: $c-green--darker;;
+        			}
+        			
+        		}
+                
+                
+                
+            }
+        }
+	}
+	
+	a {
+	    
 	}
 }

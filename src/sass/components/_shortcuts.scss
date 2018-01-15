@@ -7,6 +7,10 @@
 	background-color: white;
 	overflow: scroll;
 	-webkit-overflow-scrolling: touch;
+	
+    @media print {
+        display: none;
+    }
 
 	&__cols {
 		@extend %clear;

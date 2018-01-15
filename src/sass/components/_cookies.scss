@@ -5,6 +5,10 @@
 	background-color: $c-green--darker;
 	margin-top: 0;
 	
+	@media print {
+    	display: none;
+	}
+	
 	@media screen and ( min-width: $tablet + 1px ) {
 		height: 120px;
 	}

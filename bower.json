@@ -1,9 +1,9 @@
 {
-  "name": "yareal-rezydencja-chrobrego",
+  "name": "mint",
   "description": "",
   "main": "gulpfile.js",
   "authors": [
-    "withpassion"
+    "cutme.pl"
   ],
   "license": "ISC",
   "homepage": "",
@@ -25,7 +25,8 @@
     "js-cookie": "^2.1.4",
     "nouislider": "noUiSlider#^10.0.0",
     "wnumb": "^1.1.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "classie": "^1.0.1"
   },
   "overrides": {
     "outlayer": {

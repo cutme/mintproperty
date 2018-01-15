@@ -145,7 +145,7 @@
 							Zapisz pdf
 						</a>
 						
-						<a href="#" class="o-btn o-btn--gray-empty">
+						<a href="#" class="o-btn o-btn--gray-empty" id="print">
 							<i class="icon-print"></i>
 							Wydrukuj
 						</a>
@@ -161,9 +161,19 @@
 				<li class="c-grid__item js-location is-loading" data-lat="50.0623232" data-lng="19.9260243" data-url="oferta-detal.html">
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
-						<div class="o-sticker o-sticker--exclusive">
-							<i class="icon-sticker"></i>
-						</div>
+                        <div class="o-sticker__holder">
+                        	<div class="o-sticker o-sticker--exclusive">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--rent-property">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--without-commission">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        </div>
 						
 						<div class="c-box__photo">
 							<div class="pl-wave"><div class="loader"><span></span></div></div>
@@ -246,6 +256,8 @@
 
 					
 				<li class="c-grid__item is-loading">
+				
+				    <a href="#" class="c-grid__close icon-close-2"></a>
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--without-commission">
@@ -412,7 +424,7 @@
 				</ul>
 				
 				<div class="c-load-more">
-					<a href="#" class="o-btn o-btn--big o-btn--gray-fill">Pokaż więcej</a>
+					<a href="#" class="o-btn o-btn--big o-btn--gray-fill" id="loadMore">Pokaż więcej</a>
 				</div>
 			</div>
 		</div>

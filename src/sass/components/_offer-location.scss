@@ -1,4 +1,8 @@
 .c-offer-location {
 	@extend %clear;
 	margin-bottom: 40px;
+	
+	@media print {
+	    page-break-before: always; 
+	}
 }

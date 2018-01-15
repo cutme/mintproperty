@@ -2,5 +2,9 @@
 	@extend %rel;
 	z-index: 10;
 	background-color: $c-black;	
+	
+	@media print {
+	    display: none;
+	}
 }
 

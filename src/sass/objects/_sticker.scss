@@ -3,6 +3,25 @@
 	right: 10px; top: 0;
 	z-index: 100;
 	
+		
+	&__holder {
+	    @extend %abs;
+	    right: 10px; top: 0;
+	    z-index: 100;
+	    
+        @media print {
+            display: none;
+        }
+
+    	.o-sticker {
+    		position: relative;
+    		float: left;
+    		margin-right: 5px;
+    		right: auto; top: auto;
+        }
+
+	}
+	
 	span {
 		@media screen and ( max-width: $smartphone + px ) {
 			display: none;

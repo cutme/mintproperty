@@ -39,6 +39,10 @@
 		@media screen and ( min-width: $smartphone + 1px ) {
 			padding: 0 80px;
 		}
+		
+		@media print {
+    		display: none;
+		}
 	}
 	
 	.slick-prev {
@@ -104,6 +108,10 @@
 	&__stickers {
 		@extend %abs;
 		top: 0; right: 0;
+		
+		@media print {
+		    display: none;
+		}
 		
 		.o-sticker {
 			@extend %rel;

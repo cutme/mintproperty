@@ -9,8 +9,15 @@ $primary-color: $c-green--darker;
 	opacity: 0;
 
 	.is-loading & {
-		opacity: 1;
-		transform: translate(-50%, calc(-50% + 40px));
+	    @media screen {
+    		opacity: 1;
+        }
+	}
+	
+	.c-box & {
+	    @media screen {
+    		transform: translate(-50%, calc(-50% + 40px));
+        }
 	}
 }
 

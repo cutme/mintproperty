@@ -1,10 +1,14 @@
 .c-clipboard {
-	
+	margin-bottom: 5px;
 
 	@media screen and ( min-width: $smartphone + 1px ) {
 		display: flex;
 		align-items: center;
 		transform: translateY(5px);
+	}
+	
+	@media print {
+    	display: none;
 	}
 
 	strong {

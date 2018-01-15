@@ -9,15 +9,27 @@
 		function initialize() {
 	
 			var map, overlay,
-				lat = 50.0559333,
-				lng = 19.9592909,
-				center;
+			    container = document.getElementById('map-canvas'),
+				lat = parseFloat(container.getAttribute('data-lat')),
+				lng = parseFloat(container.getAttribute('data-lng')),
+				info = container.getAttribute('data-info'),
+				center,
+				route = document.getElementById('show-route'),
+				routeBox = document.getElementById('show-route__box');
+
+            if (isNaN(lat)) {
+                lat = 50.0559333;
+            }
+            
+            if (isNaN(lng)) {
+                lng = 19.9592909;
+            }
 		
 			function CustomMarker(latlng, map, args) {
 				this.latlng = latlng;	
 				this.args = args;	
 				this.setMap(map);	
-			}
+			}			
 			
 			CustomMarker.prototype = new google.maps.OverlayView();
 			
@@ -127,6 +139,88 @@ google.maps.event.addDomListener(div, "click", function(event) {
 				map.panBy(200, -100);
 				moved = true;
 			}
+			
+			
+			/* Show route */
+			
+//			var map_render = new google.maps.DirectionsRenderer();\
+			
+			var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+            
+            directionsDisplay.setMap(map);
+            
+            var lang = "pl";
+            
+            
+
+			var showRoute = function(e) {
+			
+			    $(routeBox).fadeOut();
+			    $(container).addClass('is-loading');
+			
+			    //var infoWindow = new google.maps.InfoWindow;
+			
+			    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                   /*
+ infoWindow.setPosition(pos);
+                    infoWindow.setContent(browserHasGeolocation ?
+                                          'Error: The Geolocation service failed.' :
+                                          'Error: Your browser doesn\'t support geolocation.');
+                    infoWindow.open(map);
+*/
+                  }
+			
+			    if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                      lat: position.coords.latitude,
+                      lng: position.coords.longitude
+                    };
+                    
+                    $(container).removeClass('is-loading');
+                    $('#pin').hide();
+        
+                    /*
+infoWindow.setPosition(pos);
+                    infoWindow.setContent(info);
+                    infoWindow.open(map);
+*/
+                    map.setCenter(pos);
+                    
+                    directionsService.route({
+                      origin: pos,
+                      destination: myLatlng,
+                      travelMode: 'DRIVING'
+                    }, function(response, status) {
+                      if (status === 'OK') {
+                        directionsDisplay.setDirections(response);
+                      } else {
+                        window.alert('Directions request failed due to ' + status);
+                      }
+                    });
+                    
+                    //alert(pos);
+                    
+                    
+                  }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                  });
+                } else {
+                  // Browser doesn't support Geolocation
+                  handleLocationError(false, infoWindow, map.getCenter());
+                  $(container).removeClass('is-loading');
+                }
+                
+                
+                
+              //  alert(myLatlng);
+                
+                e.returnValue = false;
+            };
+            
+    
+            route.addEventListener('click', showRoute);
 			
 			
 			/*

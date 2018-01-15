@@ -76,23 +76,6 @@
 				mint.MapMarkers.init();
 			}
 
-			/*
-var bLazy = new Blazy({
-				breakpoints: false,	
-				success: function(element){
-				    setTimeout(function(){					
-						var parent = element.parentNode.parentNode;
-						parent.className = parent.className.replace(/\bis-hidden\b/,'');
-						parent.parentNode.className = parent.parentNode.className.replace(/\bis-loading\b/,'');
-				    }, 200);
-		        }
-		   });
-			
-			$(el).on('afterChange', function(event, slick, direction) {
-				bLazy.revalidate();
-			});	
-*/
-
 		});
 	};
 		

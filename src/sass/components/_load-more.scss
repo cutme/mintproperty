@@ -1,17 +1,31 @@
 .c-load-more {
+    @extend %rel;
+    height: 50px;
 	text-align: center;
+	
+	@media print {
+        display: none;
+    }
+    
+    .pl-wave {
+        top: 50%;
+    }
 	
 	.o-btn {
 		@media screen and ( min-width: $smartphone + 1px ) {
 			padding: 0 140px;
-		}
-		
-		
+		}		
 		
 		@media screen and ( max-width: $smartphone_portrait + px ) {
 				display: flex;
 				width: 100%;
 		}
-		
+	}
+	
+	
+	&.is-loading {
+	    .o-btn {
+	        display: none;
+	    }
 	}
 }

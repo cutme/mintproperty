@@ -1,9 +1,12 @@
 .c-grid {
+    @extend %rel;
 
-	&:not(.c-grid--noflex) {	
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	&:not(.c-grid--noflex) {
+	    @media screen {
+    		display: flex;
+    		flex-wrap: wrap;
+    		justify-content: space-between;
+        }
 		
 		@media screen and ( max-width: $tablet_portrait + px ) {
 			justify-content: center;
@@ -16,18 +19,18 @@
 			margin-right: grid(20);	
 			
 			&:nth-child(3n) {
-		    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+		    	@media only print, only screen and ( min-width: $tablet_portrait + 1px ) {
 		    	   margin-right: 0;
 		    	}		 
 		    }
 		    
-		    @media screen and ( min-width: $tablet_portrait + 1px ) {
+		    @media only print, only screen and ( min-width: $tablet_portrait + 1px ) {
 		    	&:nth-child(3n+1) {
 		    		clear: left;
 		    	}
 		    }
 		    
-		    @media screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+		    @media only print, only screen and ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
 		    	&:nth-child(2n+1) {
 		    		clear: left;
 		    	}
@@ -35,16 +38,23 @@
 		    	    
 		}
 	}
+	
+    &__close {
+        @extend %abs;
+        z-index: 10;
+        left: 10px; top:  10px;
+        color: white;
+    }
     
     &__item {
     	@extend %rel;
 	    margin-bottom: 20px;
 
-	    @media screen and ( min-width: $tablet_portrait + 1px ) {
+	    @media only print, only screen and ( min-width: $tablet_portrait + 1px ) {
 	    	width: grid($grid_item);
 	    }
 
-	    @media screen and ( min-width: $smartphone + px ) and ( max-width: $tablet_portrait + px ) {
+	    @media only print, only screen and ( min-width: $smartphone + px ) and ( max-width: $tablet_portrait + px ) {
 	  	    	
 	    	width: grid(354, $tablet_portrait - 40);
 	    	
@@ -62,8 +72,21 @@
 			    margin-right: 0;
 		    }
 	    }
+
+	    @media print {
+    	    page-break-inside:avoid; 
+    	    float: left;
+    	    
+    	    &:nth-child(even) {
+    	        float: right;
+    	    }
+    	    
+    	   // &:nth-child(even) {
+        	    //page-break-after: always; 
+    	   // }
+	    }
 	    
-		@media screen and ( max-width: $smartphone + px ) {
+		@media only print, only screen and ( max-width: $smartphone + px ) {
 	    	max-width: $grid_item + px;
 	    	
 			.c-grid--noflex & {
@@ -71,16 +94,19 @@
 	    	    margin: 0 auto 20px auto;
 	    	}
 	    }
+	    
+	   
+	   
     }
     
     &__sizer {
     	max-width: $grid_item + px;
    
-    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+    	@media only print, only screen and ( min-width: $tablet_portrait + 1px ) {
 		    width: grid($grid_item);
 	    }
 	    
-		@media screen and ( max-width: $tablet_portrait + px ) {
+		@media only print, only screen and ( max-width: $tablet_portrait + px ) {
 		
 			.c-grid--noflex & {
 				//width: grid(374, $tablet_portrait);
@@ -94,10 +120,10 @@
 
 
 	&--addresses {
-		 @media screen and ( max-width: $smartphone + px ) {			
+		 @media only print, only screen and ( max-width: $smartphone + px ) {			
 			.c-grid__item {
 			
-				@media screen and ( max-width: $smartphone + px ) {
+				@media only print, only screen and ( max-width: $smartphone + px ) {
 					width: 100%;
 				}
 				
@@ -112,7 +138,7 @@
     	@extend %clear;
 	    margin-bottom: 40px;
 	    
-	    @media screen and ( max-width: $smartphone + px ) {
+	    @media only print, only screen and ( max-width: $smartphone + px ) {
 			display: flex;
 			flex-direction: column-reverse;
 			margin-bottom: 10px;
@@ -127,11 +153,11 @@
 
     .gutter-sizer {
     
-    	@media screen and ( min-width: $tablet_portrait + 1px ) {
+    	@media only print, only screen and ( min-width: $tablet_portrait + 1px ) {
 		    width: grid(20);
 		}
 	    
-	    @media screen and ( max-width: $tablet_portrait + px ) {
+	    @media only print, only screen and ( max-width: $tablet_portrait + px ) {
 			width: grid(20, $tablet_portrait);
 			//width: 1px;
     	}

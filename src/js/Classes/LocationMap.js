@@ -106,6 +106,7 @@
 			google.load('maps', '3.exp', { 
 				other_params: 'key=AIzaSyDzv4gozpcF9CjrI6OWHpLavj2hTLfH4IY', 
 				callback: function() {
+				    $('body').addClass('map-loaded');
 					google.maps.event.addDomListener(window, "load", initialize);					
 				}
 			});

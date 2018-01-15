@@ -5,6 +5,9 @@
 		width: grid(430);
 	}
 
+    @media print {
+        display: none;
+    }
 	
 	.c-contact-box {
 		@extend %clear;

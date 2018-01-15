@@ -1,5 +1,9 @@
 .c-shortcuts-btn {
 	
+	@media print {
+    	display: none;
+	}
+	
 	.o-btn {
 		background-color: white;
 		font-size: em(13);			

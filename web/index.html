@@ -175,19 +175,19 @@
 				<h1 class="title">Kraków i okolice, <strong>mieszkanie</strong> na <strong>wynajem</strong></h1>			
 			</header>
 		
-			<div id="filters" class="c-filters c-filters--dropdown">
+			<form action="#" method="post" id="filters" class="c-filters c-filters--dropdown">
 	
 				
 			<div class="c-filters__item">
 				<p class="c-filters__title">Typ nieruchomości</p>
 
-				<select class="nice-select small">
-					<option>Mieszkanie</option>
-					<option>Dom</option>
-					<option>Lokal użytkowy</option>
+				<select class="nice-select small" name="typeOfProperty">
+					<option value="1">Mieszkanie</option>
+					<option value="2">Dom</option>
+					<option value="3">Lokal użytkowy</option>
 				</select>
 			</div>
-			
+
 			<div class="c-filters__item slider">
 				<p class="c-filters__title">Cena
 					<span class="c-filters__info">
@@ -195,7 +195,8 @@
 					</span>
 				</p>
 
-				<div id="slider-price"></div>
+				<div id="price" class="js-slider"></div>
+				<input type="hidden" name="price">
 			</div>
 			
 			<div class="c-filters__item slider">
@@ -205,7 +206,8 @@
 					</span>
 				</p>
 
-				<div id="slider-area"></div>
+				<div id="area" class="js-slider"></div>
+				<input type="hidden" name="area">
 			</div>
 			
 			<div class="c-filters__item slider">
@@ -215,12 +217,13 @@
 					</span>
 				</p>
 
-				<div id="slider-rooms"></div>
+				<div id="rooms" class="js-slider"></div>
+				<input type="hidden" name="rooms">
 			</div>
 
 			<div class="c-filters__item longinmobile c-filters__item--numoffers medium">
 			
-				<div class="c-filters__item--small medium" id="bathrooms">
+				<div class="c-filters__item--small medium js-bathrooms">
 					<p class="c-filters__title">Liczba łazienek</p>
 					
 					<div class="c-bathrooms">
@@ -231,15 +234,15 @@
 							<span class="num">1</span> lub więcej
 						</span>
 						
-						<input type="hidden" id="number_of_bathrooms">
+						<input type="hidden" id="bathrooms" name="bathrooms" value="1">
 					</div>
 				</div>	
 				
 				<div class="c-filters__item--small js-start">
-					<p class="c-filters__title c-filters__offersNum js-offersNum">Liczba ofert: <span class="results_num">123</span></p>
+					<p class="c-filters__title c-filters__offersNum js-offersNum">Liczba ofert: <span class="js-resultsNum">123</span></p>
 					
-					<div class="c-filters__submit js-submit">
-						<a href="#" class="o-btn o-btn--small o-btn--green-empty o-btn--block">Pokaż</a>
+					<div class="c-filters__submit">
+						<a href="#" class="o-btn o-btn--small o-btn--green-empty o-btn--block js-submit">Pokaż</a>
 					</div>
 				</div>	
 			
@@ -251,19 +254,19 @@
 			<div class="c-filters__item moreOption sale">
 				<p class="c-filters__title">Rynek</p>
 
-				<select class="nice-select small">
-					<option>Dowolny</option>
+				<select class="nice-select small" name="market">
+					<option value="1">Dowolny</option>
 				</select>
 			</div>
 			
 			<div class="c-filters__item moreOption rent sale">
 				<p class="c-filters__title">Typ budynku</p>
 
-				<select class="nice-select small">
-					<option>Dowolny</option>
-					<option>Apartamentowiec</option>
-					<option>Kamienica</option>
-					<option>Blok</option>
+				<select class="nice-select small" name="typeOfBuilding">
+					<option value="1">Dowolny</option>
+					<option value="2">Apartamentowiec</option>
+					<option value="3">Kamienica</option>
+					<option value="4">Blok</option>
 				</select>
 			</div>
 			
@@ -274,53 +277,54 @@
 					</span>
 				</p>
 
-				<div id="slider-floor"></div>
+				<div id="floor" class="js-slider"></div>
+				<input type="hidden" name="floor">
 			</div>
 			
 			<div class="c-filters__item moreOption sale">
 				<p class="c-filters__title">Stan wykończenia</p>
 
-				<select class="nice-select small">
-					<option>Dowolny</option>
+				<select class="nice-select small" name="condition">
+					<option value="1">Dowolny</option>
 				</select>
 			</div>
 			
 			<div class="c-filters__item moreOption rent sale medium--sale">
 				<p class="c-filters__title">Inwestycja</p>
 
-				<select class="nice-select small">
-					<option>Dowolna</option>
+				<select class="nice-select small" name="investment">
+					<option value="1">Dowolna</option>
 				</select>
 			</div>
 			
 			<div class="c-filters__item moreOption rent sale">
 				<p class="c-filters__title">Dzielnica</p>
 
-				<select class="nice-select small">
-					<option>Wszystkie</option>
+				<select class="nice-select small" name="district">
+					<option value="1">Wszystkie</option>
 				</select>
 			</div>
 			
 			<div class="c-filters__item longinmobile moreOption rent medium medium--rent">
 				<p class="c-filters__title">Umeblowanie</p>
 
-				<select class="nice-select small">
-					<option>Dowolne</option>
+				<select class="nice-select small" name="furnishings">
+					<option value="1">Dowolne</option>
 				</select>
 			</div>				
 			
 			<div class="c-filters__item moreOption rent sale wide">
 				<div class="c-checkboxes">					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" checked id="option-1">
+						<input type="checkbox" class="js-checkbox" checked id="option-1" name="balcony">
 						<label for="option-1">
 							<i class="icon-checkmark"></i>
-							<span>Balokn /taras</span>
+							<span>Balkon /taras</span>
 						</label>
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-2">
+						<input type="checkbox" class="js-checkbox" id="option-2" name="elevator">
 						<label for="option-2">
 							<i class="icon-checkmark"></i>
 							<span>Winda</span>
@@ -328,7 +332,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-3">
+						<input type="checkbox" class="js-checkbox" id="option-3" name="parking">
 						<label for="option-3">
 							<i class="icon-checkmark"></i>
 							<span>Parking</span>
@@ -336,7 +340,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-4">
+						<input type="checkbox" class="js-checkbox" id="option-4" name="garden">
 						<label for="option-4">
 							<i class="icon-checkmark"></i>
 							<span>Ogródek</span>
@@ -344,7 +348,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-5">
+						<input type="checkbox" class="js-checkbox" id="option-5" name="storage">
 						<label for="option-5">
 							<i class="icon-checkmark"></i>
 							<span>Komórka<br> lokatorska</span>
@@ -352,7 +356,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-6">
+						<input type="checkbox" class="js-checkbox" id="option-6" name="airConditioning">
 						<label for="option-6">
 							<i class="icon-checkmark"></i>
 							<span>Klimatyzacja</span>
@@ -360,7 +364,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item">
-						<input type="checkbox" id="option-7">
+						<input type="checkbox" class="js-checkbox" id="option-7" name="protection">
 						<label for="option-7">
 							<i class="icon-checkmark"></i>
 							<span>Ochrona</span>
@@ -368,7 +372,7 @@
 					</div>
 					
 					<div class="c-checkboxes__item rent">
-						<input type="checkbox" id="option-8">
+						<input type="checkbox" class="js-checkbox" id="option-8" name="animals">
 						<label for="option-8">
 							<i class="icon-checkmark"></i>
 							<span>Przyjazne<br> dla zwierząt</span>
@@ -388,7 +392,7 @@
 
 			
 			<div class="c-filters__item full js-end">
-				<a href="#" class="c-filters__clear">
+				<a href="#" class="c-filters__clear js-reset">
 					<i class="icon-close-2"></i>
 					<span>Wyczyść</span>
 				</a>				
@@ -400,7 +404,7 @@
 						<span>Więcej opcji</span> <i class="icon-arrow-1"></i>
 					</a>
 				</div>
-			</div>
+			</form>
 	
 	
 			<div class="c-boxes">
@@ -419,9 +423,19 @@
 				<li class="c-grid__item js-location is-loading" data-lat="50.0623232" data-lng="19.9260243" data-url="oferta-detal.html">
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
-						<div class="o-sticker o-sticker--exclusive">
-							<i class="icon-sticker"></i>
-						</div>
+                        <div class="o-sticker__holder">
+                        	<div class="o-sticker o-sticker--exclusive">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--rent-property">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--without-commission">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        </div>
 						
 						<div class="c-box__photo">
 							<div class="pl-wave"><div class="loader"><span></span></div></div>
@@ -504,6 +518,8 @@
 
 					
 				<li class="c-grid__item is-loading">
+				
+				    <a href="#" class="c-grid__close icon-close-2"></a>
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--without-commission">
@@ -692,9 +708,19 @@
 				<li class="c-grid__item js-location is-loading" data-lat="50.0623232" data-lng="19.9260243" data-url="oferta-detal.html">
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
-						<div class="o-sticker o-sticker--exclusive">
-							<i class="icon-sticker"></i>
-						</div>
+                        <div class="o-sticker__holder">
+                        	<div class="o-sticker o-sticker--exclusive">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--rent-property">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        	
+                        	<div class="o-sticker o-sticker--without-commission">
+                        		<i class="icon-sticker"></i>
+                        	</div>
+                        </div>
 						
 						<div class="c-box__photo">
 							<div class="pl-wave"><div class="loader"><span></span></div></div>
@@ -777,6 +803,8 @@
 
 					
 				<li class="c-grid__item is-loading">
+				
+				    <a href="#" class="c-grid__close icon-close-2"></a>
 					
 					<a href="oferta-detal.html" class="c-box is-hidden">
 						<div class="o-sticker o-sticker--without-commission">

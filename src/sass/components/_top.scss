@@ -7,6 +7,10 @@
 	height: 120px;
 	border-bottom: 1px solid $c-gray--brightest;
 	
+	@media print {
+    	display: none;
+	}
+	
 	.mobile-menu & {
 		position: static;
 	}

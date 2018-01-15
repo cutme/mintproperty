@@ -20,34 +20,33 @@
 			</header>
 	
 	
-			<div id="filters" class="c-filters is-expanded">
+			<form action="#" method="post" id="filters" class="c-filters is-expanded">
 	
 				@@include('./includes/filters.html')
 	
-			</div>
+			</form>
 	
-	
+
 			<div class="c-boxes">
 				<header class="o-header o-header--type-2 o-header--options o-header--extramargin-2">
 					<h2 class="title">Wyszukane oferty</h2>
 	
-					<strong>Liczba ofert: <span class="results_num">123</span></strong>
+					<strong>Liczba ofert: <span class="js-resultsNum">123</span></strong>
 					
 					<div class="c-switcher c-switcher--center big" id="viewType">
-						<a href="#" class="o-btn o-btn--green-empty o-btn--long js-btn is-active" data-type="grid">Lista ofert</a>
+						<a href="#" class="o-btn o-btn--green-empty o-btn--long js-btn is-active" data-type="offersList">Lista ofert</a>
 						<a href="#" class="o-btn o-btn--green-empty o-btn--long js-btn" data-type="mapHolder">Mapa ofert</a>
 					</div>
 				</header>
 	
 				<div class="c-results" id="results">
-					<div class="c-results__view js-view is-active" id="grid">
+					<div class="c-results__view js-view is-active" id="offersList">
 					
-						<ul class="c-grid">
+						<ul class="c-grid" id="grid" data-script="https://mint.io-lab.net.pl/a.php">
 							@@include('./includes/places-1.html')
 							@@include('./includes/places-2.html')
 							@@include('./includes/places-3.html')
-						</ul>
-					
+						</ul>						
 					</div>
 					
 					<div class="c-results__view js-view" id="mapHolder">
@@ -56,6 +55,12 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			
+
+			<div class="c-load-more">
+			    <div class="pl-wave"><div class="loader"><span></span></div></div>
+				<a href="#" class="o-btn o-btn--big o-btn--gray-fill" id="loadMore">Pokaż więcej</a>
 			</div>
 		</div>
 	</div>
