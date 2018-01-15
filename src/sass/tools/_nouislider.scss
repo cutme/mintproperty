@@ -5,6 +5,8 @@
 }
 
 .noUi-handle {
+    cursor: pointer;
+
 	&:after,
 	&:before {
 		display: none;

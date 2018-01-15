@@ -2,20 +2,24 @@
 	'use strict';
 	
 	var Filters = mint.Filters = function () { },
-	    form, offers_num, submit, results, script;
-	
+	    form, grid, offers_num, submit = document.getElementsByClassName('js-submit')[0], results, script;
+
 	Filters.prototype.init = function() {
 	
 	    form = document.getElementById('filters');
 	    offers_num = document.getElementsByClassName('js-resultsNum');
-	    submit = document.getElementsByClassName('js-submit')[0];
         results = document.getElementById('results');
-        script = grid.getAttribute('data-script')+'?a=';
+
+        if ( submit === undefined ) {
+            grid = document.getElementById('grid');
+            script = grid.getAttribute('data-script')+'?a=';
+        }
         
 		this.elements();
 		this.moreOptions();
 		this.listen();
-		this.loadMore();
+		
+		if (document.getElementById('loadMore') != null) this.loadMore();
 	};
 	
 	Filters.prototype.loadMore = function(data) {
@@ -127,7 +131,6 @@
 			btn = $('.js-moreOptions'),
 			offersNum = $('.js-offersNum'),
 			start = $('.js-start'),
-			submit = $('.js-submit'),
 			end = document.getElementsByClassName('js-end')[0];
 		
 		btn.on('click', function(e) {
@@ -148,10 +151,10 @@
 				
 				if (mint.Helper.isWindowSmallerThan(640)) {
 					offersNum.detach();
-					submit.detach();
+					$(submit).detach();
 					
 					end.prepend(offersNum);
-					end.append(submit);
+					end.append($(submit));
 				}
 				
 				
@@ -159,10 +162,10 @@
 				$('span', $$).text(more);
 				
 				offersNum.detach();
-				submit.detach();
+				$(submit).detach();
 				
 				start.prepend(offersNum);
-				start.append(submit);
+				start.append($(submit));
 			}
 		});
 		
@@ -172,17 +175,17 @@
 			if ( $(el).hasClass('is-expanded') ) {
 				if (mint.Helper.isWindowSmallerThan(769) === false) {
 					offersNum.detach();
-					submit.detach();
+					$(submit).detach();
 					
 					start.prepend(offersNum);
 					start.append(submit);
 				} else {
 					
 					offersNum.detach();
-					submit.detach();
+					$(submit).detach();
 					
 					end.prepend(offersNum);
-					end.append(submit);
+					end.append($(submit));
 					
 				}
 			}
