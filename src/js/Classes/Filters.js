@@ -11,6 +11,7 @@
         results = document.getElementById('results');
 
         if ( submit === undefined ) {
+            console.log('dyn');
             grid = document.getElementById('grid');
             script = grid.getAttribute('data-script')+'?a=';
         }
@@ -131,7 +132,8 @@
 			btn = $('.js-moreOptions'),
 			offersNum = $('.js-offersNum'),
 			start = $('.js-start'),
-			end = document.getElementsByClassName('js-end')[0];
+			end = document.getElementsByClassName('js-end')[0],
+			reset_btn = document.getElementsByClassName('js-reset')[0];
 		
 		btn.on('click', function(e) {
 			e.preventDefault();
@@ -211,7 +213,10 @@
             e.returnValue = false;
 		};
 		
-		document.getElementsByClassName('js-reset')[0].addEventListener('click', resetForm, false);
+        if (reset_btn != undefined) {
+    		reset_btn.addEventListener('click', resetForm, false);
+        }
+
         window.addEventListener('resize', checkAndPlace, false);
 /*
 		$(window).on('resize', function() {
